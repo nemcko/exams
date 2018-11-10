@@ -1,0 +1,76 @@
+{
+    "exasubtitle": {
+        "en": "Basic data",
+        "sk": "Základné údaje"
+    },
+    "exacard": {
+        "en": "Basic",
+        "sk": "Údaje"
+    },
+    "exacode": {
+        "en": "Type",
+        "sk": "Typ"
+    },
+    "exnum": {
+        "en": "Exam Nr.",
+        "sk": "Skúška č."
+    },
+    "lng": {
+        "en": "Lng",
+        "sk": "Jazyk"
+    },
+    "usetstnr": {
+        "en": "Test Nr.",
+        "sk": "Test č."
+    },
+    "userecnr": {
+        "en": "Record Nr.",
+        "sk": "Nahrávka č."
+    },
+    "usevidnr": {
+        "en": "Video Nr.",
+        "sk": "Video č."
+    },
+    "planplace": {
+        "en": "Planned location",
+        "sk": "Plánované miesto"
+    },
+    "plandate": {
+        "en": "Planned date",
+        "sk": "Plán.dátum"
+    },
+    "plantime": {
+        "en": "Planned time",
+        "sk": "Plán.čas"
+    },
+    "realplace": {
+        "en": "Real location",
+        "sk": "Skutočné miesto"
+    },
+    "realdate": {
+        "en": "Real date",
+        "sk": "Skut.dátum"
+    },
+    "realtime": {
+        "en": "Real time",
+        "sk": "Skut.čas"
+    },
+    "chngreas": {
+        "en": "Change reason",
+        "sk": "Dôvod zmeny"
+    },
+    "assigned": {
+        "en": "Assigned",
+        "sk": "Zadal"
+    },
+    "applicant": {
+        "en": "Applicant",
+        "sk": "Žiadateľ"
+    },
+
+    "state": {
+        "en": "State of review",
+        "sk": "Stav preskúšania"
+    }
+
+}

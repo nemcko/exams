@@ -1,0 +1,39 @@
+:host ::ng-deep .data-table.table > tbody+tbody {
+    /* border-top: none; */
+}
+:host ::ng-deep .data-table.table td {
+    vertical-align: middle;
+}
+
+:host ::ng-deep .data-table-row {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+:host ::ng-deep .data-table > thead > tr > th,
+:host ::ng-deep .data-table > tbody > tr > td {
+	overflow: hidden;
+}
+
+:host ::ng-deep .table.table-sm.table-hover.table-striped {
+    margin-bottom: 0 !important;
+}
+.column-header.resizable {
+    margin-right: 8px;
+}
+.column-header {
+    position: relative;
+}
+.column-header .column-resize-handle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    width: 8px;
+    height: 100%;
+    cursor: col-resize;
+}

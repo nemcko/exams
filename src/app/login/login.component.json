@@ -1,0 +1,30 @@
+{
+    "login":{
+        "en":"Login",
+        "sk":"Prihlásenie"
+    },
+    "usr":{
+        "en":"Username",
+        "sk":"Používateľ"
+    },
+    "usrreq":{
+        "en":"Username is required",
+        "sk":"Vyžaduje sa Používateľ"
+    },
+    "pwd":{
+        "en":"Password",
+        "sk":"Heslo"
+    },
+    "pwdreq":{
+        "en":"Password is required",
+        "sk":"Vyžaduje sa Heslo"
+    },
+    "lng":{
+        "en":"Language",
+        "sk":"Jazyk"
+    },
+    "logon":{
+        "en":"Logon",
+        "sk":"Prihlásiť sa"
+    }
+}

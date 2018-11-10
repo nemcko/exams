@@ -1,0 +1,88 @@
+{
+    "title": {
+        "en": "Users",
+        "sk": "Používatelia"
+    },
+
+
+
+    "name": {
+        "en": "Name",
+        "sk": "Meno"
+    },
+    "usr": {
+        "en": "User Name",
+        "sk": "Používateľ"
+    },
+    "firstname": {
+        "en": "Name",
+        "sk": "Meno"
+    },
+    "lastname": {
+        "en": "Surname",
+        "sk": "Priezvisko"
+    },
+    "phone": {
+        "en": "Phone",
+        "sk": "Telefón"
+    },
+    "mobile": {
+        "en": "Mobile",
+        "sk": "Mobil"
+    },
+    "web": {
+        "en": "www",
+        "sk": "www"
+    },
+    "email": {
+        "en": "E-mail",
+        "sk": "E-mail"
+    },
+    "profession": {
+        "en": "Profession",
+        "sk": "Profesia"
+    },
+    "speaks": {
+        "en": "Speaks",
+        "sk": "Hovorí"
+    },
+
+
+
+
+
+    "active": {
+        "en": "Active",
+        "sk": "Aktívny"
+    },
+    "company": {
+        "en": "Company",
+        "sk": "Firma"
+    },
+    "street": {
+        "en": "street",
+        "sk": "Ulica"
+    },
+    "zip": {
+        "en": "zip",
+        "sk": "PSČ"
+    },
+    "city": {
+        "en": "city",
+        "sk": "Obec"
+    },
+
+    "btnadd": {
+        "en": "Add",
+        "sk": "Nový"
+    },
+    "btndelete": {
+        "en": "Delete",
+        "sk": "Vymaž"
+    },
+    "btnsave": {
+        "en": "Save",
+        "sk": "Uložiť"
+    }
+    
+}

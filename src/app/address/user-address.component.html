@@ -1,0 +1,16 @@
+<brw [uuid]="uuid" [oid]="oid"  [service]="service" [qparams]="qparams">
+  <brwcol [name]="'firstname'" [header]="labels.firstname" [width]="50"></brwcol>
+  <brwcol [name]="'lastname'" [header]="labels.lastname" [width]="30"></brwcol>
+  <brwcol [name]="'phone'" [header]="labels.phone" [width]="30"></brwcol>
+  <brwcol [name]="'id'" [width]="'28px'" [cls]="'p-0 float-right'" [visible]="access.adm">
+    <ng-template #dataTableCell let-item="row">
+      <button type="button" class="btn btn-primary btn-sm" (click)="alertUsrDlg(item)">
+        <span [class]="'fa fa-times'"></span>
+      </button>
+    </ng-template>
+  </brwcol>
+</brw>
+<pgalert [dlgid]="'deleteItemalertdlg'" [dlgRef]="deleteItemalertdlg" [title]="labels.delUsrTitle" [type]="'YES-NO'"
+  (doClick)="doDeleteItem($event)">
+  <p>{{labels.delUsrQuestion}}</p>
+</pgalert>

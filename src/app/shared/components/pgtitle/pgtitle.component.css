@@ -1,0 +1,27 @@
+/* .pgtitle .h1 {
+    margin-bottom: 0; 
+    padding-bottom: 0 !important;
+} */
+/* .pgtitle .text-primary {
+    padding-right: 4px; 
+} */
+.pgtitle .col-4 {
+    position: relative;
+    top: -4px;
+    left:-10px;
+}
+.pgtitle .col-8 {
+    /* margin-bottom: 4px;  */
+    margin: 0;
+    padding: 0;
+    padding-right: 2px;
+}
+.pgtitle {
+    margin-bottom: 4px; 
+    margin-left: 0;
+    margin-right: 0;
+}
+.asdf {
+    margin-left:auto !important; 
+    margin-right:0 !important;
+  }

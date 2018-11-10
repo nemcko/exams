@@ -1,0 +1,62 @@
+<pgtitle [title]="labels.title" [subtitle]="labels.subtitle" [oid]="oid" [brwFieldName]="'fullsearch'">
+  <div class="btn-group col-sm-3 px-0">
+    <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></span>
+    <input type="text" #search class="form-control px-1 text-primary" placeholder="{{labels.search}}">
+  </div>
+  <div class="dropdown">
+    <button class="btn btn-outline-secondary dropdown-toggle" appdropdown type="button" id="dropdownMenuButton"
+      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="fa fa-plus"></i>&nbsp;{{labels.btnnew}}
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="javascript:void(0)" (click)="showTrainingsDialog('')">
+        <i class="fa fa-university"></i>&nbsp;{{labels.btntra}}</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="javascript:void(0)" (click)="showExaminationsDialog('')">
+        <i class="fa fa-file-text"></i>&nbsp;{{labels.btnexa}}</a>
+    </div>
+  </div>
+</pgtitle>
+
+
+
+<pgpanel [lmargins]="20">
+  <pgview [width]="panelWidth.left" [lmargin]="0">
+    <brw [uuid]="uuid" [oid]="oid" [service]="service" (rowClick)="rowClick($event)" (rowDoubleClick)="rowDoubleClick($event)"
+      (rowChanged)="rowChanged($event)">
+      <brwcol [name]="'usr'" [header]="labels.usr" [width]="10"></brwcol>
+      <brwcol [name]="'firstname'" [header]="labels.firstname" [width]="40"></brwcol>
+      <brwcol [name]="'lastname'" [header]="labels.lastname" [width]="30"></brwcol>
+
+      <brwcol [name]="'phone'" [header]="labels.phone" [width]="10" [visible]="!(this.examtype == 'adm' || this.examtype == 'lpes' || this.examtype == 'lprs' || this.examtype == 'lpts' || this.panelType !== 'btnMembers')"></brwcol>
+      <brwcol [name]="'mobile'" [header]="labels.mobile" [width]="10" [visible]="!(this.examtype == 'adm' || this.examtype == 'lpes' || this.examtype == 'lprs' || this.examtype == 'lpts' || this.panelType !== 'btnMembers')"></brwcol>
+      <brwcol [name]="'email'" [header]="labels.email" [width]="15" [visible]="!(this.examtype == 'adm' || this.examtype == 'lpes' || this.examtype == 'lprs' || this.examtype == 'lpts' || this.panelType !== 'btnMembers')"></brwcol>
+      <brwcol [name]="'id'" [width]="'114px'" [cls]="'p-0 float-right'" [visible]="access.adm">
+        <ng-template #dataTableCell let-item="row">
+          <button type="button" class="btn btn-outline-secondary mr-1" (click)="showTrainingsDialog(item.id)"  *ngIf="item.usr!='fero'">
+            <span [class]="'fa fa-university'"></span>
+          </button>
+
+          <div class="btn-group mr-1" role="group" *ngIf="item.usr=='fero'">
+            <button type="button" class="btn btn-outline-secondary" (click)="showExaminationsDialog(item.id)">
+              <span [class]="'fa fa-file-text '"></span>
+            </button>
+            <button type="button" class="btn btn-outline-secondary" (click)="showEvaluationsDialog(item.id)">
+              <span [class]="'fa fa-list-ol'"></span>
+            </button>
+          </div>
+
+          <button type="button" class="btn btn-outline-secondary" (click)="showDocumentsDialog(item.id)">
+            <span [class]="'fa fa-folder'"></span>
+          </button>
+
+        </ng-template>
+      </brwcol>
+    </brw>
+  </pgview>
+</pgpanel>
+
+<pgalert [dlgid]="'deleteExaminertdlg'" [dlgRef]="deleteItemalertdlg" [title]="labels.delExaminerTitle" [type]="'YES-NO'"
+  (doClick)="doDeleteExaminer($event)">
+  <p>{{labels.delExaminerQuestion}}</p>
+</pgalert>

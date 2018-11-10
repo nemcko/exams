@@ -1,0 +1,133 @@
+<pgtitle [title]="labels.title" [oid]="oid" [brwFieldName]="'fullsearch'">
+
+    <div class="btn-group col-sm-3 px-0">
+        <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></span>
+        <input type="text" #search class="form-control px-1 text-primary" placeholder="{{labels.search}}">
+    </div>
+    <div class="dropdown">
+        <button class="btn btn-outline-secondary dropdown-toggle" appdropdown type="button" id="dropdownMenuButton"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="selectPanelType('btnUser')">
+            <i class="fa fa-user"></i>&nbsp;{{labels.btnUser}}
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="javascript:void(0)" (click)="selectPanelType('btnUser')"><i class="fa fa-user"></i>&nbsp;{{labels.btnUser}}</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="javascript:void(0)" (click)="showBasicData('')" [class.disabled]="!access.adm"><i
+                    class="fa fa-plus"></i>&nbsp;{{labels.btnadd}}</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="btn btn-outline-secondary dropdown-toggle" appdropdown type="button" id="dropdownMenuButton"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="selectPanelType('btnDocuments')">
+            <i class="fa fa-file"></i>&nbsp;{{labels.btnDocuments}}
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="javascript:void(0)" (click)="selectPanelType('btnDocuments')"><i class="fa fa-file"></i>&nbsp;{{labels.btnDocuments}}</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="javascript:void(0)" (click)="showExamdocData()" [class.disabled]="!access.adm"><i
+                    class="fa fa-plus"></i>&nbsp;{{labels.btnadd}}</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="btn btn-outline-secondary dropdown-toggle" appdropdown type="button" id="dropdownMenuButton"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="selectPanelType('btnExamLang')">
+            <i class="fa fa-language"></i>&nbsp;{{labels.btnExamLang}}
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="javascript:void(0)" (click)="selectPanelType('btnExamLang')"><i class="fa fa-language"></i>&nbsp;{{labels.btnExamLang}}</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="javascript:void(0)" (click)="showExamLangData()" [class.disabled]="!access.adm"><i
+                    class="fa fa-plus"></i>&nbsp;{{labels.btnadd}}</a>
+        </div>
+    </div>
+</pgtitle>
+
+<pgpanel [lmargins]="20">
+    <pgview [width]="panelWidth.left" [lmargin]="0">
+        <brw [uuid]="uuid" [oid]="oid" [service]="service" [title]="labels.title" (rowClick)="rowClick($event)"
+            (rowDoubleClick)="rowDoubleClick($event)" (rowChanged)="rowChanged($event)">
+            <brwtitle>
+                <div class="rounded border border-primary d-inline-flex mb-1">
+                    <div class="btn-group" role="group mr-3">
+                        <button type=" button" class="btn btn-primary btn-sm" (click)="setExaFilter($event,'lpe*')">{{labels.lpe}}</button>
+                        <button type="button" class="btn btn-primary btn-sm" (click)="setExaFilter($event,'lpr*')">{{labels.lpr}}</button>
+                        <button type="button" class="btn btn-primary btn-sm mr-3" (click)="setExaFilter($event,'lpt*')">{{labels.lpt}}</button>
+
+                        <div class="d-inline-flex flex-row align-items-end text-primary">
+                            <div class="custom-control custom-checkbox mr-4 text-nowrap">
+                                <input type="checkbox" class="custom-control-input" id="flt-lpes" (click)="setExaFilter($event,'lpes')">
+                                <label class="custom-control-label" for="flt-lpes">{{labels.lpes}}</label>
+                            </div>
+                            <div class="custom-control custom-checkbox mr-4 text-nowrap">
+                                <input type="checkbox" class="custom-control-input" id="flt-lprs" (click)="setExaFilter($event,'lprs')">
+                                <label class="custom-control-label" for="flt-lprs">{{labels.lprs}}</label>
+                            </div>
+                            <div class="custom-control custom-checkbox mr-4 text-nowrap">
+                                <input type="checkbox" class="custom-control-input" id="flt-lpts" (click)="setExaFilter($event,'lpts')">
+                                <label class="custom-control-label" for="flt-lpts">{{labels.lpts}}</label>
+                            </div>
+                            <div class="custom-control custom-checkbox mr-4 text-nowrap">
+                                <input type="checkbox" class="custom-control-input" id="flt-lpe" (click)="setExaFilter($event,'lpe')">
+                                <label class="custom-control-label" for="flt-lpe">{{labels.lpe}}</label>
+                            </div>
+                            <div class="custom-control custom-checkbox mr-4 text-nowrap">
+                                <input type="checkbox" class="custom-control-input" id="flt-lpr" (click)="setExaFilter($event,'lpr')">
+                                <label class="custom-control-label" for="flt-lpr">{{labels.lpr}}</label>
+                            </div>
+                            <div class="custom-control custom-checkbox mr-4 text-nowrap">
+                                <input type="checkbox" class="custom-control-input" id="flt-lpt" (click)="setExaFilter($event,'lpt')">
+                                <label class="custom-control-label" for="flt-lpt">{{labels.lpt}}</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </brwtitle>
+            <brwcol [name]="'usr'" [header]="labels.usr" [width]="'150px'">
+                <ng-template #dataTableCell let-item="row">
+                    <usrphoto [uid]="item.id"></usrphoto>
+                    <div class="float-right d-flex flex-column">
+                        <span class="badge badge-danger mr-1" *ngIf="item.adm=='1'">ADM</span>
+                        <span class="badge badge-primary mr-1" *ngIf="item.lpes=='1'">{{labels.lpes}}</span>
+                        <span class="badge badge-warning mr-1" *ngIf="item.lprs=='1'">{{labels.lprs}}</span>
+                        <span class="badge badge-success mr-1" *ngIf="item.lpts=='1'">{{labels.lpts}}</span>
+                        <span class="badge badge-primary mr-1" *ngIf="item.lpe=='1'">{{labels.lpe}}</span>
+                        <span class="badge badge-warning mr-1" *ngIf="item.lpr=='1'">{{labels.lpr}}</span>
+                        <span class="badge badge-success mr-1" *ngIf="item.lpt=='1'">{{labels.lpt}}</span>
+                    </div>
+
+
+
+                    <span>{{item.usr}}</span>
+                </ng-template>
+            </brwcol>
+            <brwcol [name]="'firstname'" [header]="labels.firstname" [width]="18" [visible]="!panelWidth.right"></brwcol>
+            <brwcol [name]="'lastname'" [header]="labels.lastname" [width]="45"></brwcol>
+            <brwcol [name]="'id'" [width]="'50px'" [cls]="'p-0'" [visible]="!panelWidth.right">
+                <ng-template #dataTableCell let-item="row">
+                    <div class="d-flex align-items-end flex-row">
+                        <div class="mr-1">
+                            <button type=" button" class="btn btn-outline-secondary btn-sm" (click)="showBasicData(item.id)"
+                                data-toggle="tooltip" data-placement="top" title="{{labels.title}}">
+                                <span [class]="'fa fa-pencil'"></span>
+                            </button>
+                        </div>
+                        <div class="d-flex align-items-end flex-column">
+                            <div class="mr-1">
+                                <button type=" button" class="btn btn-outline-secondary btn-sm" (click)="showPhoto(item)">
+                                    <span [class]="'fa fa-camera'"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </brwcol>
+        </brw>
+    </pgview>
+
+    <pgview [width]="panelWidth.right">
+        <userdocs *ngIf="panelWidth.right && panelType=='btnDocuments'" [poid]="oid" [parentId]="parentId" [rowId]="rowId"></userdocs>
+        <userlngs *ngIf="panelWidth.right && panelType=='btnExamLang'" [poid]="oid" [parentId]="parentId"></userlngs>
+    </pgview>
+
+</pgpanel>

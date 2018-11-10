@@ -1,0 +1,247 @@
+<brwtitle [title]="labels.title">
+  <input type="text" class="col-sm-2 text-primary" placeholder="Search" aria-label="Example text with button addon" aria-describedby="button-addon1">
+  <button type="button" class="btn btn-outline-primary btn-sm"><i class="fa fa-plus"></i> Add</button>
+</brwtitle>
+<brw [oid]="'testdata1'" [hasBackbutton]="true" (rowDoubleClick)="openDlg(content)">
+  <brwcol [name]="'username'" [header]="labels.exacode" [width]="10"></brwcol>
+  <brwcol [name]="'username'" [header]="labels.exnum" [width]="10"></brwcol>
+  <brwcol [name]="'username'" [header]="labels.lng" [width]="10"></brwcol>
+  <brwcol [name]="'username'" [header]="labels.usetstnr" [width]="10"></brwcol>
+  <brwcol [name]="'username'" [header]="labels.userecnr" [width]="10"></brwcol>
+  <brwcol [name]="'username'" [header]="labels.usevidnr" [width]="10"></brwcol>
+</brw>
+
+<ng-template #content let-modal>
+    <div class="modal-header pb-1">
+      <h4 class="modal-title" id="modal-basic-title">{{labels.detailtitle}}</h4>
+      <button type="button" class="close" aria-label="Close" (click)="closeDlg()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+
+      <div class="btn-group btn-group-toggle float-right" ngbRadioGroup [(ngModel)]="viewcard">
+        <label ngbButtonLabel class="btn btn-outline-primary">
+          <input ngbButton type="radio" [value]="'basic'"> {{labels.exacard}}
+        </label>
+        <label ngbButtonLabel class="btn btn-outline-primary">
+          <input ngbButton type="radio" [value]="'notify'"> {{labels.notifcard}}
+        </label>
+      </div>
+
+      <form>
+      
+        <div class="border border-primary rounded p-2" *ngIf="viewcard=='basic'">
+          <h6 class="text-primary">{{labels.exasubtitle}}</h6>
+      
+          <div class="form-row">
+            <div class="col-md-1">
+              <label for="exacode">{{labels.exacode}}</label>
+              <input type="text" class="form-control" id="exacode">
+            </div>
+            <div class="col-md-2">
+              <label for="exnum">{{labels.exnum}}</label>
+              <input type="text" class="form-control" id="exnum">
+            </div>
+            <div class="col-md-1">
+              <label for="lng">{{labels.lng}}</label>
+              <input type="text" class="form-control" id="lng">
+            </div>
+            <div class="col-md-2">
+              <label for="usetstnr">{{labels.usetstnr}}</label>
+              <input type="text" class="form-control" id="usetstnr">
+            </div>
+            <div class="col-md-2">
+              <label for="userecnr">{{labels.userecnr}}</label>
+              <input type="text" class="form-control" id="userecnr">
+            </div>
+            <div class="col-md-2">
+              <label for="usevidnr">{{labels.usevidnr}}</label>
+              <input type="text" class="form-control" id="usevidnr">
+            </div>
+          </div>
+      
+          <div class="form-row">
+            <div class="col-md-6">
+              <label for="planplace">{{labels.planplace}}</label>
+              <input type="text" class="form-control" id="planplace">
+            </div>
+            <div class="col-md-2">
+              <label for="plandate">{{labels.plandate}}</label>
+              <input type="text" class="form-control" id="plandate">
+            </div>
+            <div class="col-md-2">
+              <label for="plantime">{{labels.plantime}}</label>
+              <input type="text" class="form-control" id="plantime">
+            </div>
+          </div>
+      
+          <div class="form-row">
+            <div class="col-md-6">
+              <label for="realplace">{{labels.realplace}}</label>
+              <input type="text" class="form-control" id="realplace">
+            </div>
+            <div class="col-md-2">
+              <label for="realdate">{{labels.realdate}}</label>
+              <input type="text" class="form-control" id="realdate">
+            </div>
+            <div class="col-md-2">
+              <label for="realtime">{{labels.realtime}}</label>
+              <input type="text" class="form-control" id="realtime">
+            </div>
+            <div class="col-md-2">
+              <label for="chngreas">{{labels.chngreas}}</label>
+              <input type="text" class="form-control" id="chngreas">
+            </div>
+          </div>
+      
+          <div class="form-row">
+            <div class="col-md-4">
+              <label for="assigned">{{labels.assigned}}</label>
+              <input type="text" class="form-control" id="assigned">
+            </div>
+            <div class="col-md-4">
+              <label for="applicant">{{labels.applicant}}</label>
+              <input type="text" class="form-control" id="applicant">
+            </div>
+            <div class="col-md-2">
+              <label for="state">{{labels.state}}</label>
+              <input type="text" class="form-control" id="state">
+            </div>
+          </div>
+      
+        </div>
+      
+      
+        <div class="border border-primary rounded p-2" *ngIf="viewcard=='notify'">
+          <h6 class="text-primary mb-3">{{labels.notifsubtitle}}</h6>
+          <div class="form-row">
+            <div class="col-md-4">
+              <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+                <input type="checkbox" class="custom-control-input" id="notifbefexamsk">
+                <label class="custom-control-label" for="notifbefexamsk">{{labels.notifbefexamsk}}</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+                <input type="checkbox" class="custom-control-input" id="notifbefexam">
+                <label class="custom-control-label" for="notifbefexam">{{labels.notifbefexam}}</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+                <input type="checkbox" class="custom-control-input" id="notifbefexamapp">
+                <label class="custom-control-label" for="notifbefexamapp">{{labels.notifbefexamapp}}</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-4">
+              <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+                <input type="checkbox" class="custom-control-input" id="notifaftexamsk">
+                <label class="custom-control-label" for="notifaftexamsk">{{labels.notifaftexamsk}}</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+                <input type="checkbox" class="custom-control-input" id="notifaftexam">
+                <label class="custom-control-label" for="notifaftexam">{{labels.notifaftexam}}</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+                <input type="checkbox" class="custom-control-input" id="notifaftexamapp">
+                <label class="custom-control-label" for="notifaftexamapp">{{labels.notifaftexamapp}}</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-4">
+              <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+                <input type="checkbox" class="custom-control-input" id="notifbefevalsk">
+                <label class="custom-control-label" for="notifbefevalsk">{{labels.notifbefevalsk}}</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+                <input type="checkbox" class="custom-control-input" id="notifbefeval">
+                <label class="custom-control-label" for="notifbefeval">{{labels.notifbefeval}}</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+                <input type="checkbox" class="custom-control-input" id="notifbefevalapp">
+                <label class="custom-control-label" for="notifbefevalapp">{{labels.notifbefevalapp}}</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-4">
+              <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+                <input type="checkbox" class="custom-control-input" id="notifbefappsk">
+                <label class="custom-control-label" for="notifbefappsk">{{labels.notifbefappsk}}</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+                <input type="checkbox" class="custom-control-input" id="notifbefapp">
+                <label class="custom-control-label" for="notifbefapp">{{labels.notifbefapp}}</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+                <input type="checkbox" class="custom-control-input" id="notifbefappapp">
+                <label class="custom-control-label" for="notifbefappapp">{{labels.notifbefappapp}}</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-4">
+              <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+                <input type="checkbox" class="custom-control-input" id="notifaftappsk">
+                <label class="custom-control-label" for="notifaftappsk">{{labels.notifaftappsk}}</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+                <input type="checkbox" class="custom-control-input" id="notifaftapp">
+                <label class="custom-control-label" for="notifaftapp">{{labels.notifaftapp}}</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+                <input type="checkbox" class="custom-control-input" id="notifaftappapp">
+                <label class="custom-control-label" for="notifaftappapp">{{labels.notifaftappapp}}</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-4">
+              <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+                <input type="checkbox" class="custom-control-input" id="notiffinalsk">
+                <label class="custom-control-label" for="notiffinalsk">{{labels.notiffinalsk}}</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+                <input type="checkbox" class="custom-control-input" id="notiffinal">
+                <label class="custom-control-label" for="notiffinal">{{labels.notiffinal}}</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+                <input type="checkbox" class="custom-control-input" id="notiffinalapp">
+                <label class="custom-control-label" for="notiffinalapp">{{labels.notiffinalapp}}</label>
+              </div>
+            </div>
+          </div>
+            
+        </div>
+      
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="closeDlg()">{{labels.close}}</button>
+      <button type="button" class="btn btn-primary" (click)="closeDlg()">{{labels.saveall}}</button>
+    </div>
+</ng-template>

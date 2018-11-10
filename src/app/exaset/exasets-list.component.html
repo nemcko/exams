@@ -1,0 +1,78 @@
+<pgtitle [title]="labels['examinator'+examtype]" [oid]="oid" [brwFieldName]="'fullsearch'">
+  <div class="btn-group col-sm-3 px-0">
+    <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></span>
+    <input type="text" #search class="form-control px-1 text-primary" placeholder="{{labels.search}}">
+  </div>
+  <button type="button" class="btn btn-outline-secondary" (click)="addExaminator()" [class.disabled]="!access.adm"><i
+      class="fa fa-plus"></i>&nbsp;{{labels.btnnew}}&nbsp;&nbsp;</button>
+  <div class="dropdown">
+    <button class="btn btn-outline-secondary dropdown-toggle" appdropdown type="button" id="dropdownMenuButton"
+      [disabled]="!(this.examtype == 'adm' || this.examtype == 'lpes' || this.examtype == 'lprs' || this.examtype == 'lpts' || this.panelType !== 'btnMembers')"
+      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="selectPanelType('btnMembers')">
+      <i class="fa fa-user-circle"></i>&nbsp;{{labels.btnMembers}}
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="javascript:void(0)" (click)="selectPanelType('btnMembers')"><i class="fa fa-user-circle"></i>&nbsp;{{labels.btnMembers}}</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="javascript:void(0)" (click)="addMember()" [class.disabled]="!access.adm"><i class="fa fa-plus"></i>&nbsp;{{labels.btnadd}}</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="btn btn-outline-secondary dropdown-toggle" appdropdown type="button" id="dropdownMenuButton"
+      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="selectPanelType('btnUsers')">
+      <i class="fa fa-user"></i>&nbsp;{{labels.btnUsers}}
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="javascript:void(0)" (click)="selectPanelType('btnUsers')"><i class="fa fa-user"></i>&nbsp;{{labels.btnUsers}}</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="javascript:void(0)" (click)="addUser()" [class.disabled]="!access.adm"><i class="fa fa-link"></i>&nbsp;{{labels.btnadd}}</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="btn btn-outline-secondary dropdown-toggle" appdropdown type="button" id="dropdownMenuButton"
+      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="selectPanelType('btnClients')">
+      <i class="fa fa-address-card"></i>&nbsp;{{labels.btnClients}}
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="javascript:void(0)" (click)="selectPanelType('btnClients')"><i class="fa fa-address-card"></i>&nbsp;{{labels.btnClients}}</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="javascript:void(0)" (click)="addClient('')" [class.disabled]="!access.adm"><i
+          class="fa fa-plus"></i>&nbsp;{{labels.btnadd}}</a>
+    </div>
+  </div>
+
+</pgtitle>
+
+<pgpanel [lmargins]="20">
+  <pgview [width]="panelWidth.left" [lmargin]="0">
+    <div class="text-primary px-1">{{labels.title}}</div>
+    <brw [uuid]="uuid" [oid]="oid" [service]="service" (rowClick)="rowClick($event)" (rowDoubleClick)="rowDoubleClick($event)"
+      (rowChanged)="rowChanged($event)">
+      <brwcol [name]="'usr'" [header]="labels.usr" [width]="10"></brwcol>
+      <brwcol [name]="'firstname'" [header]="labels.firstname" [width]="40"></brwcol>
+      <brwcol [name]="'lastname'" [header]="labels.lastname" [width]="30"></brwcol>
+
+      <brwcol [name]="'phone'" [header]="labels.phone" [width]="10" [visible]="!(this.examtype == 'adm' || this.examtype == 'lpes' || this.examtype == 'lprs' || this.examtype == 'lpts' || this.panelType !== 'btnMembers')"></brwcol>
+      <brwcol [name]="'mobile'" [header]="labels.mobile" [width]="10" [visible]="!(this.examtype == 'adm' || this.examtype == 'lpes' || this.examtype == 'lprs' || this.examtype == 'lpts' || this.panelType !== 'btnMembers')"></brwcol>
+      <brwcol [name]="'email'" [header]="labels.email" [width]="15" [visible]="!(this.examtype == 'adm' || this.examtype == 'lpes' || this.examtype == 'lprs' || this.examtype == 'lpts' || this.panelType !== 'btnMembers')"></brwcol>
+      <brwcol [name]="'id'" [width]="'28px'" [cls]="'p-0 float-right'" [visible]="access.adm">
+        <ng-template #dataTableCell let-item="row">
+          <button type="button" class="btn btn-primary btn-sm" (click)="alertExaminerDlg(item)">
+            <span [class]="'fa fa-times'"></span>
+          </button>
+        </ng-template>
+      </brwcol>
+    </brw>
+  </pgview>
+
+  <pgview [width]="panelWidth.right">
+    <exasetmbrs *ngIf="panelWidth.right && panelType=='btnMembers'" [poid]="oid" [parentId]="parentId" [examtype]="examtype"></exasetmbrs>
+    <exasetusrs *ngIf="panelWidth.right && panelType=='btnUsers'" [poid]="oid" [parentId]="parentId" [examtype]="examtype"></exasetusrs>
+    <exasetclts *ngIf="panelWidth.right && panelType=='btnClients'" [poid]="oid" [parentId]="parentId" [examtype]="examtype"></exasetclts>
+  </pgview>
+</pgpanel>
+
+<pgalert [dlgid]="'deleteExaminertdlg'" [dlgRef]="deleteItemalertdlg" [title]="labels.delExaminerTitle" [type]="'YES-NO'"
+  (doClick)="doDeleteExaminer($event)">
+  <p>{{labels.delExaminerQuestion}}</p>
+</pgalert>

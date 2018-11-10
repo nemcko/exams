@@ -1,0 +1,51 @@
+{
+    "appname":{
+        "en":"Examinators",
+        "sk":"Preskúšania"
+    },
+    "exams":{
+        "en":"Examinations",
+        "sk":"Preskúšania"
+    },
+    "users":{
+        "en":"Users",
+        "sk":"Používatelia"
+    },
+    "documents": {
+        "en": "Documents",
+        "sk": "Dokumenty"
+    },
+    "examinatorexa": {
+        "en": "Examinators",
+        "sk": "Examinátori"
+    },
+    "verifications": {
+        "en": "Verifications",
+        "sk": "Preskúšania"
+    },
+    "evaluations": {
+        "en": "Evaluations",
+        "sk": "Hodnotenia"
+    },
+    "trainings": {
+        "en": "Trainings",
+        "sk": "Hodnotenia"
+    },
+    "addresses": {
+        "en": "Addresses",
+        "sk": "Adresy"
+    },
+    "clients": {
+        "en": "Clients",
+        "sk": "Klienti"
+    },
+    "flyoffices": {
+        "en": "Flyoffices",
+        "sk": "Let.úrady"
+    },
+    "exasets": {
+        "en": "Settings",
+        "sk": "Nastavenie"
+    }
+
+}

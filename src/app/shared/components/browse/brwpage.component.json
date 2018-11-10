@@ -1,0 +1,27 @@
+{
+    "indexColumn":{
+        "en":"index",
+        "sk":"index"
+    },
+    "selectColumn":{
+        "en":"select",
+        "sk":"výber"
+    },
+    "expandColumn":{
+        "en":"expand",
+        "sk":"expand"
+    },
+    "paginationLimit":{
+        "en":"Limit",
+        "sk":"Počet"
+    },
+    "paginationRange":{
+        "en":"Results",
+        "sk":"Výsledok"
+    },
+    "btnback": {
+        "en": "Back",
+        "sk": "Späť"
+    }
+
+}

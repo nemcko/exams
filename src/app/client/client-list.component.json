@@ -1,0 +1,56 @@
+{
+    "title": {
+        "en": "Clients",
+        "sk": "Klienti"
+    },
+    "dtitle": {
+        "en": "Client detail",
+        "sk": "Detail údajov klienta"
+    },
+
+    "btnClients":{
+        "en":"Clients",
+        "sk":"Klienti"
+    },
+    "btnAddresses":{
+        "en":"Addresses",
+        "sk":"Adresy"
+    },
+    "btnUsers": {
+        "en": "Users",
+        "sk": "Používatelia"
+    },
+    "delCliTitle": {
+        "en": "Delete client",
+        "sk": "Vymazanie klienta"
+    },
+    "delCliQuestion": {
+        "en": "Do you want to delete this client?",
+        "sk": "Chcete vymazať túto adresu klienta?"
+    },
+    "delUsrTitle": {
+        "en": "Delete user",
+        "sk": "Vymazanie používateľa"
+    },
+    "delUsrQuestion": {
+        "en": "Do you want to delete this user?",
+        "sk": "Chcete vymazať tohto používateľa?"
+    },
+    "addUserTitle": {
+        "en": "Add a user for this client",
+        "sk": "Pridať používateľa pre tohto klienta"
+    },
+    "addCliusrsTitle": {
+        "en": "Add a address for this client",
+        "sk": "Pridať adresu pre tohto klienta"
+    },
+    "delCliusrsTitle": {
+        "en": "Delete address",
+        "sk": "Vymazanie adresy"
+    },
+    "delCliusrsQuestion": {
+        "en": "Do you want to delete this address?",
+        "sk": "Chcete vymazať túto adresu?"
+    }
+
+}

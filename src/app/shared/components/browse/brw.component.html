@@ -1,0 +1,23 @@
+<ng-content></ng-content>
+<table #brwtable class="table table-sm table-hover table-striped table-bordered data-table">
+    <thead>
+        <tr>
+            <th *ngFor="let column of columns" #th scope="col" [class]="'text-primary column-header'" [hidden]="!column.visible" [style.width]="column.width | perc">
+                <div>{{column.header}}</div>
+                <span class="column-resize-handle" (mousedown)="resizeColumnStart($event, column, th)"></span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="data-table-row" *ngFor="let rowdata of rows; let index=index" 
+            (selectedChange)="onRowSelectChanged(rowdata)" 
+            (dblclick)="rowDoubleClicked(rowdata,$event)"
+            (click)="rowClicked(rowdata,$event)">
+                <td *ngFor="let column of columns; let icol=index" [hidden]="!column.visible" [class]="column.cls+' truncate'">
+                    <div *ngIf="!column.cellTemplate" [textContent]="rowdata[column.name]"></div>
+                    <div *ngIf="column.cellTemplate" [ngTemplateOutlet]="column.cellTemplate" [ngTemplateOutletContext]="{'column': column, 'row': rowdata}"></div>
+                </td>        
+        </tr>
+    </tbody> 
+</table>
+<brwpage [limit]="limit" [hasBackbutton]="hasBackbutton"></brwpage>

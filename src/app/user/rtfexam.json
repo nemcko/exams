@@ -1,0 +1,138 @@
+{
+    "exasubtitle": {
+        "en": "Basic data",
+        "sk": "Základné údaje"
+    },
+    "notifsubtitle": {
+        "en": "Notifications",
+        "sk": "Notifikácie"
+    },
+    "exnum": {
+        "en": "Exam Nr.",
+        "sk": "Skúška č."
+    },
+    "lng": {
+        "en": "Lng",
+        "sk": "Jazyk"
+    },
+    "vfrifr": {
+        "en": "VFR/IFR",
+        "sk": "VFR/IFR"
+    },
+    "uselpename": {
+        "en": "Name of LPE",
+        "sk": "Meno LPE"
+    },
+    "planplace": {
+        "en": "Planned location",
+        "sk": "Plánované miesto"
+    },
+    "plandate": {
+        "en": "Planned date",
+        "sk": "Plán.dátum"
+    },
+    "plantime": {
+        "en": "Planned time",
+        "sk": "Plán.čas"
+    },
+    "realdate": {
+        "en": "Real date",
+        "sk": "Skut.dátum"
+    },
+    "realtime": {
+        "en": "Real time",
+        "sk": "Skut.čas"
+    },
+    "chngreas": {
+        "en": "Change reason",
+        "sk": "Dôvod zmeny"
+    },
+    "assigned": {
+        "en": "Assigned",
+        "sk": "Zadal"
+    },
+    "applicant": {
+        "en": "Applicant",
+        "sk": "Žiadateľ"
+    },
+    "lpeplaned": {
+        "en": "Planned LPE",
+        "sk": "Plán.LPE"
+    },
+    "lpereal": {
+        "en": "Real LPE",
+        "sk": "Skut.LPE"
+    },
+    "lpechngre": {
+        "en": "LPE chng.re.",
+        "sk": "LPE dôvod zm."
+    },
+    "lperespon": {
+        "en": "Respon.LPE-S",
+        "sk": "Zodpov.LPE-S"
+    },
+    "notifbefexamsk": {
+        "en": "Notification before the examination by the Slovak Office",
+        "sk": "Notifikácia pred skúškou slovenský úrad"
+    },
+    "notifbefexam": {
+        "en": "Notification before the exam responsible authority",
+        "sk": "Notifikácia pred skúškou zodpovedný úrad"
+    },
+    "notifbefexamapp": {
+        "en": "Notification before the exam applicant + employer",
+        "sk": "Notifikácia pred skúškou žiadateľ + zamestnávateľ"
+    },
+
+    "notifaftexamsk": {
+        "en": "Notification after the examination by the Slovak Office",
+        "sk": "Notifikácia po skúške slovenský úrad"
+    },
+    "notifaftexam": {
+        "en": "Notification after the exam responsible authority",
+        "sk": "Notifikácia po skúške zodpovedný úrad"
+    },
+    "notifaftexamapp": {
+        "en": "Notification after the exam applicant + employer",
+        "sk": "Notifikácia po skúške žiadateľ + zamestnávateľ"
+    },
+
+    "regpayment": {
+        "en": "Registered payment",
+        "sk": "Zaregistrovaná platba"
+    },
+    "invoice": {
+        "en": "Invoice",
+        "sk": "Faktúra"
+    },
+    "certificate": {
+        "en": "Generated certificate",
+        "sk": "Vygenerovaný certifikát"
+    },
+    "employer": {
+        "en": "Responsible employer",
+        "sk": "Zodpovedný zamestnávateľ"
+    },
+    "examrec": {
+        "en": "Exam record",
+        "sk": "Exam record"
+    },
+    "finexam": {
+        "en": "Final examination level",
+        "sk": "Finálna úroveň preskúšania"
+    },
+    "respaviaauth": {
+        "en": "Responsible Aviation Authority",
+        "sk": "Zodpovedný letecký úrad"
+    },
+
+    "recording": {
+        "en": "Recording",
+        "sk": "Nahrávka"
+    },
+    "rectime": {
+        "en": "Recording time",
+        "sk": "Čas nahrávky"
+    }
+
+}

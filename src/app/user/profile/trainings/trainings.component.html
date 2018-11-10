@@ -1,0 +1,140 @@
+<brwtitle [title]="labels.title">
+  <input type="text" class="col-sm-2 text-primary" placeholder="Search" aria-label="Example text with button addon" aria-describedby="button-addon1">
+  <button type="button" class="btn btn-outline-primary btn-sm"><i class="fa fa-plus"></i> Add</button>
+</brwtitle>
+<brw [oid]="'testdata1'" [hasBackbutton]="true" (rowDoubleClick)="openDlg(content)">
+  <brwcol [name]="'username'" [header]="labels.exnum" [width]="10"></brwcol>
+  <brwcol [name]="'username'" [header]="labels.lng" [width]="10"></brwcol>
+  <brwcol [name]="'username'" [header]="labels.vfrifr" [width]="10"></brwcol>
+  <brwcol [name]="'username'" [header]="labels.uselpename" [width]="10"></brwcol>
+</brw>
+
+<ng-template #content let-modal>
+    <div class="modal-header pb-1">
+      <h4 class="modal-title" id="modal-basic-title">{{labels.detailtitle}}</h4>
+      <button type="button" class="close" aria-label="Close" (click)="closeDlg()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+      
+        <div class="border border-primary rounded p-2">
+          <h6 class="text-primary">{{labels.exasubtitle}}</h6>
+      
+          <div class="form-row">
+            <div class="col-md-2">
+              <label for="exnum">{{labels.exnum}}</label>
+              <input type="text" class="form-control" id="exnum">
+            </div>
+            <div class="col-md-1">
+              <label for="lng">{{labels.lng}}</label>
+              <input type="text" class="form-control" id="lng">
+            </div>
+            <div class="col-md-2">
+              <label for="vfrifr">{{labels.vfrifr}}</label>
+              <input type="text" class="form-control" id="vfrifr">
+            </div>
+            <div class="col-md-5">
+              <label for="uselpename">{{labels.uselpename}}</label>
+              <input type="text" class="form-control" id="uselpename">
+            </div>
+          </div>
+      
+          <div class="form-row">
+            <div class="col-md-6">
+              <label for="planplace">{{labels.planplace}}</label>
+              <input type="text" class="form-control" id="planplace">
+            </div>
+            <div class="col-md-2">
+              <label for="plandate">{{labels.plandate}}</label>
+              <input type="text" class="form-control" id="plandate">
+            </div>
+            <div class="col-md-2">
+              <label for="plantime">{{labels.plantime}}</label>
+              <input type="text" class="form-control" id="plantime">
+            </div>
+          </div>
+      
+          <div class="form-row">
+            <div class="col-md-2 offset-md-6">
+              <label for="realdate">{{labels.realdate}}</label>
+              <input type="text" class="form-control" id="realdate">
+            </div>
+            <div class="col-md-2">
+              <label for="realtime">{{labels.realtime}}</label>
+              <input type="text" class="form-control" id="realtime">
+            </div>
+            <div class="col-md-2">
+              <label for="chngreas">{{labels.chngreas}}</label>
+              <input type="text" class="form-control" id="chngreas">
+            </div>
+          </div>
+      
+          <div class="form-row">
+            <div class="col-md-4">
+              <label for="assigned">{{labels.assigned}}</label>
+              <input type="text" class="form-control" id="assigned">
+            </div>
+            <div class="col-md-4">
+              <label for="applicant">{{labels.applicant}}</label>
+              <input type="text" class="form-control" id="applicant">
+            </div>
+          </div>
+      
+        </div>
+      
+        <div class="mt-2"></div>
+
+        <div class="border border-primary rounded p-2">
+          <h6 class="text-primary">{{labels.notifsubtitle}}</h6>
+          <div class="form-row">
+            <div class="col-md-4">
+              <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+                <input type="checkbox" class="custom-control-input" id="notifbefexamsk">
+                <label class="custom-control-label" for="notifbefexamsk">{{labels.notifbefexamsk}}</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+                <input type="checkbox" class="custom-control-input" id="notifbefexam">
+                <label class="custom-control-label" for="notifbefexam">{{labels.notifbefexam}}</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+                <input type="checkbox" class="custom-control-input" id="notifbefexamapp">
+                <label class="custom-control-label" for="notifbefexamapp">{{labels.notifbefexamapp}}</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-4">
+              <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+                <input type="checkbox" class="custom-control-input" id="notifaftexamsk">
+                <label class="custom-control-label" for="notifaftexamsk">{{labels.notifaftexamsk}}</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+                <input type="checkbox" class="custom-control-input" id="notifaftexam">
+                <label class="custom-control-label" for="notifaftexam">{{labels.notifaftexam}}</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+                <input type="checkbox" class="custom-control-input" id="notifaftexamapp">
+                <label class="custom-control-label" for="notifaftexamapp">{{labels.notifaftexamapp}}</label>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="closeDlg()">{{labels.close}}</button>
+      <button type="button" class="btn btn-primary" (click)="closeDlg()">{{labels.saveall}}</button>
+    </div>
+</ng-template>

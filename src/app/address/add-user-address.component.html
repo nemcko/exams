@@ -1,0 +1,21 @@
+<pgaddlg [title]="labels.addUserTitle">
+    <brw [uuid]="uuid" [oid]="oid" [service]="service" [qparams]="qparams">
+      <brwtitle [brwFieldName]="'fullsearch'" [searchControl]="'search'">
+        <div class="btn-group col-sm-12 px-0">
+          <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></span>
+          <input type="text" id="search" class="form-control px-1 text-primary" placeholder="{{labels.search}}">
+          <button type="button" class="btn btn-outline-secondary" (click)="appendItem()" [class.disabled]="!access.adm"><i class="fa fa-plus"></i>&nbsp;{{labels.btnappend}}</button>
+        </div>
+      </brwtitle>
+      <brwcol [name]="'firstname'" [header]="labels.firstname" [width]="50"></brwcol>
+      <brwcol [name]="'lastname'" [header]="labels.lastname" [width]="30"></brwcol>
+      <brwcol [name]="'phone'" [header]="labels.phone" [width]="30"></brwcol>
+      <brwcol [name]="'id'" [width]="'28px'" [cls]="'p-0 float-right'" [visible]="access.adm">
+        <ng-template #dataTableCell let-item="row">
+          <button type="button" class="btn btn-primary btn-sm" (click)="addItem(item)">
+            <span [class]="'fa fa-plus'"></span>
+          </button>
+        </ng-template>
+      </brwcol>
+    </brw>
+</pgaddlg>

@@ -1,0 +1,14 @@
+{
+    "title":{
+        "en":"Users",
+        "sk":"Používatelia"
+    },
+    "name":{
+        "en":"Name",
+        "sk":"Meno"
+    },
+    "username":{
+        "en":"User Name",
+        "sk":"Používateľ"
+    }
+}

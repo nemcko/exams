@@ -1,0 +1,38 @@
+{
+    "code": {
+        "en": "Code",
+        "sk": "Kód"
+    },
+    "name":{
+        "en":"Name",
+        "sk":"Názov"
+    },
+    "ico": {
+        "en": "Business ID",
+        "sk": "IČO"
+    },
+    "icdph": {
+        "en": "VAT reg.no.",
+        "sk": "IČDPH"
+    },
+    "dic": {
+        "en": "Tax ID",
+        "sk": "DIČ"
+    },
+    "comment":{
+        "en":"Comment",
+        "sk":"Poznámka"
+    },
+    "phone": {
+        "en": "Phone",
+        "sk": "Telefón"
+    },
+    "email": {
+        "en": "E-mail",
+        "sk": "E-mail"
+    },
+    "agreement": {
+        "en": "Agreement no.",
+        "sk": "Zmluva č."
+    }   
+}

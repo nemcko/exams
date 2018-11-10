@@ -1,0 +1,28 @@
+{
+    "title": {
+        "en": "User Profile",
+        "sk": "Užívateľský profil"
+    },
+    
+    "btndet": {
+        "en": "User data",
+        "sk": "Údaje používateľa"
+    },
+    "btndoc": {
+        "en": "Documents",
+        "sk": "Dokumenty"
+    },
+    "btneva": {
+        "en": "Evaluations",
+        "sk": "Preskúšania"
+    },
+    "btnexa": {
+        "en": "Examinations",
+        "sk": "Hodnotenia"
+    },
+    "btntra": {
+        "en": "Trainings",
+        "sk": "Tréningy"
+    }
+    
+}

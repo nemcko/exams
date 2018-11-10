@@ -1,0 +1,69 @@
+<pgtitle [title]="labels.title" [subtitle]="labels.name">
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-outline-secondary"><i class="fa fa-plus"></i> Add</button>
+        <button type="button" class="btn btn-outline-secondary"><i class="fa fa-edit"></i> Edit</button>
+        <button type="button" class="btn btn-outline-secondary"><i class="fa fa-remove"></i> Delete</button>
+        <button type="button" class="btn btn-outline-secondary"><i class="fa fa-list"></i> List</button>
+    </div>
+</pgtitle>
+<pgpanel [lmargins]="20">
+    <pgview [width]="60" [lmargin]="0">
+        <brwtitle [title]="labels.username" [subtitle]="labels.name">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-outline-primary btn-sm"><i class="fa fa-plus"></i> Add</button>
+                <button type="button" class="btn btn-outline-primary btn-sm"><i class="fa fa-edit"></i> Edit</button>
+                <button type="button" class="btn btn-outline-primary btn-sm"><i class="fa fa-remove"></i> Delete</button>
+            </div>
+        </brwtitle>
+        <brw [oid]="oid" [title]="labels.title" (rowClick)="rowClick($event)" (rowDoubleClick)="rowDoubleClick($event)">
+            <brwcol [name]="'name'" [header]="labels.username" [width]="50"></brwcol>
+            <brwcol [name]="'phone'" [header]="'Phone Number'" [width]="20"></brwcol>
+            <brwcol [name]="'email'" [header]="'Email'" [width]="30"></brwcol>
+        </brw>
+    </pgview>
+    <pgview [width]="40" >
+        <brwtitle [title]="labels.name">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <div class="dropdown">
+                    <button class="btn btn-outline-primary btn-sm dropdown-toggle" appdropdown type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-th-list"></i> Menu
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+            </div>
+        </brwtitle>
+
+        <brw 
+        [oid]="oid" 
+        [title]="labels.username"
+        >
+            <brwcol [name]="'name'" [header]="labels.username">
+                <ng-template #dataTableCell let-item="row">
+                    <div [class]="(item.active?'text-danger':'inherit')">{{item.name}}</div>
+                </ng-template>
+            </brwcol>
+            <brwcol [name]="'active'" [width]="'28px'" [cls]="'p-0'">
+                <ng-template #dataTableCell let-item="row">
+                    <button type="button" class="btn btn-outline-secondary btn-sm"           
+                        (click)="msg(item.name)">
+                        <span [class]="'fa fa-plus'" *ngIf="item.active"></span>
+                        <span [class]="'fa fa-minus'" *ngIf="!item.active"></span>
+                    </button>
+
+                    <!-- <button type="button" class="btn btn-outline-success btn-sm" *ngIf="item.active" (click)="msg(item.name)">
+                        <span [class]="'fa fa-plus'"></span>
+                    </button>
+
+                    <button type="button" class="btn btn-outline-danger btn-sm" *ngIf="!item.active" (click)="msg(item.name)">
+                        <span [class]="'fa fa-times'"></span>
+                    </button>  -->
+                </ng-template>
+            </brwcol>
+        </brw>
+    </pgview>
+</pgpanel>

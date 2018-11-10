@@ -1,0 +1,78 @@
+{
+    "title": {
+        "en": "Examinators",
+        "sk": "Examinátori"
+    },
+    "dtitle": {
+        "en": "Client detail",
+        "sk": "Detail údajov klienta"
+    },
+
+    "btnMembers":{
+        "en":"Members",
+        "sk":"Členovia"
+    },
+    "btnUsers": {
+        "en": "Users",
+        "sk": "Používatelia"
+    },
+    "btnClients":{
+        "en":"Clients",
+        "sk":"Klienti"
+    },
+
+    "addExaminerTitle": {
+        "en": "Add Examiner",
+        "sk": "Nový skúšajúci"
+    },
+    "delExaminerTitle": {
+        "en": "Delete examiner",
+        "sk": "Vymazanie skúšateľa"
+    },
+    "delExaminerQuestion": {
+        "en": "Do you want to delete this examiner?",
+        "sk": "Chcete vymazať tohto preskúšavateľa?"
+    },
+
+    "addMemberTitle": {
+        "en": "Add member",
+        "sk": "Nový člen"
+    },
+    "delMemberTitle": {
+        "en": "Delete member",
+        "sk": "Vymazanie člena"
+    },
+    "delMemberQuestion": {
+        "en": "Do you want to delete this member of group?",
+        "sk": "Chcete vymazať tohto člena skupiny?"
+    },
+
+
+    "addUserTitle": {
+        "en": "Add user",
+        "sk": "Nový používateľ"
+    },
+    "delUserTitle": {
+        "en": "Delete user",
+        "sk": "Vymazanie používateľa"
+    },
+    "delUserQuestion": {
+        "en": "Do you want to delete this user?",
+        "sk": "Chcete vymazať tohto používateľa?"
+    },
+
+    "addClientTitle": {
+        "en": "Add client",
+        "sk": "Nový klient"
+    },
+    "delClientTitle": {
+        "en": "Delete client",
+        "sk": "Vymazanie klienta"
+    },
+    "delClientQuestion": {
+        "en": "Do you want to delete this client?",
+        "sk": "Chcete vymazať tohto klienta?"
+    }
+
+
+}

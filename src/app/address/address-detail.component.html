@@ -1,0 +1,66 @@
+<div class="modal-header pb-1">
+    <h4 class="modal-title">{{labels.dtitle}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body pt-0 pb-0">
+
+    <form [formGroup]="detailForm" (ngSubmit)="onSubmit()">
+
+        <div class="border border-primary rounded px-2">
+            <h6 class="text-primary">{{labels.exasubtitle}}</h6>
+
+            <div class="form-row">
+                <div class="form-group col-12">
+                    <label for="address">{{labels.address}}</label>
+                    <input type="text" formControlName="address" class="form-control" [ngClass]="{ 'is-invalid': f.address.errors }"
+                        [fldvalid]="f.address" name="address" />
+                    <div *ngIf="f.address.invalid && (f.address.dirty || f.address.touched)" class="invalid-feedback">
+                        <div *ngIf="f.address.errors.required">{{labels.errrequired}}</div>
+                        <div *ngIf="f.address.errors.addressExist">{{labels.erraddressexist}}</div>
+                        <div *ngIf="f.address.errors.maxlength">{{labels.errmaxlen}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-3">
+                    <label for="zip">{{labels.zip}}</label>
+                    <input type="text" name="zip" formControlName="zip" class="form-control" [ngClass]="{ 'is-invalid': f.zip.errors }" />
+                    <div *ngIf="f.zip.invalid && (f.zip.dirty || f.zip.touched)" class="invalid-feedback">
+                        <div *ngIf="f.zip.errors.required">{{labels.errrequired}}</div>
+                        <div *ngIf="f.zip.errors.maxlength">{{labels.errmaxlen}}</div>
+                    </div>
+                </div>
+                <div class="form-group col-9">
+                    <label for="city">{{labels.city}}</label>
+                    <input type="text" name="city" formControlName="city" class="form-control" [ngClass]="{ 'is-invalid': f.city.errors }" />
+                    <div *ngIf="f.city.invalid && (f.city.dirty || f.city.touched)" class="invalid-feedback">
+                        <div *ngIf="f.city.errors.required">{{labels.errrequired}}</div>
+                        <div *ngIf="f.city.errors.maxlength">{{labels.errmaxlen}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-6">
+                    <label for="state">{{labels.state}}</label>
+                    <input type="text" name="state" formControlName="state" class="form-control" [ngClass]="{ 'is-invalid': f.state.errors }" />
+                    <div *ngIf="f.state.invalid && (f.state.dirty || f.state.touched)" class="invalid-feedback">
+                        <div *ngIf="f.state.errors.required">{{labels.errrequired}}</div>
+                        <div *ngIf="f.state.errors.maxlength">{{labels.errmaxlen}}</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="activeModal.dismiss('Cross click')">{{labels.btnclose}}</button>
+    <button [disabled]="!recid" type="button" class="btn btn-secondary" data-dismiss="modal" (click)="alertDlg()">{{labels.btndelete}}</button>
+    <button [disabled]="detailForm.invalid" type="submit" class="btn btn-primary" (click)="onSubmit()">{{labels.btnsave}}</button>
+</div>
+
+<pgalert [dlgid]="'deletealertdlg'" [dlgRef]="deleteAlert" [title]="labels.delAddrTitle" [type]="'YES-NO'" (doClick)="doDelete($event)">
+    <p>{{labels.delAddrQuestion}}</p>
+</pgalert>

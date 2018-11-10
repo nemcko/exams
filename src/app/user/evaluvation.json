@@ -1,0 +1,320 @@
+{
+    "lpesubtitle": {
+        "en": "Rating by LPE",
+        "sk": "Hodnotenie od LPE"
+    },
+    "lpecard": {
+        "en": "LPE",
+        "sk": "LPE"
+    },
+    "lpeplaned": {
+        "en": "Planned LPE",
+        "sk": "Plán.LPE"
+    },
+   "lpereal": {
+        "en": "Real LPE",
+        "sk": "Skut.LPE"
+    },
+    "lpechngre": {
+        "en": "LPE chng.re.",
+        "sk": "LPE dôvod zm."
+    },
+    "lperespon": {
+        "en": "Respon.LPE-S",
+        "sk": "Zodpov.LPE-S"
+    },
+    "lperat1": {
+        "en": "LPE rating sec.1",
+        "sk": "LPE hodn.sek.1"
+    },
+    "lperat1val": {
+        "en": "Rating1",
+        "sk": "Hodn.1"
+    },
+    "lperat1com": {
+        "en": "Comment1",
+        "sk": "Poznámka.1"
+    },
+    "lperat2": {
+        "en": "LPE rating sec.2",
+        "sk": "LPE hodn.sek.2"
+    },
+    "lperat2val": {
+        "en": "Rating2",
+        "sk": "Hodn.2"
+    },
+    "lperat2com": {
+        "en": "Comment2",
+        "sk": "Poznámka.2"
+    },
+    "lperat3": {
+        "en": "LPE rating sec.3",
+        "sk": "LPE hodn.sek.3"
+    },
+    "lperat3val": {
+        "en": "Rating3",
+        "sk": "Hodn.3"
+    },
+    "lperat3com": {
+        "en": "Comment3",
+        "sk": "Poznámka.3"
+    },
+    "lperat4": {
+        "en": "LPE rating sec.4",
+        "sk": "LPE hodn.sek.4"
+    },
+    "lperat4val": {
+        "en": "Rating4",
+        "sk": "Hodn.4"
+    },
+    "lperat4com": {
+        "en": "Comment4",
+        "sk": "Poznámka.4"
+    },
+    "lperat5": {
+        "en": "LPE rating sec.5",
+        "sk": "LPE hodn.sek.5"
+    },
+    "lperat5val": {
+        "en": "Rating5",
+        "sk": "Hodn.5"
+    },
+    "lperat5com": {
+        "en": "Comment5",
+        "sk": "Poznámka.5"
+    },
+    "lperate": {
+        "en": "Rating LPE",
+        "sk": "Hodnot.LPE"
+    },
+
+    "lprsubtitle": {
+        "en": "Rating by LPR",
+        "sk": "Hodnotenie od LPR"
+    },
+    "lprcard": {
+        "en": "LPR",
+        "sk": "LPR"
+    },
+    "lprplaned": {
+        "en": "Planned LPR",
+        "sk": "Plán.LPR"
+    },
+    "lprreal": {
+        "en": "Real LPR",
+        "sk": "Skut.LPR"
+    },
+    "lprchngre": {
+        "en": "LPR chng.re.",
+        "sk": "LPR dôvod zm."
+    },
+    "lprrespon": {
+        "en": "Respon.LPR-S",
+        "sk": "Zodpov.LPR-S"
+    },
+    "lprrat1": {
+        "en": "LPR rating sec.1",
+        "sk": "LPR hodn.sek.1"
+    },
+    "lprrat1val": {
+        "en": "Rating1",
+        "sk": "Hodn.1"
+    },
+    "lprrat1com": {
+        "en": "Comment1",
+        "sk": "Poznámka.1"
+    },
+    "lprrat2": {
+        "en": "LPR rating sec.2",
+        "sk": "LPR hodn.sek.2"
+    },
+    "lprrat2val": {
+        "en": "Rating2",
+        "sk": "Hodn.2"
+    },
+    "lprrat2com": {
+        "en": "Comment2",
+        "sk": "Poznámka.2"
+    },
+    "lprrat3": {
+        "en": "LPR rating sec.3",
+        "sk": "LPR hodn.sek.3"
+    },
+    "lprrat3val": {
+        "en": "Rating3",
+        "sk": "Hodn.3"
+    },
+    "lprrat3com": {
+        "en": "Comment3",
+        "sk": "Poznámka.3"
+    },
+    "lprrat4": {
+        "en": "LPR rating sec.4",
+        "sk": "LPR hodn.sek.4"
+    },
+    "lprrat4val": {
+        "en": "Rating4",
+        "sk": "Hodn.4"
+    },
+    "lprrat4com": {
+        "en": "Comment4",
+        "sk": "Poznámka.4"
+    },
+    "lprrat5": {
+        "en": "LPR rating sec.5",
+        "sk": "LPR hodn.sek.5"
+    },
+    "lprrat5val": {
+        "en": "Rating5",
+        "sk": "Hodn.5"
+    },
+    "lprrat5com": {
+        "en": "Comment5",
+        "sk": "Poznámka.5"
+    },
+    "lprrate": {
+        "en": "Rating LPR",
+        "sk": "Hodnot.LPR"
+    },
+
+
+    "appsubtitle": {
+        "en": "Appeal against result",
+        "sk": "Odvolanie sa voči výsledkom"
+    },
+    "appcard": {
+        "en": "Appeal",
+        "sk": "Odvolanie"
+    },
+    "appplaned": {
+        "en": "Planned appeal",
+        "sk": "Plán.odvolanie"
+    },
+    "appreal": {
+        "en": "Real appeal",
+        "sk": "Skut.odvolanie"
+    },
+    "appchngre": {
+        "en": "Appeal chng.re.",
+        "sk": "Odvolanie-dôvod zm."
+    },
+    "apprat1": {
+        "en": "Appeal rating sec.1",
+        "sk": "Odvolanie-hodn.sek.1"
+    },
+    "apprat1val": {
+        "en": "Rating1",
+        "sk": "Hodn.1"
+    },
+    "apprat1com": {
+        "en": "Comment1",
+        "sk": "Poznámka.1"
+    },
+    "apprat2": {
+        "en": "Appeal rating sec.2",
+        "sk": "Odvolanie-hodn.sek.2"
+    },
+    "apprat2val": {
+        "en": "Rating2",
+        "sk": "Hodn.2"
+    },
+    "apprat2com": {
+        "en": "Comment2",
+        "sk": "Poznámka.2"
+    },
+    "apprat3": {
+        "en": "Appeal rating sec.3",
+        "sk": "Odvolanie-hodn.sek.3"
+    },
+    "apprat3val": {
+        "en": "Rating3",
+        "sk": "Hodn.3"
+    },
+    "apprat3com": {
+        "en": "Comment3",
+        "sk": "Poznámka.3"
+    },
+    "apprat4": {
+        "en": "Appeal rating sec.4",
+        "sk": "Odvolanie-hodn.sek.4"
+    },
+    "apprat4val": {
+        "en": "Rating4",
+        "sk": "Hodn.4"
+    },
+    "apprat4com": {
+        "en": "Comment4",
+        "sk": "Poznámka.4"
+    },
+    "apprat5": {
+        "en": "Appeal rating sec.5",
+        "sk": "Odvolanie-hodn.sek.5"
+    },
+    "apprat5val": {
+        "en": "Rating5",
+        "sk": "Hodn.5"
+    },
+    "apprat5com": {
+        "en": "Comment5",
+        "sk": "Poznámka.5"
+    },
+    "apprate": {
+        "en": "Rating of appeal",
+        "sk": "Hodnot.odvolania"
+    },
+
+    "examrec": {
+        "en": "Exam record",
+        "sk": "Exam record"
+    },
+    "ratrep": {
+        "en": "Rating report",
+        "sk": "Rating report"
+    },
+    "finexalev": {
+        "en": "Final examination level",
+        "sk": "Fin.úroveň preskúšania"
+    },
+    "valexato": {
+        "en": "Validity of review to",
+        "sk": "Platnosť preskúš.do"
+    },
+    "aviaauto": {
+        "en": "Aviation Authority",
+        "sk": "Letecký úrad"
+    },
+    "regpayment": {
+        "en": "Registered payment",
+        "sk": "Zaregistrovaná platba"
+    },
+    "invoice": {
+        "en": "Invoice",
+        "sk": "Faktúra"
+    },
+    "certificate": {
+        "en": "Generated certificate",
+        "sk": "Vygenerovaný certifikát"
+    },
+    "employer": {
+        "en": "Responsible employer",
+        "sk": "Zodpovedný zamestnávateľ"
+    },
+
+    "finexam": {
+        "en": "Final examination level",
+        "sk": "Finálna úroveň preskúšania"
+    },
+    "respaviaauth": {
+        "en": "Responsible Aviation Authority",
+        "sk": "Zodpovedný letecký úrad"
+    },
+
+    "recording": {
+        "en": "Recording",
+        "sk": "Nahrávka"
+    },
+    "rectime": {
+        "en": "Recording time",
+        "sk": "Čas nahrávky"
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "title": {
+        "en": "Photo",
+        "sk": "Fotografia"
+    },
+    "btnUpload": {
+        "en": "Upload picture",
+        "sk": "Nahrať obrázok"
+    },
+    "btnPhoto": {
+        "en": "Selfie",
+        "sk": "Fotografia"
+    },
+    "uploadSuccess": {
+        "en": "Successfully uploaded image",
+        "sk": "Fotografia bola načítaná úspešne"
+    },
+    "uploadError": {
+        "en": "Error uploading image",
+        "sk": "Chyba pri načítaní"
+    },
+    "deleteSuccess": {
+        "en": "Successfully deleted image",
+        "sk": "Obrázok bol vymazaný"
+    },
+    "deleteError": {
+        "en": "Error deleting image",
+        "sk": "Chyba pri vymazávaní obrázka"
+    }
+}

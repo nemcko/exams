@@ -1,0 +1,156 @@
+{
+    "title": {
+        "en": "Users",
+        "sk": "Používatelia"
+    },
+    "dtitle": {
+        "en": "User Registration Data",
+        "sk": "Registračné údaje používateľa"
+    },
+
+    "btnUser":{
+        "en":"User",
+        "sk":"Používateľ"
+    },
+    "btnDocuments":{
+        "en":"Documents",
+        "sk":"Dokumenty"
+    },
+    "btnExamLang":{
+        "en":"Exa.Lang.",
+        "sk":"Jaz.presk."
+    },
+    "labelExamLang":{
+        "en":"Authorization to perform a language test",
+        "sk":"Oprávnenie vykonávať jazykové preskúšanie"
+    },
+    "titleExamLang":{
+        "en":"Authorization for",
+        "sk":"Oprávnenie pre"
+    },
+    "lng":{
+        "en":"Language",
+        "sk":"Jazyk"
+    },
+    "level":{
+        "en":"Level",
+        "sk":"Úroveň"
+    },
+    "lnglevels": {
+        "en": [
+            {
+                "level": "A1",
+                "name": "Beginner (A1)"
+            },
+            {
+                "level": "A2",
+                "name": "Elementary (A2)"
+            },
+            {
+                "level": "B1",
+                "name": "Intermediate (B1)"
+            },
+            {
+                "level": "B2",
+                "name": "Upper-Intermediate (B2)"
+            },
+            {
+                "level": "C1",
+                "name": "Advanced (C1)"
+            },
+            {
+                "level": "C2",
+                "name": "Proficiency (C2)"
+            }
+        ],
+        "sk": [
+            {
+                "level": "A1",
+                "name": "Začiatočník (A1)"
+            },
+            {
+                "level": "A2",
+                "name": "Elementárne (A2)"
+            },
+            {
+                "level": "B1",
+                "name": "Stredná (B1)"
+            },
+            {
+                "level": "B2",
+                "name": "Horná stredná (B2)"
+            },
+            {
+                "level": "C1",
+                "name": "Pokročilý (C1)"
+            },
+            {
+                "level": "C2",
+                "name": "Zbehlý (C2)"
+            }
+        ]
+    },
+    "rtf":{
+        "en":"Is authorized to carry out the examinations",
+        "sk":"Je oprávnený vykonávať preskúšania"
+    },
+    "rtftitle":{
+        "en":"RTF",
+        "sk":"RTF"
+    },
+    "titleDocuments":{
+        "en":"Personal documents",
+        "sk":"Osobné dokumenty"
+    },
+    "titleExamDocument":{
+        "en":"Document",
+        "sk":"Dokument"
+    },
+    "type":{
+        "en":"Type",
+        "sk":"Typ"
+    },
+    "doctypes": {
+        "en": [
+            {
+                "type": "lic",
+                "name": "License"
+            },
+            {
+                "type": "doc",
+                "name": "Document"
+            }
+        ],
+        "sk": [
+            {
+                "type": "lic",
+                "name": "Licencia"
+            },
+            {
+                "type": "doc",
+                "name": "Dokument"
+            }
+        ]
+    },
+    "name":{
+        "en":"Name",
+        "sk":"Názov"
+    },
+    "comment":{
+        "en":"Comment",
+        "sk":"Komentár"
+    },
+    "dafr":{
+        "en":"From",
+        "sk":"Od"
+    },
+    "dato":{
+        "en":"To",
+        "sk":"Do"
+    },
+    "droptext":{
+        "en":"Drop file here",
+        "sk":"Sem pustiť súbor"
+    }
+
+}

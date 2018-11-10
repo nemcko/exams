@@ -1,0 +1,28 @@
+{
+    "lng":{
+        "en":"Language",
+        "sk":"Jazyk"
+    },
+    "lngs": {
+        "en": [
+            {
+                "lng": "en",
+                "name": "English"
+            },
+            {
+                "lng": "sk",
+                "name": "Slovak"
+            }
+        ],
+        "sk": [
+            {
+                "lng": "en",
+                "name": "Anglicky"
+            },
+            {
+                "lng": "sk",
+                "name": "Slovensky"
+            }
+        ]
+    }
+}

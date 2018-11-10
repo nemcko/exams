@@ -1,0 +1,53 @@
+    <form class="col-md-12" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="form-group col-3">
+          <label for="username">{{labels.usr}}</label>
+          <input type="text" formControlName="username" class="form-control" />
+        </div>
+        <div class="form-group col-3">
+          <label for="firstname">{{labels.firstname}}</label>
+          <input type="text" formControlName="firstname" class="form-control" />
+        </div>
+        <div class="form-group col-5">
+          <label for="lastname">{{labels.lastname}}</label>
+          <input type="text" formControlName="lastname" class="form-control" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-3">
+          <label for="phone">{{labels.phone}}</label>
+          <input type="text" formControlName="phone" class="form-control" />
+        </div>
+        <div class="form-group col-3">
+          <label for="mobile">{{labels.mobile}}</label>
+          <input type="text" formControlName="mobile" class="form-control" />
+        </div>
+        <div class="form-group col-3">
+          <label for="email">{{labels.email}}</label>
+          <input type="email" formControlName="email" class="form-control" />
+        </div>
+        <div class="form-group col-3">
+          <label for="web">{{labels.web}}</label>
+          <input type="text" formControlName="web" class="form-control" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-2">
+          <label for="profession">{{labels.profession}}</label>
+          <input type="text" formControlName="profession" class="form-control" />
+        </div>
+        <div class="form-group col-3">
+          <label for="speaks">{{labels.speaks}}</label>
+          <input type="text" formControlName="speaks" class="form-control" />
+        </div>
+
+      </div>
+    </form>
+
+<pgaction>
+    <button class="btn ml-1 col-3">{{labels.btnadd}}</button>
+    <button class="btn ml-1 col-3">{{labels.btndelete}}</button>
+    <button [disabled]="loading" class="btn ml-1 btn-primary col-3">{{labels.btnsave}}</button>
+</pgaction>

@@ -1,0 +1,58 @@
+<div class="modal-header pb-1">
+    <h4 class="modal-title">{{labels.dtitle}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body pt-0 pb-0">
+
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+        <div class="border border-primary rounded px-2">
+            <h6 class="text-primary">{{labels.exasubtitle}}</h6>
+            <div class="form-row">
+                <div class="form-group col-3" frminput [id]="'usr'" [fld]="f.usr" [labels]="labels">
+                    <input type="text" name="usr" [readonly]="id && id!==''" formControlName="usr" class="form-control"
+                        [ngClass]="{ 'is-invalid': f.usr.errors }" />
+                </div>
+                <div class="form-group col-3" frminput [id]="'firstname'" [fld]="f.firstname" [labels]="labels">
+                    <input type="text" name="firstname" formControlName="firstname" class="form-control" [ngClass]="{ 'is-invalid': f.firstname.errors }" />
+                </div>
+                <div class="form-group col-5" frminput [id]="'lastname'" [fld]="f.lastname" [labels]="labels">
+                    <input type="text" name="lastname" formControlName="lastname" class="form-control" [ngClass]="{ 'is-invalid': f.lastname.errors }" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-3" frminput [id]="'phone'" [fld]="f.phone" [labels]="labels">
+                    <input type="text" name="phone" ormControlName="usr" class="form-control" [ngClass]="{ 'is-invalid': f.phone.errors }" />
+                </div>
+                <div class="form-group col-3" frminput [id]="'mobile'" [fld]="f.mobile" [labels]="labels">
+                    <input type="text" name="mobile" formControlName="mobile" class="form-control" [ngClass]="{ 'is-invalid': f.mobile.errors }" />
+                </div>
+                <div class="form-group col-3" frminput [id]="'email'" [fld]="f.email" [labels]="labels">
+                    <input type="text" name="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': f.email.errors }" />
+                </div>
+                <div class="form-group col-3" frminput [id]="'web'" [fld]="f.web" [labels]="labels">
+                    <input type="text" name="web" formControlName="web" class="form-control" [ngClass]="{ 'is-invalid': f.web.errors }" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-2" frminput [id]="'profession'" [fld]="f.profession" [labels]="labels">
+                    <input type="text" name="profession" formControlName="profession" class="form-control" [ngClass]="{ 'is-invalid': f.profession.errors }" />
+                </div>
+                <div class="form-group col-8">
+                    <label for="speaks">{{labels.speaks}}</label>
+                    <ng-select id="speaks" [items]="languages" bindLabel="name" bindValue="id" labelForId="speaks"
+                        [multiple]="true" clearAllText="Clear" formControlName="speaks" [ngClass]="{ 'is-invalid': f.speaks.errors }">
+                    </ng-select>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="activeModal.dismiss('Cross click')">{{labels.btnclose}}</button>
+    <button [disabled]="!recid" type="button" class="btn btn-secondary" data-dismiss="modal" (click)="deleteData()">{{labels.btndelete}}</button>
+    <button [disabled]="profileForm.invalid" type="submit" class="btn btn-primary" (click)="onSubmit()">{{labels.btnsave}}</button>
+</div>

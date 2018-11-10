@@ -1,0 +1,476 @@
+<div class="modal-header pb-1">
+    <h4 class="modal-title" id="modal-basic-title">{{labels.detailtitle}}</h4>
+    <button type="button" class="close" aria-label="Close"  (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body py-0">
+
+    <div class="btn-group btn-group-toggle float-right" ngbRadioGroup [(ngModel)]="viewcard">
+      <label ngbButtonLabel class="btn btn-outline-primary">
+        <input ngbButton type="radio" [value]="'lpe'"> {{labels.lpecard}}
+      </label>
+      <label ngbButtonLabel class="btn btn-outline-primary">
+        <input ngbButton type="radio" [value]="'lpr'"> {{labels.lprcard}}
+      </label>
+      <label ngbButtonLabel class="btn btn-outline-primary">
+        <input ngbButton type="radio" [value]="'app'"> {{labels.appcard}}
+      </label>
+    </div>
+  
+
+
+    <form>
+    
+      <div class="border border-primary rounded p-2" *ngIf="viewcard=='lpe'">
+        <h6 class="text-primary">{{labels.lpesubtitle}}</h6>
+    
+        <div class="form-row">
+          <div class="col-md-3">
+            <label for="lpeplaned">{{labels.lpeplaned}}</label>
+            <input type="text" class="form-control" id="lpeplaned">
+          </div>
+          <div class="col-md-3">
+            <label for="lpereal">{{labels.lpereal}}</label>
+            <input type="text" class="form-control" id="lpereal">
+          </div>
+          <div class="col-md-3">
+            <label for="lpechngre">{{labels.lpechngre}}</label>
+            <input type="text" class="form-control" id="lpechngre">
+          </div>
+          <div class="col-md-3">
+            <label for="lperespon">{{labels.lperespon}}</label>
+            <input type="text" class="form-control" id="lperespon">
+          </div>
+        </div>
+    
+        <div class="form-row">
+          <div class="col-md-11">
+            <label for="lperat1">{{labels.lperat1}}</label>
+            <input type="text" class="form-control" id="lperat1">
+          </div>
+          <div class="col-md-1">
+            <label for="lperat1val">{{labels.lperat1val}}</label>
+            <select class="custom-select" id="lperat1val">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+          </div>
+          <div class="col-md-12 input-group input-group-sm mb-3 mr-3 mt-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="lperat1com">{{labels.lperat1com}}</span>
+            </div>
+            <input type="text" class="form-control" aria-describedby="lperat1com">
+          </div>
+        </div>
+    
+        <div class="form-row">
+          <div class="col-md-11">
+            <label for="lperat2">{{labels.lperat2}}</label>
+            <input type="text" class="form-control" id="lperat2">
+          </div>
+          <div class="col-md-1">
+            <label for="lperat2val">{{labels.lperat2val}}</label>
+            <select class="custom-select" id="lperat2val">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+          </div>
+          <div class="col-md-12 input-group input-group-sm mb-3 mr-3 mt-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="lperat2com">{{labels.lperat2com}}</span>
+            </div>
+            <input type="text" class="form-control" aria-describedby="lperat2com">
+          </div>
+        </div>
+    
+        <div class="form-row">
+          <div class="col-md-11">
+            <label for="lperat3">{{labels.lperat3}}</label>
+            <input type="text" class="form-control" id="lperat3">
+          </div>
+          <div class="col-md-1">
+            <label for="lperat3val">{{labels.lperat3val}}</label>
+            <select class="custom-select" id="lperat3val">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+          </div>
+          <div class="col-md-12 input-group input-group-sm mb-3 mr-3 mt-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="lperat3com">{{labels.lperat3com}}</span>
+            </div>
+            <input type="text" class="form-control" aria-describedby="lperat3com">
+          </div>
+        </div>
+    
+        <div class="form-row">
+          <div class="col-md-11">
+            <label for="lperat4">{{labels.lperat4}}</label>
+            <input type="text" class="form-control" id="lperat4">
+          </div>
+          <div class="col-md-1">
+            <label for="lperat4val">{{labels.lperat4val}}</label>
+            <select class="custom-select" id="lpera41val">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+          </div>
+          <div class="col-md-12 input-group input-group-sm mb-3 mr-3 mt-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="lperat4com">{{labels.lperat4com}}</span>
+            </div>
+            <input type="text" class="form-control" aria-describedby="lperat4com">
+          </div>
+        </div>
+    
+        <div class="form-row">
+          <div class="col-md-11">
+            <label for="lperat5">{{labels.lperat5}}</label>
+            <input type="text" class="form-control" id="lperat5">
+          </div>
+          <div class="col-md-1">
+            <label for="lperat5val">{{labels.lperat5val}}</label>
+            <select class="custom-select" id="lperat5val">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+          </div>
+          <div class="col-md-12 input-group input-group-sm mb-3 mr-3 mt-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="lperat5com">{{labels.lperat5com}}</span>
+            </div>
+            <input type="text" class="form-control" aria-describedby="lperat5com">
+          </div>
+        </div>
+    
+        <div class="form-row">
+          <div class="col-md-2">
+            <label for="lperate">{{labels.lperate}}</label>
+            <input type="text" class="form-control" id="lperate">
+          </div>
+        </div>
+      </div>
+    
+      <div class="border border-primary rounded p-2" *ngIf="viewcard=='lpr'">
+        <h6 class="text-primary">{{labels.lprsubtitle}}</h6>
+        <div class="form-row">
+          <div class="col-md-3">
+            <label for="lprplaned">{{labels.lprplaned}}</label>
+            <input type="text" class="form-control" id="lprplaned">
+          </div>
+          <div class="col-md-3">
+            <label for="lprreal">{{labels.lprreal}}</label>
+            <input type="text" class="form-control" id="lprreal">
+          </div>
+          <div class="col-md-3">
+            <label for="lprchngre">{{labels.lprchngre}}</label>
+            <input type="text" class="form-control" id="lprchngre">
+          </div>
+          <div class="col-md-3">
+            <label for="lprrespon">{{labels.lprrespon}}</label>
+            <input type="text" class="form-control" id="lprrespon">
+          </div>
+        </div>
+    
+        <div class="form-row">
+          <div class="col-md-11">
+            <label for="lprrat1">{{labels.lprrat1}}</label>
+            <input type="text" class="form-control" id="lprrat1">
+          </div>
+          <div class="col-md-1">
+            <label for="lprrat1val">{{labels.lprrat1val}}</label>
+            <select class="custom-select" id="lprrat1val">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+          </div>
+          <div class="col-md-12 input-group input-group-sm mb-3 mr-3 mt-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="lprrat1com">{{labels.lprrat1com}}</span>
+            </div>
+            <input type="text" class="form-control" aria-describedby="lprrat1com">
+          </div>
+        </div>
+    
+        <div class="form-row">
+          <div class="col-md-11">
+            <label for="lprrat2">{{labels.lprrat2}}</label>
+            <input type="text" class="form-control" id="lprrat2">
+          </div>
+          <div class="col-md-1">
+            <label for="lprrat2val">{{labels.lprrat2val}}</label>
+            <select class="custom-select" id="lprrat2val">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+          </div>
+          <div class="col-md-12 input-group input-group-sm mb-3 mr-3 mt-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="lprrat2com">{{labels.lprrat2com}}</span>
+            </div>
+            <input type="text" class="form-control" aria-describedby="lprrat2com">
+          </div>
+        </div>
+    
+        <div class="form-row">
+          <div class="col-md-11">
+            <label for="lprrat3">{{labels.lprrat3}}</label>
+            <input type="text" class="form-control" id="lprrat3">
+          </div>
+          <div class="col-md-1">
+            <label for="lprrat3val">{{labels.lprrat3val}}</label>
+            <select class="custom-select" id="lprrat3val">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+          </div>
+          <div class="col-md-12 input-group input-group-sm mb-3 mr-3 mt-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="lprrat3com">{{labels.lprrat3com}}</span>
+            </div>
+            <input type="text" class="form-control" aria-describedby="lprrat3com">
+          </div>
+        </div>
+    
+        <div class="form-row">
+          <div class="col-md-11">
+            <label for="lprrat4">{{labels.lprrat4}}</label>
+            <input type="text" class="form-control" id="lprrat4">
+          </div>
+          <div class="col-md-1">
+            <label for="lprrat4val">{{labels.lprrat4val}}</label>
+            <select class="custom-select" id="lprrat4val">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+          </div>
+          <div class="col-md-12 input-group input-group-sm mb-3 mr-3 mt-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="lprrat4com">{{labels.lprrat4com}}</span>
+            </div>
+            <input type="text" class="form-control" aria-describedby="lprrat4com">
+          </div>
+        </div>
+    
+        <div class="form-row">
+          <div class="col-md-11">
+            <label for="lprrat5">{{labels.lprrat5}}</label>
+            <input type="text" class="form-control" id="lprrat5">
+          </div>
+          <div class="col-md-1">
+            <label for="lprrat5val">{{labels.lprrat5val}}</label>
+            <select class="custom-select" id="lprrat5val">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+          </div>
+          <div class="col-md-12 input-group input-group-sm mb-3 mr-3 mt-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="lprrat5com">{{labels.lprrat5com}}</span>
+            </div>
+            <input type="text" class="form-control" aria-describedby="lprrat5com">
+          </div>
+        </div>
+    
+        <div class="form-row">
+          <div class="col-md-2">
+            <label for="lprrate">{{labels.lprrate}}</label>
+            <input type="text" class="form-control" id="lprrate">
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="border border-primary rounded p-2" *ngIf="viewcard=='app'">
+        <h6 class="text-primary">{{labels.appsubtitle}}</h6>
+        <div class="form-row">
+          <div class="col-md-3">
+            <label for="appplaned">{{labels.appplaned}}</label>
+            <input type="text" class="form-control" id="appplaned">
+          </div>
+          <div class="col-md-3">
+            <label for="appreal">{{labels.appreal}}</label>
+            <input type="text" class="form-control" id="appreal">
+          </div>
+          <div class="col-md-3">
+            <label for="appchngre">{{labels.appchngre}}</label>
+            <input type="text" class="form-control" id="appchngre">
+          </div>
+        </div>
+    
+        <div class="form-row">
+          <div class="col-md-11">
+            <label for="apprat1">{{labels.apprat1}}</label>
+            <input type="text" class="form-control" id="apprat1">
+          </div>
+          <div class="col-md-1">
+            <label for="apprat1val">{{labels.apprat1val}}</label>
+            <select class="custom-select" id="apprat1val">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+          </div>
+          <div class="col-md-12 input-group input-group-sm mb-3 mr-3 mt-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="apprat1com">{{labels.apprat1com}}</span>
+            </div>
+            <input type="text" class="form-control" aria-describedby="apprat1com">
+          </div>
+        </div>
+    
+        <div class="form-row">
+          <div class="col-md-11">
+            <label for="apprat2">{{labels.apprat2}}</label>
+            <input type="text" class="form-control" id="apprat2">
+          </div>
+          <div class="col-md-1">
+            <label for="apprat2val">{{labels.apprat2val}}</label>
+            <select class="custom-select" id="apprat2val">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+          </div>
+          <div class="col-md-12 input-group input-group-sm mb-3 mr-3 mt-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="apprat2com">{{labels.apprat2com}}</span>
+            </div>
+            <input type="text" class="form-control" aria-describedby="apprat2com">
+          </div>
+        </div>
+    
+        <div class="form-row">
+          <div class="col-md-11">
+            <label for="apprat3">{{labels.apprat3}}</label>
+            <input type="text" class="form-control" id="apprat3">
+          </div>
+          <div class="col-md-1">
+            <label for="apprat3val">{{labels.apprat3val}}</label>
+            <select class="custom-select" id="apprat3val">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+          </div>
+          <div class="col-md-12 input-group input-group-sm mb-3 mr-3 mt-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="apprat3com">{{labels.apprat3com}}</span>
+            </div>
+            <input type="text" class="form-control" aria-describedby="apprat3com">
+          </div>
+        </div>
+    
+        <div class="form-row">
+          <div class="col-md-11">
+            <label for="apprat4">{{labels.apprat4}}</label>
+            <input type="text" class="form-control" id="apprat4">
+          </div>
+          <div class="col-md-1">
+            <label for="apprat4val">{{labels.apprat4val}}</label>
+            <select class="custom-select" id="apprat4val">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+          </div>
+          <div class="col-md-12 input-group input-group-sm mb-3 mr-3 mt-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="apprat4com">{{labels.apprat4com}}</span>
+            </div>
+            <input type="text" class="form-control" aria-describedby="apprat4com">
+          </div>
+        </div>
+    
+        <div class="form-row">
+          <div class="col-md-11">
+            <label for="apprat5">{{labels.apprat5}}</label>
+            <input type="text" class="form-control" id="apprat5">
+          </div>
+          <div class="col-md-1">
+            <label for="apprat5val">{{labels.apprat5val}}</label>
+            <select class="custom-select" id="apprat5val">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+          </div>
+          <div class="col-md-12 input-group input-group-sm mb-3 mr-3 mt-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="apprat5com">{{labels.apprat5com}}</span>
+            </div>
+            <input type="text" class="form-control" aria-describedby="apprat5com">
+          </div>
+        </div>
+    
+        <div class="form-row">
+          <div class="col-md-2">
+            <label for="apprate">{{labels.apprate}}</label>
+            <input type="text" class="form-control" id="apprate">
+          </div>
+        </div>
+    
+      </div>
+    
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="closeDlg()">{{labels.close}}</button>
+    <button type="button" class="btn btn-primary" (click)="closeDlg()">{{labels.saveall}}</button>
+  </div>

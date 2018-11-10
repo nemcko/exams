@@ -1,0 +1,22 @@
+{
+    "address": {
+        "en": "Address",
+        "sk": "Adresa"
+    },
+    "zip":{
+        "en":"Zip",
+        "sk":"PSČ"
+    },
+    "city": {
+        "en": "City",
+        "sk": "Obec"
+    },
+    "state": {
+        "en": "State",
+        "sk": "Štát"
+    },
+    "creator": {
+        "en": "Creator",
+        "sk": "Vytvoril"
+    }   
+}

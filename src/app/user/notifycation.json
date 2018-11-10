@@ -1,0 +1,87 @@
+{
+    "notifsubtitle": {
+        "en": "Notifications",
+        "sk": "Notifikácie"
+    },
+    "notifcard": {
+        "en": "Notify",
+        "sk": "Oznámiť"
+    },
+    "notifbefexamsk": {
+        "en": "Notification before the examination by the Slovak Office",
+        "sk": "Notifikácia pred skúškou slovenský úrad"
+    },
+    "notifbefexam": {
+        "en": "Notification before the exam responsible authority",
+        "sk": "Notifikácia pred skúškou zodpovedný úrad"
+    },
+    "notifbefexamapp": {
+        "en": "Notification before the exam applicant + employer",
+        "sk": "Notifikácia pred skúškou žiadateľ + zamestnávateľ"
+    },
+
+    "notifaftexamsk": {
+        "en": "Notification after the examination by the Slovak Office",
+        "sk": "Notifikácia po skúške slovenský úrad"
+    },
+    "notifaftexam": {
+        "en": "Notification after the exam responsible authority",
+        "sk": "Notifikácia po skúške zodpovedný úrad"
+    },
+    "notifaftexamapp": {
+        "en": "Notification after the exam applicant + employer",
+        "sk": "Notifikácia po skúške žiadateľ + zamestnávateľ"
+    },
+
+    "notifbefevalsk": {
+        "en": "Notification of Slovak Office after the evaluation",
+        "sk": "Notifikácia slovenskeho úradu po hodnotení"
+    },
+    "notifbefeval": {
+        "en": "Notification of the resp.authority after the evaluation",
+        "sk": "Notifikácia zodpovedného úradu po hodnotení"
+    },
+    "notifbefevalapp": {
+        "en": "Notification of applicant + employer after the evaluation",
+        "sk": "Notifikácia po hodnotení žiadateľ + zamestnávateľ"
+    },
+
+    "notifbefappsk": {
+        "en": "Notification Appeal - Slovak Office",
+        "sk": "Notifikácia odvolanie - slovenský úrad"
+    },
+    "notifbefapp": {
+        "en": "Notification Appeal - Responsible Authority",
+        "sk": "Notifikácia odvolanie - zodpovedný úrad"
+    },
+    "notifbefappapp": {
+        "en": "Notifying Appeal - Applicant + Employer",
+        "sk": "Notifikácia odvolanie - žiadateľ + zamestnávateľ"
+    },
+
+    "notifaftappsk": {
+        "en": "Notification after appeal - Slovak Office",
+        "sk": "Notifikácia odvolanie - slovenský úrad"
+    },
+    "notifaftapp": {
+        "en": "Notification after appeal - Responsible Authority",
+        "sk": "Notifikácia odvolanie - zodpovedný úrad"
+    },
+    "notifaftappapp": {
+        "en": "Notifying after appeal - Applicant + Employer",
+        "sk": "Notifikácia odvolanie - žiadateľ + zamestnávateľ"
+    },
+
+    "notiffinalsk": {
+        "en": "Notification - final level Slovak office",
+        "sk": "Notifikácia – finálny level slovenský úrad"
+    },
+    "notiffinal": {
+        "en": "Notification - the final level responsible authority",
+        "sk": "Notifikácia – finálny level zodpovedný úrad"
+    },
+    "notiffinalapp": {
+        "en": "Notification - final level, applicant + employer",
+        "sk": "Notifikácia – finálny level, žiadateľ + zamestnávateľ"
+    }
+}

@@ -1,0 +1,13 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1201px
+);
+
+$data-table-underline: theme-color(primary);
+$data-table-border: theme-color-level(secondary, -9);
+$data-table-selrow: theme-color-level(secondary, -8);
+// $appbgcolor: $gray-100;
+

@@ -1,0 +1,42 @@
+{
+    "title":{
+        "en":"Users",
+        "sk":"Používatelia"
+    },
+    "name":{
+        "en":"Name",
+        "sk":"Meno"
+    },
+    "username":{
+        "en":"User Name",
+        "sk":"Používateľ"
+    },
+    "surname":{
+        "en":"surname",
+        "sk":"Priezvisko"
+    },
+    "email":{
+        "en":"E-mail",
+        "sk":"E-mail"
+    },
+    "active":{
+        "en":"Active",
+        "sk":"Aktívny"
+    },
+    "company":{
+        "en":"Company",
+        "sk":"Firma"
+    },
+    "street":{
+        "en":"street",
+        "sk":"Ulica"
+    },
+    "zip":{
+        "en":"zip",
+        "sk":"PSČ"
+    },
+    "city":{
+        "en":"city",
+        "sk":"Obec"
+    }
+}
