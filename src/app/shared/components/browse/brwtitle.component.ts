@@ -1,9 +1,8 @@
 import { Component, ContentChild, ContentChildren, AfterViewInit, ViewChild, QueryList, Input, OnDestroy, Inject, forwardRef } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Subscription ,  fromEvent } from 'rxjs';
 import { ICrudCmd, ICrudAndData } from '../../services';
 import { BrwComponent } from './brw.component';
 import { BrwService } from './brw.service';
-import { fromEvent } from 'rxjs';
 import { debounceTime, map } from 'rxjs/operators';
 
 @Component({
@@ -12,6 +11,7 @@ import { debounceTime, map } from 'rxjs/operators';
   styleUrls: ['./brwtitle.component.css']
 })
 export class BrwtitleComponent implements AfterViewInit, OnDestroy {
+  // private _subscription: Subscription;
   private _subscribe: Subscription;
   private _uuid: string = '';
 
@@ -48,6 +48,8 @@ export class BrwtitleComponent implements AfterViewInit, OnDestroy {
   }
 
   public ngOnDestroy() {
+    // if (this._subscription)
+    //   this._subscription.unsubscribe();
     if (this._subscribe)
       this._subscribe.unsubscribe();
   }

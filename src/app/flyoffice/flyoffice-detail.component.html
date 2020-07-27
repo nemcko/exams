@@ -18,6 +18,7 @@
             name="name" />
           <div *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" class="invalid-feedback">
             <div *ngIf="f.name.errors.required">{{labels.errrequired}}</div>
+            <!-- <div *ngIf="f.name.errors.errclientexist">{{labels.errnameexist}}</div> -->
             <div *ngIf="f.name.errors.maxlength">{{labels.errmaxlen}}</div>
           </div>
         </div>

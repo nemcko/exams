@@ -52,6 +52,25 @@ export class ShowErrorsDirective implements AfterViewInit, Validator {
   }
   
   ngAfterViewInit() {
+
+
+    // let data2 = `
+    // <div *ngIf="${this.frm}.${this.fld}.invalid && (${this.frm}.${this.fld}.dirty || ${this.frm}.${this.fld}.touched)" class="invalid-feedback">
+    //   <div *ngIf="${this.frm}.${this.fld}.errors.maxlength">${this.labels['errmaxlen']}</div>
+    // </div>
+    // `
+
+    // let div:Element = this._renderer.createElement('div');
+    // // const text = this._renderer.createText(data);
+    // div.innerHTML=this.htm;
+    // //this._sanitizer.bypassSecurityTrustHtml(data);
+    // this._renderer.appendChild(this._elRef.nativeElement.parentNode,div);
+
+    // // const parent = this._elRef.nativeElement.parentNode;
+    // // const refChild = this._elRef.nativeElement;
+
+    // // this._renderer.appendChild(parent, div);
+
   }
 
 }

@@ -93,6 +93,7 @@ export class UsersComponent implements AfterViewInit, OnDestroy {
   ngAfterViewInit() {
     this._subscribe = this._service.onCommand$.subscribe(cmd => {
       if (cmd.cid == '#rowchanged' && cmd.oid == this.poid) {
+        // this.parentId = (cmd.row ? cmd.row.id : null);
         this.parentId = (cmd.row ? cmd.row.usr : null);
         this._service.refresh(this._uuid, this.qparams);
       }

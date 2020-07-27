@@ -1,4 +1,4 @@
-<pgtitle [title]="labels.title" [subtitle]="labels.subtitle" [oid]="oid" [brwFieldName]="'fullsearch'">
+<pgtitle [title]="labels.title" [iclass]="'fa fa-fw fa-tasks'" [subtitle]="labels.subtitle" [oid]="oid" [brwFieldName]="'fullsearch'">
   <div class="btn-group col-sm-3 px-0">
     <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></span>
     <input type="text" #search class="form-control px-1 text-primary" placeholder="{{labels.search}}">
@@ -9,10 +9,10 @@
       <i class="fa fa-plus"></i>&nbsp;{{labels.btnnew}}
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" href="javascript:void(0)" (click)="showTrainingsDialog('')">
+      <a class="dropdown-item" href="javascript:void(0)" (click)="showDocumentsDialog('newtest')">
         <i class="fa fa-university"></i>&nbsp;{{labels.btntra}}</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="javascript:void(0)" (click)="showExaminationsDialog('')">
+      <a class="dropdown-item" href="javascript:void(0)" (click)="showDocumentsDialog('newexam')">
         <i class="fa fa-file-text"></i>&nbsp;{{labels.btnexa}}</a>
     </div>
   </div>
@@ -24,36 +24,91 @@
   <pgview [width]="panelWidth.left" [lmargin]="0">
     <brw [uuid]="uuid" [oid]="oid" [service]="service" (rowClick)="rowClick($event)" (rowDoubleClick)="rowDoubleClick($event)"
       (rowChanged)="rowChanged($event)">
-      <brwcol [name]="'usr'" [header]="labels.usr" [width]="10"></brwcol>
-      <brwcol [name]="'firstname'" [header]="labels.firstname" [width]="40"></brwcol>
-      <brwcol [name]="'lastname'" [header]="labels.lastname" [width]="30"></brwcol>
-
-      <brwcol [name]="'phone'" [header]="labels.phone" [width]="10" [visible]="!(this.examtype == 'adm' || this.examtype == 'lpes' || this.examtype == 'lprs' || this.examtype == 'lpts' || this.panelType !== 'btnMembers')"></brwcol>
-      <brwcol [name]="'mobile'" [header]="labels.mobile" [width]="10" [visible]="!(this.examtype == 'adm' || this.examtype == 'lpes' || this.examtype == 'lprs' || this.examtype == 'lpts' || this.panelType !== 'btnMembers')"></brwcol>
-      <brwcol [name]="'email'" [header]="labels.email" [width]="15" [visible]="!(this.examtype == 'adm' || this.examtype == 'lpes' || this.examtype == 'lprs' || this.examtype == 'lpts' || this.panelType !== 'btnMembers')"></brwcol>
-      <brwcol [name]="'id'" [width]="'114px'" [cls]="'p-0 float-right'" [visible]="access.adm">
-        <ng-template #dataTableCell let-item="row">
-          <button type="button" class="btn btn-outline-secondary mr-1" (click)="showTrainingsDialog(item.id)"  *ngIf="item.usr!='fero'">
-            <span [class]="'fa fa-university'"></span>
-          </button>
-
-          <div class="btn-group mr-1" role="group" *ngIf="item.usr=='fero'">
-            <button type="button" class="btn btn-outline-secondary" (click)="showExaminationsDialog(item.id)">
-              <span [class]="'fa fa-file-text '"></span>
-            </button>
-            <button type="button" class="btn btn-outline-secondary" (click)="showEvaluationsDialog(item.id)">
-              <span [class]="'fa fa-list-ol'"></span>
-            </button>
+      <brwtitle>
+        <div class="rounded border border-primary d-inline-flex mb-1 mr-1">
+          <div class="btn-group" role="group mr-3">
+            <div class="d-inline-flex flex-row align-items-end text-primary pl-2">
+              <div class="custom-control custom-radio mr-4 text-nowrap">
+                <input type="radio" name="flttype" class="custom-control-input" checked id="flt-typeact" (click)="setExaFilter($event,'typeact')">
+                <label class="custom-control-label" for="flt-typeact">{{labels.btntypeact}}</label>
+              </div>
+              <div class="custom-control custom-radio mr-4 text-nowrap">
+                <input type="radio" name="flttype" class="custom-control-input" id="flt-typeall" (click)="setExaFilter($event,'typeall')">
+                <label class="custom-control-label" for="flt-typeall">{{labels.btntypeall}}</label>
+              </div>
+            </div>
           </div>
+        </div>
 
-          <button type="button" class="btn btn-outline-secondary" (click)="showDocumentsDialog(item.id)">
-            <span [class]="'fa fa-folder'"></span>
+        <div class="rounded border border-primary d-inline-flex mb-1 mr-1 px-1">
+          <div class="btn-group" role="group">
+            <div class="d-inline-flex flex-row align-items-end text-primary">
+              <div class="custom-control custom-checkbox mr-4 text-nowrap">
+                <input type="checkbox" class="custom-control-input" checked id="flt-btnexa" (click)="setExaFilter($event,'typeexa')">
+                <label class="custom-control-label" for="flt-btnexa">{{labels.btnexa}}</label>
+              </div>
+              <div class="custom-control custom-checkbox mr-4 text-nowrap">
+                <input type="checkbox" class="custom-control-input" checked id="flt-btntra" (click)="setExaFilter($event,'typetra')">
+                <label class="custom-control-label" for="flt-btntra">{{labels.btntra}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="rounded border border-primary d-inline-flex mb-1 mr-1 px-1">
+          <div class="btn-group" role="group">
+            <div class="d-inline-flex flex-row align-items-end text-primary">
+              <div class="custom-control custom-checkbox mr-4 text-nowrap">
+                <input type="checkbox" class="custom-control-input" id="flt-lpe" (click)="setExaFilter($event,'lpe')">
+                <label class="custom-control-label" for="flt-lpe">{{labels.lpe}}</label>
+              </div>
+              <div class="custom-control custom-checkbox mr-4 text-nowrap">
+                <input type="checkbox" class="custom-control-input" id="flt-lpr" (click)="setExaFilter($event,'lpr')">
+                <label class="custom-control-label" for="flt-lpr">{{labels.lpr}}</label>
+              </div>
+              <div class="custom-control custom-checkbox mr-4 text-nowrap">
+                <input type="checkbox" class="custom-control-input" id="flt-lpt" (click)="setExaFilter($event,'lpt')">
+                <label class="custom-control-label" for="flt-lpt">{{labels.lpt}}</label>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+      </brwtitle>
+      <brwcol [name]="'exatype'" [header]="labels.exatype" [width]="10">
+        <ng-template #dataTableCell let-item="row">
+          {{item.exatype| uppercase}}
+        </ng-template>
+      </brwcol>
+      <brwcol [name]="'exnum'" [header]="labels.exnum" [width]="20"></brwcol>
+      <brwcol [name]="'lng'" [header]="labels.lng" [width]="5"></brwcol>
+      <brwcol [name]="'usr_assignedby'" [header]="labels.assignedby" [width]="15"></brwcol>
+      <brwcol [name]="'usr_applicant'" [header]="labels.applicant" [width]="15"></brwcol>
+      <brwcol [name]="'usr_lpeplaned'" [header]="labels.lpeplaned" [width]="15"></brwcol>
+      <brwcol [name]="'usr_lpereal'" [header]="labels.lpereal" [width]="15"></brwcol>
+      <brwcol [name]="'usr_lperespon'" [header]="labels.lperespon" [width]="15"></brwcol>
+      <brwcol [name]="'state'" [header]="labels.state" [width]="5"></brwcol>
+
+      <brwcol [name]="'id'" [width]="'114px'" [cls]="'p-0 float-right'">
+        <ng-template #dataTableCell let-item="row">
+          <button type="button" class="btn btn-primary btn-sm" (click)="showDocumentsDialog(item.id)">
+            <span [class]="'fa fa-pencil'"></span>
           </button>
 
+          <button type="button" class="btn btn-outline-primary btn-sm ml-1" (click)="deleteDocument(item.id)" *ngIf="access.adm">
+            <span [class]="'fa fa-trash'"></span>
+          </button>
         </ng-template>
       </brwcol>
     </brw>
   </pgview>
+  <!--
+  <pgview [width]="panelWidth.right">
+    <exasetmbrs *ngIf="panelWidth.right && panelType=='btnMembers'" [poid]="oid" [parentId]="parentId" [examtype]="examtype"></exasetmbrs>
+    <exasetusrs *ngIf="panelWidth.right && panelType=='btnUsers'" [poid]="oid" [parentId]="parentId" [examtype]="examtype"></exasetusrs>
+    <exasetclts *ngIf="panelWidth.right && panelType=='btnClients'" [poid]="oid" [parentId]="parentId" [examtype]="examtype"></exasetclts>
+  </pgview>
+-->
 </pgpanel>
 
 <pgalert [dlgid]="'deleteExaminertdlg'" [dlgRef]="deleteItemalertdlg" [title]="labels.delExaminerTitle" [type]="'YES-NO'"

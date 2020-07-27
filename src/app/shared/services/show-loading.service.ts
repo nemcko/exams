@@ -10,3 +10,34 @@ export class ShowLoadingService {
     this._showLoading.next(msg !== '');
   }
 }
+
+// export class RequestEventEmitter extends Subject<String>{
+//   constructor() {
+//     super();
+//   }
+//   emit(value) { super.next(value); }
+// }
+
+// export class ResponseEventEmitter extends Subject<String>{
+//   constructor() {
+//     super();
+//   }
+//   emit(value) {
+//     setTimeout(() => {
+//       super.next(value);
+//     }, 300);
+//   }
+// }
+
+// @Injectable({ providedIn: 'root' })
+// export class ShowLoadingService {
+//   beforeRequest: RequestEventEmitter;
+//   afterRequest: ResponseEventEmitter;
+
+//   constructor() {
+//     this.beforeRequest = new RequestEventEmitter();
+//     this.afterRequest = new ResponseEventEmitter();
+//   }
+// }
+
+

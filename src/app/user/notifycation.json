@@ -5,83 +5,83 @@
     },
     "notifcard": {
         "en": "Notify",
-        "sk": "Oznámiť"
+        "sk": "Notifikovať"
     },
     "notifbefexamsk": {
-        "en": "Notification before the examination by the Slovak Office",
-        "sk": "Notifikácia pred skúškou slovenský úrad"
+        "en": "Notification before the exam - Slovak NAA",
+        "sk": "Notifikácia pred skúškou - Slovenský úrad"
     },
     "notifbefexam": {
-        "en": "Notification before the exam responsible authority",
-        "sk": "Notifikácia pred skúškou zodpovedný úrad"
+        "en": "Notification before the exam - Issuing NAA",
+        "sk": "Notifikácia pred skúškou - Úrad vydania licencie"
     },
     "notifbefexamapp": {
-        "en": "Notification before the exam applicant + employer",
-        "sk": "Notifikácia pred skúškou žiadateľ + zamestnávateľ"
+        "en": "Notification before the exam - Candidate",
+        "sk": "Notifikácia pred skúškou - Žiadateľ"
     },
 
     "notifaftexamsk": {
-        "en": "Notification after the examination by the Slovak Office",
-        "sk": "Notifikácia po skúške slovenský úrad"
+        "en": "Notification after the exam - Slovak NAA",
+        "sk": "Notifikácia po skúške - Slovenský úrad"
     },
     "notifaftexam": {
-        "en": "Notification after the exam responsible authority",
-        "sk": "Notifikácia po skúške zodpovedný úrad"
+        "en": "Notification after the exam - Issuing NAA",
+        "sk": "Notifikácia po skúške - Úrad vydania"
     },
     "notifaftexamapp": {
-        "en": "Notification after the exam applicant + employer",
-        "sk": "Notifikácia po skúške žiadateľ + zamestnávateľ"
+        "en": "Notification after the exam - Candidate",
+        "sk": "Notifikácia po skúške - Žiadateľ"
     },
 
     "notifbefevalsk": {
-        "en": "Notification of Slovak Office after the evaluation",
-        "sk": "Notifikácia slovenskeho úradu po hodnotení"
+        "en": "Rating notification - Slovak NAA",
+        "sk": "Notifikácia o hodnotení - Slovenský úrad"
     },
     "notifbefeval": {
-        "en": "Notification of the resp.authority after the evaluation",
-        "sk": "Notifikácia zodpovedného úradu po hodnotení"
+        "en": "Rating notification - issuing NAA",
+        "sk": "Notifikácia o hodnotení - úrad vydania"
     },
     "notifbefevalapp": {
-        "en": "Notification of applicant + employer after the evaluation",
-        "sk": "Notifikácia po hodnotení žiadateľ + zamestnávateľ"
+        "en": "Rating notification - Exam candidate",
+        "sk": "Notifikácia o hodnotení - Žiadateľ"
     },
 
     "notifbefappsk": {
-        "en": "Notification Appeal - Slovak Office",
-        "sk": "Notifikácia odvolanie - slovenský úrad"
+        "en": "Dispute notification - Slovak NAA",
+        "sk": "Odvolanie sa - notifikácia - Slovenský úrad"
     },
     "notifbefapp": {
-        "en": "Notification Appeal - Responsible Authority",
-        "sk": "Notifikácia odvolanie - zodpovedný úrad"
+        "en": "Dispute notification - Issuing NAA",
+        "sk": "Odvolanie sa - úrad vydania"
     },
     "notifbefappapp": {
-        "en": "Notifying Appeal - Applicant + Employer",
-        "sk": "Notifikácia odvolanie - žiadateľ + zamestnávateľ"
+        "en": "Dispute notification - Candidate",
+        "sk": "Odvolanie sa - notifikácia - žiadateľ"
     },
 
     "notifaftappsk": {
-        "en": "Notification after appeal - Slovak Office",
-        "sk": "Notifikácia odvolanie - slovenský úrad"
+        "en": "Dispute review notification - Slovak NAA",
+        "sk": "Vybavenie odvolania - notifikácia - Slovenský úrad"
     },
     "notifaftapp": {
-        "en": "Notification after appeal - Responsible Authority",
-        "sk": "Notifikácia odvolanie - zodpovedný úrad"
+        "en": "Dispute review notification  - Issuing NAA",
+        "sk": "Vybavenie odvolania - notifikácia - úrad vydania"
     },
     "notifaftappapp": {
-        "en": "Notifying after appeal - Applicant + Employer",
-        "sk": "Notifikácia odvolanie - žiadateľ + zamestnávateľ"
+        "en": "Dispute review notification  - Candidate",
+        "sk": "Vybavenie odvolania - notifikácia - Žiadateľ"
     },
 
     "notiffinalsk": {
-        "en": "Notification - final level Slovak office",
-        "sk": "Notifikácia – finálny level slovenský úrad"
+        "en": "Notification - final level Slovak NAA",
+        "sk": "Notifikácia – konečná úroveň Slovenský CAA"
     },
     "notiffinal": {
-        "en": "Notification - the final level responsible authority",
-        "sk": "Notifikácia – finálny level zodpovedný úrad"
+        "en": "Notification - final level issuing NAA",
+        "sk": "Notifikácia – konečná úroveň - úrad vydania"
     },
     "notiffinalapp": {
-        "en": "Notification - final level, applicant + employer",
-        "sk": "Notifikácia – finálny level, žiadateľ + zamestnávateľ"
+        "en": "Notification - final level exam candidate",
+        "sk": "Notifikácia – konečná úroveň - žiadateľ"
     }
 }

@@ -10,6 +10,8 @@ import * as addresses from '../user/addresses.json';
 import * as validators from '../validators.json';
 import * as panelbuttons from '../panelbuttons.json';
 
+import { AddressDialogComponent } from './address-dialog.component';
+
 @Component({ template: '' })
 export class AddressDeleteComponent {
   constructor(public activeModal: NgbActiveModal) { }
@@ -48,10 +50,13 @@ export class AddressDetailComponent implements OnInit {
 
   ngOnInit() {
     this.detailForm = this._formBuilder.group({
-      address: ['', [Validators.required, Validators.maxLength(65)]],
+      street: ['', [Validators.maxLength(65)]],
+      house_number: ['', [Validators.maxLength(45)]],
       zip: ['', [Validators.required, Validators.maxLength(10)]],
       city: ['', [Validators.required, Validators.maxLength(65)]],
       state: ['', [Validators.required, Validators.maxLength(45)]],
+      longitude: ['', [Validators.required]],
+      latitude: ['', [Validators.required]],
     });
   }
 
@@ -106,6 +111,11 @@ export class AddressDetailComponent implements OnInit {
         }
       )
     }
+  }
+
+  public chooseAddress() {
+    const modalRef = this._modalService.open(AddressDialogComponent, { size: 'lg' });
+    modalRef.componentInstance.setFormGroup(this.detailForm);
   }
 
 }

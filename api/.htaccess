@@ -1,0 +1,33 @@
+RewriteEngine On
+RewriteBase /
+
+#Header add Access-Control-Allow-Origin "*"
+#Header add Access-Control-Allow-Headers "origin, x-requested-with, content-type"
+#Header add Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
+
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^(.*)$ index.php [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+)$ /$1.php [L,QSA]
+
+Order allow,deny
+Deny from All
+<FilesMatch "^(index|run)\.php$">
+  Allow from all
+  Satisfy any
+</FilesMatch>
+
+
+#RewriteEngine On
+#RewriteBase /
+
+#Header add Access-Control-Allow-Origin "*"
+#Header add Access-Control-Allow-Headers "origin, x-requested-with, content-type"
+#Header add Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
+
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php/$1 [L]

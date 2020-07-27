@@ -1,42 +1,42 @@
 {
     "examinatorsnr": {
-        "en": "Senior examinators",
-        "sk": "Examinátori"
+        "en": "LPE-S",
+        "sk": "LPE-S"
     },
     "examinatorexa": {
-        "en": "Examinators",
-        "sk": "Examinátori"
+        "en": "LPE",
+        "sk": "LPE"
     },
     "examinatoradm": {
-        "en": "Administrators",
-        "sk": "Administratori"
+        "en": "ADM",
+        "sk": "ADM"
     },
     "examinatorlprs": {
-        "en": "Lng.prof.raters (sr.)",
-        "sk": "Hodnotitelia (st.)"
+        "en": "LPR-S",
+        "sk": "LPR-S"
     },
     "examinatorlpes": {
-        "en": "Lng.prof.examiners (sr.)",
-        "sk": "Skušatelia (st.)"
+        "en": "LPE-S",
+        "sk": "LPE-S"
     },
     "examinatorlpts": {
-        "en": "Lng.prof.trainers (sr.)",
-        "sk": "Tréneri (st.)"
+        "en": "LPT-S",
+        "sk": "LPT-S"
     },
     "examinatorlpr": {
-        "en": "Lng.prof.raters",
-        "sk": "Hodnotitelia"
+        "en": "LPR",
+        "sk": "LPR"
     },
     "examinatorlpe": {
-        "en": "Lng.prof.examiners",
-        "sk": "Skušatelia"
+        "en": "LPE",
+        "sk": "LPE"
     },
     "examinatorlpt": {
-        "en": "Lng.prof.trainers",
-        "sk": "Tréneri"
+        "en": "LPT",
+        "sk": "LPT"
     },
     "examinatorreq": {
-        "en": "Requesters",
+        "en": "Exam candidates",
         "sk": "Žiadatelia"
     },
     "examinatorall": {

@@ -25,13 +25,23 @@ import { ClientModule } from './client/client.module';
 import { FlyofficeModule } from './flyoffice/flyoffice.module';
 import { ExasetModule } from './exaset/exaset.module';
 import { ExamModule } from './exam/exam.module';
+import { SearchPlaceComponent } from './shared/components/place/search-place.component';
+
+import {LOCALE_ID} from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import localeSk from '@angular/common/locales/sk';
+import { ExamedModule } from './examed/examed.module';
+
+
+registerLocaleData(localeSk, 'sk');
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
     NavDropdownDirective,
-    LoginComponent
+    LoginComponent,
+    SearchPlaceComponent,
   ],
   imports: [
     HttpModule, HttpClientModule,
@@ -44,11 +54,13 @@ import { ExamModule } from './exam/exam.module';
     ClientModule,
     FlyofficeModule,
     ExasetModule,
-    ExamModule
+    ExamModule,
+    ExamedModule
   ],
   providers: [
     DialogService,
     { provide: APP_CONFIG, useValue: CONFIG },
+    { provide: LOCALE_ID, useValue: 'sk' },
     StateService, CrudService, TextsService, BrwService,
     httpInterceptorProviders
   ],

@@ -11,18 +11,22 @@
             },
             {
                 "lng": "sk",
-                "name": "Slovak"
+                "name": "Slovak language"
             }
         ],
         "sk": [
             {
                 "lng": "en",
-                "name": "Anglicky"
+                "name": "Anglický jazyk"
             },
             {
                 "lng": "sk",
-                "name": "Slovensky"
+                "name": "Slovenský jazyk"
             }
         ]
+    },
+    "dateformat":{
+        "en":"M/d/y",
+        "sk":"d. M. y"
     }
 }

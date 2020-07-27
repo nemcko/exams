@@ -49,6 +49,17 @@ export class AddressListComponent implements OnInit, OnDestroy {
       this.labels = this.texts.toObject(textlib, lng);
       _service.doLngChng(lng);
     });
+
+    // this._service.onCommand$.subscribe(cmd => {
+    //   let thisuuid = this._service.getUUID(this.oid);
+    //   if (!cmd.uuid || cmd.uuid == thisuuid) {
+    //     if (cmd.cid == '#rowchanged' && cmd.oid == this.oid && cmd.uuid == thisuuid) {
+    //       let x = 0;
+    //     }
+    //   }
+    // });
+
+
   }
 
   ngOnInit() {

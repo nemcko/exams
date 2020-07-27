@@ -106,6 +106,12 @@ export class CrudService {
     })
   };
 
+  // constructor(
+  //   @Inject(APP_CONFIG) protected config: IConfig,
+  //   private _http: HttpClient,
+  //   private _state: StateService
+  // ) { }
+
   private _http: HttpClient;
   private _state: StateService;
   private _config: IConfig;
@@ -170,6 +176,7 @@ export class CrudService {
         data.items = xdata.items;
       }
     } catch (err) {
+      // this.config.showSnackbar(body._body && typeof body['_body'] === 'string' ? body['_body'] : err.message);
       return false;
     }
     return true;
@@ -180,6 +187,7 @@ export class CrudService {
     try {
       xdata = body;//.json();
     } catch (err) {
+      // this.config.showSnackbar(body._body && typeof body['_body'] === 'string' ? body['_body'] : err.message);
       return null;
     }
     return xdata;

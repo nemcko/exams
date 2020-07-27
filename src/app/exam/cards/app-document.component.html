@@ -1,0 +1,20 @@
+<ng-template #content>
+  <ng-content></ng-content>
+</ng-template>
+<div *ngIf="doctype.startsWith('test')">
+  <file-drop (onFileDrop)="dropped($event)" (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)"
+    [disableIf]="disabledrop">
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </file-drop>
+  <div class="font-weight-light text-center w-100"><small>{{availExt}}</small></div>
+</div>
+<div *ngIf="doctype.startsWith('show')">
+  <button type="button" class="btn btn-outline-secondary w-100 text-left" (click)="doClick($event)">
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </button>
+</div>
+<div *ngIf="doctype.startsWith('media')">
+  <button type="button" class="btn btn-outline-secondary btn-sm input-group-append" (click)="doMediaClick($event)">
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </button>
+</div>

@@ -5,6 +5,7 @@
 
   <div class="navbar-collapse collapse">
       <ul class="navbar-nav ml-auto">
+          <!-- <li class="nav-item"><a href="javascript:void(0)" class="nav-link"><i class="fa fa-envelope"></i> 5</a></li> -->
           <li class="nav-item dropdown">
               <a href="javascript:void(0)" id="dd_language" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe"> {{user.lng|titlecase}}</i></a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd_language">
@@ -19,12 +20,12 @@
 <div class="d-flex">
   <div class="sidebar sidebar-dark bg-dark" [ngClass]="{'toggled' : buttontoggled}">
       <ul class="list-unstyled mt-2">
-          <li><a href="javascript:void(0)" routerLink="/exams" routerLinkActive="active"><i class="fa fa-fw fa-comments"></i>&nbsp;&nbsp;{{labels.exams}}</a></li>
-          <li><a href="javascript:void(0)" routerLink="/users" routerLinkActive="active"><i class="fa fa-fw fa-user"></i>&nbsp;&nbsp;{{labels.users}}</a></li>
+          <li><a href="javascript:void(0)" routerLink="/exams" routerLinkActive="active"><i class="fa fa-fw fa-tasks"></i>&nbsp;&nbsp;{{labels.exams}}</a></li>
+          <li><a href="javascript:void(0)" routerLink="/users" routerLinkActive="active"><i class="fa fa-fw fa-users"></i>&nbsp;&nbsp;{{labels.users}}</a></li>
           <li><a href="javascript:void(0)" routerLink="/addresses" routerLinkActive="active"><i class="fa fa-fw fa-envelope"></i>&nbsp;&nbsp;{{labels.addresses}}</a></li>
           <li><a href="javascript:void(0)" routerLink="/clients" routerLinkActive="active"><i class="fa fa-fw fa-address-card"></i>&nbsp;&nbsp;{{labels.clients}}</a></li>
-          <li><a href="javascript:void(0)" routerLink="/flyoffices" routerLinkActive="active"><i class="fa fa-fw fa-plane"></i>&nbsp;&nbsp;{{labels.flyoffices}}</a></li>
-          <li>
+          <li *ngIf="access?.adm"><a href="javascript:void(0)" routerLink="/flyoffices" routerLinkActive="active"><i class="fa fa-fw fa-plane"></i>&nbsp;&nbsp;{{labels.flyoffices}}</a></li>
+          <li *ngIf="access?.adm">
             <a href="#sm_exasets" data-toggle="collapse">
               <i class="fa fa-fw fa-cogs "></i>&nbsp;&nbsp;{{labels.exasets}}
             </a>
@@ -39,7 +40,7 @@
                 <li><a href="javascript:void(0)" routerLink="/exasets/adm" routerLinkActive="active">{{labels.examinatoradm}}</a></li>
             </ul>
         </li>
-
+        <li *ngIf="access?.adm"><a href="javascript:void(0)" routerLink="/examed" routerLinkActive="active"><i class="fa fa-fw fa-file-video-o"></i>&nbsp;&nbsp;{{labels.examed}}</a></li>
      </ul>
   </div>
 
@@ -49,86 +50,3 @@
 </div>
 
 <div class="loader" [hidden]="hideLoader"></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <nav class="navbar navbar-dark bg-primary mb-3">
-  <a class="navbar-brand" routerLink="/users" *ngIf="logged">{{labels.users}}</a>
-  <div class="navbar-expand mr-auto" *ngIf="logged">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" routerLink="/users">{{labels.documents}}</a>
-      <a class="nav-item nav-link" routerLink="/users">{{labels.verifications}}</a>
-      <a class="nav-item nav-link" routerLink="/users">{{labels.evaluations}}</a>
-      <a class="nav-item nav-link" routerLink="/users">{{labels.trainings}}</a>
-    </div>
-  </div>
-  <div class="navbar-expand ml-auto navbar-nav">
-    &nbsp;
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" routerLink="/crisis-center" *ngIf="logged">
-        <i class="fa fa-comment"></i>
-      </a>
-
-      <div class="nav-item dropdown show" navropdown *ngIf="logged">
-        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          {{labels.users}}
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a routerLink="/users" class="dropdown-item">{{labels.examinatorexa}}</a>
-          <div class="dropdown-divider"></div>
-          <a routerLink="/users" class="dropdown-item">{{labels.documents}}</a>
-          <a routerLink="/users" class="dropdown-item">{{labels.verifications}}</a>
-          <a routerLink="/users" class="dropdown-item">{{labels.evaluations}}</a>
-          <a routerLink="/users" class="dropdown-item">{{labels.trainings}}</a>
-          <div class="dropdown-divider"></div>
-          <a routerLink="/users/testui" class="dropdown-item">Test</a>
-        </div>
-      </div>
-
-
-      <a class="nav-item nav-link" href="https://github.com/beeman" target="_blank" *ngIf="logged">
-        <i class="fa fa-github"></i>
-      </a>
-      <a class="nav-item nav-link" href="https://twitter.com/beeman_nl" target="_blank" *ngIf="logged">
-        <i class="fa fa-twitter"></i>
-      </a>
-      
-      <a class="nav-item nav-link" routerLink="/login">
-        <i class="fa fa-power-off"></i>
-      </a>
-    </div>
-  </div>
-</nav>
-<div class="container">
-  <router-outlet></router-outlet>
-</div>
-<nav class="navbar navbar-dark bg-primary mt-5 fixed-bottom">
-  <div class="navbar-expand m-auto navbar-text">
-    Copyright © 2018 
-    <router-outlet name="popup"></router-outlet>
-  </div>
-</nav>
-
-
-
-<div class="loader" [hidden]="hideLoader"></div> -->

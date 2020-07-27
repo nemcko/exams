@@ -1,18 +1,18 @@
 {
     "exasubtitle": {
-        "en": "Basic data",
-        "sk": "Základné údaje"
+        "en": "General data",
+        "sk": "Základné informácie"
     },
     "notifsubtitle": {
         "en": "Notifications",
         "sk": "Notifikácie"
     },
     "exnum": {
-        "en": "Exam Nr.",
-        "sk": "Skúška č."
+        "en": "Exam ID",
+        "sk": "Exam ID"
     },
     "lng": {
-        "en": "Lng",
+        "en": "Lnguage",
         "sk": "Jazyk"
     },
     "vfrifr": {
@@ -20,56 +20,56 @@
         "sk": "VFR/IFR"
     },
     "uselpename": {
-        "en": "Name of LPE",
-        "sk": "Meno LPE"
+        "en": "LPE",
+        "sk": "LPE"
     },
     "planplace": {
-        "en": "Planned location",
+        "en": "Planned venue",
         "sk": "Plánované miesto"
     },
     "plandate": {
         "en": "Planned date",
-        "sk": "Plán.dátum"
+        "sk": "Plánovaný dátum"
     },
     "plantime": {
         "en": "Planned time",
-        "sk": "Plán.čas"
+        "sk": "Plánovaný čas"
     },
     "realdate": {
         "en": "Real date",
-        "sk": "Skut.dátum"
+        "sk": "Skutočný dátum"
     },
     "realtime": {
         "en": "Real time",
-        "sk": "Skut.čas"
+        "sk": "Skutočný čas"
     },
     "chngreas": {
-        "en": "Change reason",
+        "en": "Reason of the change",
         "sk": "Dôvod zmeny"
     },
     "assigned": {
-        "en": "Assigned",
+        "en": "Inserted by",
         "sk": "Zadal"
     },
     "applicant": {
-        "en": "Applicant",
+        "en": "Exam candidate",
         "sk": "Žiadateľ"
     },
     "lpeplaned": {
         "en": "Planned LPE",
-        "sk": "Plán.LPE"
+        "sk": "Plánovaný LPE"
     },
     "lpereal": {
         "en": "Real LPE",
-        "sk": "Skut.LPE"
+        "sk": "Skutočný LPE"
     },
     "lpechngre": {
-        "en": "LPE chng.re.",
-        "sk": "LPE dôvod zm."
+        "en": "Reason of LPE change",
+        "sk": "Dôvod zmeny LPE"
     },
     "lperespon": {
-        "en": "Respon.LPE-S",
-        "sk": "Zodpov.LPE-S"
+        "en": "Supervising LPE-S",
+        "sk": "Dozorujúci LPE-S"
     },
     "notifbefexamsk": {
         "en": "Notification before the examination by the Slovak Office",

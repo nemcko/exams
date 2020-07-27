@@ -45,6 +45,10 @@ export class BrwService extends CrudService {
   public register(sourceObj: any, uuid: string) {
 
     if (!this._registrator[uuid]) this._registrator[uuid] = sourceObj;
+    // throw "Source object has already been registered!";
+
+    // sourceObj.regid = uuid;
+
     if (!sourceObj._starter) {
       sourceObj._starter = this.state.get(uuid);
     }
@@ -59,6 +63,7 @@ export class BrwService extends CrudService {
     if (!this._dataSources[uuid])
       this._dataSources[uuid] = sourceObj;
     else {
+      // if (this._dataSources[uuid].objectId!==sourceObj.objectId) throw "Source object has already been registered!";
       this._dataSources[uuid] = sourceObj;
     }
   }
@@ -67,6 +72,9 @@ export class BrwService extends CrudService {
     if (this._dataSources[uuid]) {
       delete this._dataSources[uuid];
     }
+    // else {
+    //   throw "Source not found!";
+    // }
   }
 
 
@@ -145,6 +153,7 @@ export class BrwService extends CrudService {
     return this.http.post<ICrudAndData>(
       this.getCmdUrl(cmd, this.config),
       JSON.stringify(this.prepareSendData(cmd, data)),
+      // this.httpOptions
     );
   }
 
@@ -152,6 +161,7 @@ export class BrwService extends CrudService {
     return this.http.post<ICrudAndData>(
       this.getCmdUrl(cmd, this.config),
       JSON.stringify(this.prepareSendData(cmd, data, true)),
+      // this.httpOptions
     );
   }
 
@@ -185,6 +195,7 @@ export class BrwService extends CrudService {
     return this.http.post<ICrudAndData>(
       this.getCmdUrl(cmd, this.config),
       JSON.stringify(this.prepareSendData(cmd, exepar.payload)),
+      // this.httpOptions
     );
   }
 
@@ -247,6 +258,10 @@ export class BrwService extends CrudService {
     cmd = this.prepareCmdPar(cmdpar.oid, cmdpar.uuid, cmdpar.cid, cmdpar.qparams);
     if (cmdpar.payload) cmd.payload = cmdpar.payload;
     if (viewpar) cmd.viewpar = this.prepareViewPar(viewpar.oid, viewpar.uuid, viewpar.cid, viewpar.qparams);
+    // for (let key in this._registrator) {
+    //   this._registrator[key]._service.doCommand(cmd);
+    // }
+    // this._dataSources[cmdpar.uuid]._service.doCommand(cmd);
     this._dataSources[cmdpar.uuid].execute(cmd);
 
   }
@@ -327,8 +342,10 @@ export class BrwService extends CrudService {
       }
 
     } catch (err) {
+      // this.config.showSnackbar(body._body && typeof body['_body'] === 'string' ? body['_body'] : err.message);
       return null;
     }
+    // console.log(body);
   }
 
   protected saveState(cmd: ICrudAndData) {

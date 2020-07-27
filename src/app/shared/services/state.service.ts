@@ -173,4 +173,42 @@ export class StateService {
     }
   }
 
+
+
+
+
+
+
+
+
+  // for(let key in newdata) {                                                    
+  //   Object.defineProperty(this, key, {                                           
+  //     get: () => { return this.data[key]; },                       
+  //     set: (value:any) => {                                                 
+  //       if (this.data[key] !== value) {                                          
+  //         this.data[key] = value;                                                
+  //         this.updatedKeys.push(key);                                            
+  //       }                                                                        
+  //     },                                                                         
+  //   });                                                                          
+  // }              
+
+
+
+  // public get(prop: any) {
+  //   return (this.data ? this.data.hasOwnProperty(prop) ? this.data[prop] : this.data : null);
+  // }
+
+  // public set(prop: string, value: any) {
+  //   return (this.data ? this.data[prop] = value : null);
+  //   return (this.data.hasOwnProperty(prop) ? this.data[prop] = value : null);
+  // }
+
+  // public remove(){
+  //   this._storage.removeItem('currentUser');
+  // }
+
+  // public get token():string {
+  //   return this.get('token');
+  // }
 }

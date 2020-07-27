@@ -10,6 +10,8 @@ import { ApiModel } from "../shared";
 import * as textdata from './login.component.json';
 import * as languages from '../languages.json';
 
+// import { AlertService, AuthenticationService } from '../_services';
+
 @Component({
     templateUrl: 'login.component.html'
 })
@@ -28,7 +30,9 @@ export class LoginComponent implements OnInit {
         private _route: ActivatedRoute,
         private _router: Router,
         private _authenticationService: AuthService,
+        // private alertService: AlertService,
         public texts: TextsService,
+        // private _showloading: ShowLoadingService,
         private _user: UserService,
     ) {
         this.labels = texts.toObject([textdata, languages], _user.lng);
@@ -42,10 +46,12 @@ export class LoginComponent implements OnInit {
         });
 
         this._authenticationService.logout();
+        // this._showloading.doMessage("login");
         this.returnUrl = this._route.snapshot.queryParams['returnUrl'] || '/';
 
         this._onLngChng = this._user.getLngChng().subscribe(lng => {
             this.labels = this.texts.toObject([textdata, languages], lng);
+            // this._user.doLngChng(lng);
         });
 
     }

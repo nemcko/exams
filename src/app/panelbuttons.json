@@ -43,6 +43,18 @@
         "en": "Save",
         "sk": "Uložiť"
     },
+    "btnBack": {
+        "en": "Back",
+        "sk": "Späť"
+    },
+    "btnsaveexit": {
+        "en": "Save & Exit",
+        "sk": "Uložiť+Návrat"
+    },
+    "btnsavenext": {
+        "en": "Save & Next",
+        "sk": "Uložiť+Ďalej"
+    },
     "search": {
         "en": "Search...",
         "sk": "Vyhľadať.."

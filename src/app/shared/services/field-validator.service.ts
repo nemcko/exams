@@ -11,6 +11,7 @@ export class FieldValidatorService {
   ) { }
 
   public validate(cid: string, value: string): Observable<any> {
+    // let elem = this.el.nativeElement;
 
     if (!this._cache[cid]) {
       return this.findValue(cid, value);
@@ -34,6 +35,7 @@ export class FieldValidatorService {
           err => {
             this._cache[cid] = { value: value, result: null };
             observer.complete();
+            // observer.next({ [cid + 'Exist']: true });
          }
         )
     })

@@ -40,14 +40,42 @@
                 <div class="form-group col-2" frminput [id]="'profession'" [fld]="f.profession" [labels]="labels">
                     <input type="text" name="profession" formControlName="profession" class="form-control" [ngClass]="{ 'is-invalid': f.profession.errors }" />
                 </div>
+                <!-- <div class="form-group col-3" frminput [id]="'speaks'" [fld]="f.speaks" [labels]="labels">
+                    <input type="text" name="speaks" formControlName="speaks" class="form-control" [ngClass]="{ 'is-invalid': f.speaks.errors }" />
+                </div> -->
+                <!-- <div class="form-group col-6" frmselect [id]="'speaks'">
+                    <ng-select labelForId="speaks" [items]="languages" [multiple]="true" clearAllText="Clear"
+                        formControlName="speaks" bindLabel="name" bindValue="id">
+                    </ng-select>
+                </div> -->
                 <div class="form-group col-8">
                     <label for="speaks">{{labels.speaks}}</label>
                     <ng-select id="speaks" [items]="languages" bindLabel="name" bindValue="id" labelForId="speaks"
-                        [multiple]="true" clearAllText="Clear" formControlName="speaks" [ngClass]="{ 'is-invalid': f.speaks.errors }">
+                        [multiple]="true" clearAllText="Clear" formControlName="speaks"  [ngClass]="{ 'is-invalid': f.speaks.errors }">
                     </ng-select>
                 </div>
 
             </div>
+            <!-- <div class="form-row">
+                <div class="form-group col-2" frmcheckbox [id]="'lpes'" [fld]="f.lpes" [labels]="labels">
+                    <input class="custom-control-input" type="checkbox" value="" id="lpes" formControlName="lpes">
+                </div>
+                <div class="form-group col-2" frmcheckbox [id]="'lprs'" [fld]="f.lprs" [labels]="labels">
+                    <input class="custom-control-input" type="checkbox" value="" id="lprs" formControlName="lprs">
+                </div>
+                <div class="form-group col-2" frmcheckbox [id]="'lpts'" [fld]="f.lpts" [labels]="labels">
+                    <input class="custom-control-input" type="checkbox" value="" id="lpts" formControlName="lpts">
+                </div>
+                <div class="form-group col-2" frmcheckbox [id]="'lpe'" [fld]="f.lpe" [labels]="labels">
+                    <input class="custom-control-input" type="checkbox" value="" id="lpe" formControlName="lpe">
+                </div>
+                <div class="form-group col-2" frmcheckbox [id]="'lpr'" [fld]="f.lpr" [labels]="labels">
+                    <input class="custom-control-input" type="checkbox" value="" id="lpr" formControlName="lpr">
+                </div>
+                <div class="form-group col-2" frmcheckbox [id]="'lpt'" [fld]="f.lpt" [labels]="labels">
+                    <input class="custom-control-input" type="checkbox" value="" id="lpt" formControlName="lpt">
+                </div>
+            </div> -->
         </div>
     </form>
 </div>

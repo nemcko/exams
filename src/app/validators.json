@@ -1,23 +1,23 @@
 {
     "errrequired":{
-        "en":"Required to enter",
-        "sk":"Vyžaduje sa zadať"
+        "en":"Required value",
+        "sk":"Povinný údaj"
     },
     "errmaxlen":{
-        "en":"The text is very long",
+        "en":"The text is too long",
         "sk":"Text je veľmi dlhý"
     },
     
     "erruserexist":{
-        "en":"User exist",
+        "en":"This user already exists",
         "sk":"Používateľ už existuje"
     },
     "erraddressexist":{
-        "en":"Address exist",
+        "en":"This address already exists",
         "sk":"Adresa už existuje"
     },
     "errclientexist":{
-        "en":"Client exist",
+        "en":"Client already exists",
         "sk":"Klient už existuje"
     }
 }

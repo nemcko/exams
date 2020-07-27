@@ -57,6 +57,9 @@ export class AddFlyAddressComponent {
   }
 
   public setParentData(parent: any) {
+    // this.parentOid = poid;
+    // this.parentId = pid;
+    // this.parentQparams = qparam;
   }
 
   protected setAddress(item) {

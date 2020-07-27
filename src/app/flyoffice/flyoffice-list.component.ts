@@ -99,4 +99,11 @@ export class FlyofficeListComponent implements OnDestroy {
     }
   }
 
+  // public addClientAddress() {
+  //   if (this.access['adm']) {
+  //     const modalRef = this._modalService.open(AddAddressComponent);
+  //     modalRef.componentInstance.setParent(this.poid, this.parentId, this.qparam);
+  //   }
+  // }
+
 }

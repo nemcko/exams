@@ -1,0 +1,51 @@
+{
+    "asscard": {
+        "en": "Assign",
+        "sk": "Prirad."
+    },
+    "assname": {
+        "en": "Applicant",
+        "sk": "Žiadateľ"
+    },
+    "asslpes": {
+        "en": "Respon.LPE-S",
+        "sk": "Zodpov.LPE-S"
+    },
+    "asslpepl": {
+        "en": "Planned LPE",
+        "sk": "Plán.LPE"
+    },
+    "asslpere": {
+        "en": "Real LPE",
+        "sk": "Skut.LPE"
+    },
+    "asslprs": {
+        "en": "Respon.LPR-S",
+        "sk": "Zodpov.LPR-S"
+    },
+    "asslprpl": {
+        "en": "Planned LPR",
+        "sk": "Plánov.LPR"
+    },
+    "asslprre": {
+        "en": "Real LPR",
+        "sk": "Skut.LPR"
+    },
+    "asslpapl": {
+        "en": "Pl.evaluator",
+        "sk": "Pl.hodnotiteľ"
+    },
+    "asslpare": {
+        "en": "Re.evaluator",
+        "sk": "Re.hodnotiteľ"
+    },
+    "asslpa": {
+        "en": "Resp.evaluator",
+        "sk": "Zodp.hodnotiteľ"
+    },
+    "assigned": {
+        "en": "Assigned by",
+        "sk": "Priradené"
+    }
+
+}

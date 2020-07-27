@@ -2,9 +2,8 @@ import {
   Component, Input, Output, EventEmitter, ContentChildren, QueryList,
   TemplateRef, ContentChild, ViewChildren, OnInit, OnDestroy, AfterContentInit
 } from '@angular/core';
-import { throwError } from 'rxjs';
+import { throwError ,  Observable, Subscription } from 'rxjs';
 import { filter, map, tap, catchError } from 'rxjs/operators';
-import { Observable, Subscription } from 'rxjs';
 import { StateService } from '../../services';
 import { BrwcolDirective } from './brwcol.directive';
 import { BrwService } from './brw.service';
@@ -41,6 +40,7 @@ export class BrwComponent implements OnInit, OnDestroy, AfterContentInit {
 
   @Input() public set uuid(val: string) {
     this._hasOwnUUID = val;
+    // this._uuid = this._service.getUUID(val);
   }
   public get uuid(): string {
     if (this._hasOwnUUID)
@@ -48,6 +48,15 @@ export class BrwComponent implements OnInit, OnDestroy, AfterContentInit {
     else
       return this._uuid;
   }
+
+
+  // get doUpdate() {
+  //   return this.updateData.bind(this);
+  // }
+
+  // protected updateData(cid: string, data: any) {
+  //   alert(cid)
+  // }
 
   ngOnDestroy() {
     if (!this._hasOwnUUID) this._service.state.del(this.uuid);
@@ -68,6 +77,7 @@ export class BrwComponent implements OnInit, OnDestroy, AfterContentInit {
   }
   set limit(value) {
     this._limit = value;
+    //this._triggerReload();
   }
 
   @Input() qparams: any;
@@ -115,6 +125,9 @@ export class BrwComponent implements OnInit, OnDestroy, AfterContentInit {
 
   get columnCount() {
     let count = 0;
+    // count += this.indexColumnVisible ? 1 : 0;
+    // count += this.selectColumnVisible ? 1 : 0;
+    // count += this.expandColumnVisible ? 1 : 0;
     if (this.columns) {
       this.columns.toArray().forEach(column => {
         count += column.visible ? 1 : 0;
@@ -134,6 +147,7 @@ export class BrwComponent implements OnInit, OnDestroy, AfterContentInit {
   set oid(value: string) {
     this._lastCrudCmd.oid = value;
     this._lastCrudCmd.offset = 0;
+    // if (this.autoReload) this.reload(this._lastCrudCmd);
   }
 
   private _objectId: string = Math.random().toString(16).slice(-4) + Math.random().toString(16).slice(-4) +
@@ -152,6 +166,13 @@ export class BrwComponent implements OnInit, OnDestroy, AfterContentInit {
   @Output() onReload = new EventEmitter();
 
   ngOnInit() {
+    // console.log('COUNT:', this.columnCount);
+    // if (this.columns) {
+    //   this.columns.toArray().forEach(column => {
+    //     console.log(column)
+    //   });
+    // }
+
     if (!this._uuid) {
       if (this._hasOwnUUID) {
         this._uuid = this._service.getUUID(this._hasOwnUUID);
@@ -185,6 +206,9 @@ export class BrwComponent implements OnInit, OnDestroy, AfterContentInit {
   }
 
   ngAfterContentInit() {
+    // if(this.searchComponent){
+    //   this.searchComponent.subscribeInput();
+    // }
     if (this.autoReload) this.reload(this._lastCrudCmd);
   }
 
@@ -266,11 +290,19 @@ export class BrwComponent implements OnInit, OnDestroy, AfterContentInit {
           this._reloading = false;
           this.doRowChanged();
           this._service.logInMe();
+
+          // if (err.status === 408) {
+          //   this._service.logInMe();
+          //   // this._appsvc.showSnackbar(err._body);
+          // } else {
+          //   // this._appsvc.showSnackbar(err);
+          // }
         }
       )
   }
 
   public execute(cmd: ICrudAndData) {
+    // let observable = Observable.create(observer => {
     this._lastrowId = undefined;
     this._reloading = true;
     this._service.registerSource(this.uuid, this);
@@ -284,17 +316,31 @@ export class BrwComponent implements OnInit, OnDestroy, AfterContentInit {
           if (cmd.viewpar) {
             this._service.doRefresh(cmd.viewpar.oid, cmd.viewpar.uuid, cmd.viewpar.qparams);
           }
+          // observer.next(body);
         },
         err => {
           this._reloading = false;
           this.doRowChanged();
+          // observer.complete(err);
         }
       )
+    // })
+    // return observable;
   }
 
   protected get itemCount(): number {
     return (this.rows && this.rows.length ? this.rows.length : 0)
   }
+
+
+
+
+  // @ContentChild('searchBarTemplate') searchBar;
+  // public brwFieldName:string;
+  // @ContentChild(BrwsearchComponent) protected searchComponent: BrwsearchComponent;
+  // protected getParent(): BrwComponent {
+  //   return this;
+  // }
 
   @Output() rowClick = new EventEmitter();
   protected rowClicked(row, event) {
@@ -340,6 +386,8 @@ export class BrwComponent implements OnInit, OnDestroy, AfterContentInit {
 
   private _isResizeInLimit(columnElement: HTMLElement, dx: number) {
     if ((dx < 0 && (columnElement.offsetWidth + dx) <= this.resizeLimit)
+      // || !columnElement.nextElementSibling 
+      // ||  (dx >= 0 && ((<HTMLElement> columnElement.nextElementSibling).offsetWidth + dx) <= this.resizeLimit)
     ) {
       return false;
     }

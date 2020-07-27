@@ -12,16 +12,20 @@
             <h6 class="text-primary">{{labels.exasubtitle}}</h6>
 
             <div class="form-row">
-                <div class="form-group col-12">
-                    <label for="address">{{labels.address}}</label>
-                    <input type="text" formControlName="address" class="form-control" [ngClass]="{ 'is-invalid': f.address.errors }"
-                        [fldvalid]="f.address" name="address" />
-                    <div *ngIf="f.address.invalid && (f.address.dirty || f.address.touched)" class="invalid-feedback">
-                        <div *ngIf="f.address.errors.required">{{labels.errrequired}}</div>
-                        <div *ngIf="f.address.errors.addressExist">{{labels.erraddressexist}}</div>
-                        <div *ngIf="f.address.errors.maxlength">{{labels.errmaxlen}}</div>
-                    </div>
+                <div class="form-group col-3">
+                    <label for="house_number">{{labels.house_number}}</label>
+                    <input type="text" formControlName="house_number" class="form-control" name="house_number" />
                 </div>
+                <div class="form-group col-7">
+                    <label for="street">{{labels.street}}</label>
+                    <input type="text" name="street" formControlName="street" class="form-control" />
+                </div>
+                <div class="form-group col-2 align-self-end mb-6">
+                    <button type="button" class="btn btn-outline-primary btn-sm" (click)="chooseAddress()">
+                        <span [class]="'fa fa-envelope'"></span>
+                    </button>
+                </div>
+
             </div>
             <div class="form-row">
                 <div class="form-group col-3">
@@ -50,6 +54,22 @@
                         <div *ngIf="f.state.errors.maxlength">{{labels.errmaxlen}}</div>
                     </div>
 
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-5">
+                    <label for="longitude">{{labels.longitude}}</label>
+                    <input type="number" name="longitude" formControlName="longitude" class="form-control" [ngClass]="{ 'is-invalid': f.longitude.errors }" readonly />
+                    <div *ngIf="f.longitude.invalid && (f.longitude.dirty || f.longitude.touched)" class="invalid-feedback">
+                        <div *ngIf="f.longitude.errors.required">{{labels.errrequired}}</div>
+                    </div>
+                </div>
+                <div class="form-group col-5">
+                    <label for="latitude">{{labels.latitude}}</label>
+                    <input type="number" name="latitude" formControlName="latitude" class="form-control" [ngClass]="{ 'is-invalid': f.latitude.errors }" readonly />
+                    <div *ngIf="f.latitude.invalid && (f.latitude.dirty || f.latitude.touched)" class="invalid-feedback">
+                        <div *ngIf="f.latitude.errors.required">{{labels.errrequired}}</div>
+                    </div>
                 </div>
             </div>
         </div>

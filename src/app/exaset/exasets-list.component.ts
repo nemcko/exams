@@ -1,8 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import {
-  ActivatedRoute, Router, NavigationStart, NavigationEnd, NavigationError, NavigationCancel, RoutesRecognized, RouterEvent
+  ActivatedRoute, Router, NavigationStart, NavigationEnd, NavigationError, NavigationCancel, RoutesRecognized, RouterEvent,ParamMap
 } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 import { NgbModalConfig, NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 declare let $: any;
 
@@ -25,7 +26,7 @@ import { AddUserComponent } from './add-user.component';
   selector: 'exaset-list',
   templateUrl: './exasets-list.component.html'
 })
-export class ExasetsListComponent implements OnDestroy {
+export class ExasetsListComponent implements OnInit, OnDestroy {
   private _onLngChng: Subscription;
   private _lngSub: Subscription;
   protected panelType: string
@@ -70,19 +71,25 @@ export class ExasetsListComponent implements OnDestroy {
       if (event instanceof NavigationEnd) {
         this.examtype = this._route.snapshot.firstChild.url[0].path;
         this.selectPanelType(this.examtype);
+        // this.qparam = {
+        //   'parentId': this.parentId, 'examtype': this.examtype
+        // }
         this._service.doRefresh(this.oid, this.uuid, {
           'parentId': this.parentId, 'examtype': this.examtype
         });
       }
     });
 
-    setTimeout(() => {
-      this._service.doRefresh(this.oid, this.uuid, {
-        'parentId': this.parentId, 'examtype': this.examtype
-      });
-    }, 500)
+    // setTimeout(() => {
+    //   this._service.doRefresh(this.oid, this.uuid, {
+    //     'parentId': this.parentId, 'examtype': this.examtype
+    //   });
+    // }, 500)
   }
 
+  ngOnInit() {
+  }
+  
   ngOnDestroy() {
     if (this._lngSub) this._lngSub.unsubscribe();
   }
@@ -96,11 +103,20 @@ export class ExasetsListComponent implements OnDestroy {
 
   public parentId: string;
   public rowChanged(lastrow: IBrwRow) {
+    // this.parentId = (lastrow.row ? lastrow.row.id : undefined);
     this.parentId = (lastrow.row ? lastrow.row.usr : undefined);
+    // this.qparam = {
+    //   'parentId': this.parentId, 'examtype': this.examtype
+    // }
+
   }
 
 
   public poid: string = '';
+  // public qparam = {
+  //   'parentId': this.parentId, 'examtype': this.examtype
+  // }
+
   public get qparam() {
     return {
       'parentId': this.parentId, 'examtype': this.examtype

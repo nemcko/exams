@@ -13,6 +13,7 @@ import { AddUserAddressComponent } from './add-user-address.component';
 import { AddClientAddressComponent } from './add-client-address.component';
 import { UserAddressComponent } from './user-address.component';
 import { ClientAddressComponent } from './client-address.component';
+import { AddressDialogComponent } from './address-dialog.component';
 
 @NgModule({
   imports: [
@@ -28,12 +29,14 @@ import { ClientAddressComponent } from './client-address.component';
     AddUserAddressComponent,
     AddClientAddressComponent,
     UserAddressComponent,
-    ClientAddressComponent
+    ClientAddressComponent,
+    AddressDialogComponent,
   ],
   entryComponents: [
     AddressDetailComponent, AddressDeleteComponent,
     AddUserAddressComponent,
     AddClientAddressComponent,
+    AddressDialogComponent,
   ],
   exports: [
     UserModule,

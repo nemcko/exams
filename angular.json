@@ -27,15 +27,16 @@
               "./src/bootadmin/css/fontawesome-all.min.css",
               "./src/bootadmin/css/bootadmin.css",
               "./node_modules/@ng-select/ng-select/themes/default.theme.css",
+              "node_modules/ol/ol.css",
              {
                 "input": "./src/bootadmin/css/bootstrap.min.css"
               },
               "src/styles.scss"
             ],
             "scripts": [
-              "./src/bootadmin/js/bootadmin.js",
-              "./src/bootadmin/js/jquery.min.js",
-              "./src/bootadmin/js/bootstrap.bundle.min.js"
+              { "input": "./src/bootadmin/js/jquery.min.js", "bundleName": "jquery" },
+              { "input": "./src/bootadmin/js/bootadmin.js", "bundleName": "bootadmin" },
+              { "input": "./src/bootadmin/js/bootstrap.bundle.min.js", "bundleName": "bootadmin.bundle" }
             ]
           },
           "configurations": {

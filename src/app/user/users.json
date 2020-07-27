@@ -5,18 +5,18 @@
     },
     "usr":{
         "en":"Username",
-        "sk":"Používateľ"
+        "sk":"Meno používateľa"
     },
     "usrreq":{
         "en":"Username is required",
-        "sk":"Vyžaduje sa Používateľ"
+        "sk":"Vyžaduje sa meno používateľa"
     },
     "firstname": {
         "en": "Name",
         "sk": "Meno"
     },
     "lastname": {
-        "en": "Surname",
+        "en": "Last name",
         "sk": "Priezvisko"
     },
     "phone": {
@@ -36,11 +36,11 @@
         "sk": "E-mail"
     },
     "profession": {
-        "en": "Profession",
+        "en": "Occupation",
         "sk": "Profesia"
     },
     "speaks": {
-        "en": "Speaks",
-        "sk": "Hovorí"
+        "en": "Languages",
+        "sk": "Jazyky"
     }   
 }

@@ -1,7 +1,8 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject } from '@angular/core';
 import {
   ActivatedRoute, Router, NavigationStart, NavigationEnd, NavigationError, NavigationCancel, RoutesRecognized, RouterEvent
 } from '@angular/router';
+import { DOCUMENT } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { NgbModalConfig, NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 declare let $: any;
@@ -12,12 +13,12 @@ import * as textdata from './exams.component.json';
 import * as users from '../user/users.json';
 import * as clients from '../user/clients.json';
 import * as examinators from '../user/examinators.json';
+import * as examination from '../user/examination.json';
+// import * as assignment from '../user/assignment.json';
+import * as evaluation from '../user/evaluvation.json';
 import * as panelbuttons from '../panelbuttons.json';
 
-import { ExaminationsDialogComponent } from './examination/examinations-dialog.component';
-import { EvaluationsDialogComponent } from './evaluation/evaluations-dialog.component';
-import { TrainingsDialogComponent } from './training/trainings-dialog.component';
-import { DocumentsDialogComponent } from './document/documents-dialog.component';
+import { ExamComponent } from './core/ctrl.component';
 
 @Component({
   selector: 'exams',
@@ -30,10 +31,10 @@ export class ExamsComponent implements OnDestroy {
   protected panelWidth;
 
   public labels = {};
-  public oid = 'user';
+  public oid = 'exams';
   public uuid: string;
   public access = {};
-  public examtype: string = 'req';
+  // public examtype: string = 'exa';
 
 
   get service(): BrwService {
@@ -48,8 +49,9 @@ export class ExamsComponent implements OnDestroy {
     public texts: TextsService,
     private _modalConfig: NgbModalConfig,
     private _modalService: NgbModal,
+    @Inject(DOCUMENT) private _document,
   ) {
-    let textlib = [textdata, clients, examinators, users, panelbuttons];
+    let textlib = [textdata, clients, examination, evaluation, examinators, users, panelbuttons];
     this._modalConfig.backdrop = false; this._modalConfig.keyboard = false;
     this.labels = texts.toObject(textlib, _user.lng);
     this.access = _user.getAccess();
@@ -62,21 +64,24 @@ export class ExamsComponent implements OnDestroy {
     });
 
     this.selectPanelType();
+    // this.examtype = this._route.snapshot.firstChild.url[0].path;
 
     _router.events.forEach((event) => {
       if (event instanceof NavigationEnd) {
-        this.selectPanelType(this.examtype);
-        this._service.doRefresh(this.oid, this.uuid, {
-          'parentId': this.parentId, 'examtype': this.examtype
-        });
+        // this.examtype = this._route.snapshot.firstChild.url[0].path;
+        // this.selectPanelType(this.examtype);
+        // this.qparam = {
+        //   'parentId': this.parentId, 'examtype': this.examtype
+        // }
+        this.refresh();
       }
     });
 
     setTimeout(() => {
-      this._service.doRefresh(this.oid, this.uuid, {
-        'parentId': this.parentId, 'examtype': this.examtype
-      });
-    }, 500)
+      this.refresh();
+    }, 500);
+
+    // _document.getElementById('el');
   }
 
   ngOnDestroy() {
@@ -87,21 +92,67 @@ export class ExamsComponent implements OnDestroy {
   }
 
   rowDoubleClick(rowEvent) {
+    // this.showDetail(rowEvent.row.id);
   }
 
   public parentId: string;
   public rowChanged(lastrow: IBrwRow) {
+    // this.parentId = (lastrow.row ? lastrow.row.id : undefined);
     this.parentId = (lastrow.row ? lastrow.row.usr : undefined);
+    // this.qparam = {
+    //   'parentId': this.parentId, 'examtype': this.examtype
+    // }
+
   }
 
 
   public poid: string = '';
+  // public qparam = {
+  //   'parentId': this.parentId, 'examtype': this.examtype
+  // }
 
-  public get qparam() {
-    return {
-      'parentId': this.parentId, 'examtype': this.examtype
+  // public get qparam() {
+  //   return {
+  //     'parentId': this.parentId, 'examtype': this.examtype
+  //   }
+  // }
+
+  protected exafilter = {
+    'typeact': true,
+    'typeexa': true,
+    'typetra': true,
+    'lpe': false,
+    'lpr': false,
+    'lpt': false
+  };
+
+  public setExaFilter(evnt, ftype) {
+    switch (ftype) {
+      case 'typeact':
+        this._document.getElementById('flt-typeact')['checked'] = this.exafilter['typeact'] = true;
+        this._document.getElementById('flt-typeall')['checked'] = !this.exafilter['typeact']
+        break;
+      case 'typeall':
+        this._document.getElementById('flt-typeall')['checked'] = !(this.exafilter['typeact'] = false);
+        this._document.getElementById('flt-typeact')['checked'] = this.exafilter['typeact']
+        break;
+      default:
+        this.exafilter[ftype] = evnt.target.checked;
     }
+    // alert(JSON.stringify(this.exafilter))
+    this.refresh();
   }
+
+  public refresh() {
+    this._service.doRefresh(this.oid, this.uuid, {
+      'parentId': this.parentId,
+      // 'examtype': this.examtype,
+      'exafilter': this.exafilter,
+    });
+  }
+
+
+
 
   public selectPanelType(type?: string) {
     this.panelType = type;
@@ -120,44 +171,28 @@ export class ExamsComponent implements OnDestroy {
   }
 
   public selectPanelWidth() {
-    if (this.examtype == 'adm' || this.examtype == 'lpes' || this.examtype == 'lprs' || this.examtype == 'lpts' || this.panelType !== 'btnMembers') {
-      this.panelWidth = { left: 60, right: 40 };
-    } else {
+    // if (this.examtype == 'adm' || this.examtype == 'lpes' || this.examtype == 'lprs' || this.examtype == 'lpts' || this.panelType !== 'btnMembers') {
+    //   this.panelWidth = { left: 60, right: 40 };
+    // } else {
       this.panelWidth = { left: 100, right: 0 };
-    }
+    // }
   }
 
-
-  public showExaminationsDialog(id) {
-    if (this.access['adm']) {
-      const modalRef = this._modalService.open(ExaminationsDialogComponent, { size: 'lg' });
-      modalRef.componentInstance.lodaData(id, this);
-    }
+  public showDocumentsDialog(id: string) {
+    const modalRef = this._modalService.open(ExamComponent, { size: 'lg' });
+    modalRef.componentInstance.lodaData(this, id);
   }
 
-  public showEvaluationsDialog(id) {
-    if (this.access['adm']) {
-      const modalRef = this._modalService.open(EvaluationsDialogComponent, { size: 'lg' });
-      modalRef.componentInstance.lodaData(id, this);
-    }
-  }
-
-  public showTrainingsDialog(id) {
-    if (this.access['adm']) {
-      const modalRef = this._modalService.open(TrainingsDialogComponent, { size: 'lg' });
-      modalRef.componentInstance.lodaData(id, this);
-    }
-  }
-
-  public showDocumentsDialog(id) {
-    if (this.access['adm']) {
-      const modalRef = this._modalService.open(DocumentsDialogComponent);
-      modalRef.componentInstance.lodaData(id, this);
-    }
+  public deleteDocument(id: string) {
+    let self = this;
+    let crudcmd = Object.assign({}, { oid: this.oid, id: id, cid: 'delete' });
+    this._service.upsert(crudcmd).subscribe(
+      body => {
+        this.refresh();
+      }
+    )
   }
 
 
 
-
-  
 }

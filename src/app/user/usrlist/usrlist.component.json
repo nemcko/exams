@@ -4,10 +4,9 @@
         "sk": "Používatelia"
     },
     "dtitle": {
-        "en": "User Registration Data",
-        "sk": "Registračné údaje používateľa"
+        "en": "User data",
+        "sk": "Registračné údaje"
     },
-
     "btnUser":{
         "en":"User",
         "sk":"Používateľ"

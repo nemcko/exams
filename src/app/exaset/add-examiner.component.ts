@@ -10,7 +10,7 @@ import * as panelbuttons from '../panelbuttons.json';
 @Component({
   selector: 'exaadd',
   template: `
-  <pgaddlg [title]="labels.addExaminerTitle">
+  <pgaddlg [title]="labels.addExaminerTitle+' ('+qparams.examtype+')'">
   <brw [uuid]="uuid" [oid]="oid" [service]="service" [qparams]="qparams">
     <brwtitle [brwFieldName]="'fullsearch'" [searchControl]="'search'">
       <div class="btn-group col-sm-12 px-0">
@@ -57,7 +57,7 @@ export class AddExaminerComponent {
 
   protected parentQparams: any;
 
-  protected get qparams() {
+  public get qparams() {
     return { commandId: 'addexa', parentId: this.parentQparams.parentId, examtype: this.parentQparams.examtype };
   }
 

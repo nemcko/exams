@@ -48,6 +48,7 @@ export class ExaminationsComponent implements OnInit {
   }
 
   rowDoubleClick(rowEvent) {
+    // alert(JSON.stringify(rowEvent.row));
   }
 
   ngOnInit() {
@@ -72,5 +73,15 @@ export class ExaminationsComponent implements OnInit {
       return;
     }
 
+    // this.authenticationService.login(this.f.username.value, this.f.password.value)
+    //     .pipe(first())
+    //     .subscribe(
+    //         data => {
+    //             this._router.navigate([this.returnUrl]);
+    //         },
+    //         error => {
+    //             this.alertService.error(error);
+    //             this.loading = false;
+    //         });
   }
 }

@@ -1,0 +1,62 @@
+<div class="modal-header pb-1">
+  <h4 class="modal-title">{{labels.dtitle}}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body pt-0 pb-0">
+
+  <form [formGroup]="detailForm" (ngSubmit)="onSubmit()">
+
+    <div class="border border-primary rounded px-2">
+      <h6 class="text-primary">{{labels.exasubtitle}}</h6>
+
+      <div class="form-row">
+        <div class="form-group col-10">
+          <label for="type">{{labels.type}}</label>
+          <select formControlName="type" class="form-control col-5" id="type" (change)="doLngChange($event.target.value)">
+            <option [value]="item.type" *ngFor="let item of labels.doctypes">{{item.name}}</option>
+          </select>
+        </div>
+
+        <div class="form-group col-2 mt-2" frmcheckbox [id]="'act'" [fld]="f.act" [labels]="labels">
+            <div>&nbsp;</div>
+            <input class="custom-control-input" type="checkbox" id="act" formControlName="act">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-12">
+          <label for="name">{{labels.name}}</label>
+          <input focus type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': f.name.errors }"
+            name="name" />
+          <div *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" class="invalid-feedback">
+            <div *ngIf="f.name.errors.required">{{labels.errrequired}}</div>
+            <!-- <div *ngIf="f.name.errors.errclientexist">{{labels.errnameexist}}</div> -->
+            <div *ngIf="f.name.errors.maxlength">{{labels.errmaxlen}}</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form-row">
+        <file-drop class="col-12" headertext="{{labels.droptext}}" (onFileDrop)="dropped($event)" (onFileOver)="fileOver($event)"
+          (onFileLeave)="fileLeave($event)">
+          <span>{{detailForm.value.filename}}</span>
+        </file-drop>
+        <div class="font-weight-light text-center w-100 pb-2"><small>{{availExt}}</small></div>
+      </div>
+
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="activeModal.dismiss('Cross click')">{{labels.btnclose}}</button>
+  <button [disabled]="!recid" type="button" class="btn btn-secondary" data-dismiss="modal" (click)="alertDlg()">{{labels.btndelete}}</button>
+  <button [disabled]="detailForm.invalid" type="submit" class="btn btn-primary" (click)="onSubmit()">{{labels.btnsave}}</button>
+</div>
+
+<pgalert [dlgid]="'deletealertdlg'" [dlgRef]="deleteAlert" [title]="labels.delExamedTitle" [type]="'YES-NO'"
+  (doClick)="doDelete($event)">
+  <p>{{labels.delExamedQuestion}}</p>
+</pgalert>

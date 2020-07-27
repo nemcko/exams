@@ -13,14 +13,31 @@ export class TextsService {
 
   constructor() { }
 
+  checkOwnProperty(obj: any, propertyName: string) {
+    return (obj && (typeof obj == "object" || typeof obj == "function") &&
+      Object.prototype.hasOwnProperty.call(obj, propertyName))
+      ? true : false;
+  }
+
+  getDefaultObject(obj: any, callback: (any)) {
+    if (obj && (typeof obj == "object" || typeof obj == "function") &&
+    typeof obj.hasOwnProperty && obj['default']) {
+      callback(obj['default']);
+    } else {
+      callback(obj);
+    }
+  }
+
 
   mergeObjects(texts: any): any {
     if (texts instanceof Array) {
       const newObj = {};
       for (const obj of texts) {
-        for (const key in obj) {
-          newObj[key] = obj[key];
-        }
+        this.getDefaultObject(obj, (defobj: any) => {
+          for (const key in defobj) {
+            newObj[key] = defobj[key];
+          }
+        })
       }
       return newObj;
     } else {
@@ -35,9 +52,12 @@ export class TextsService {
     this._lng = lng;
 
     for (let prop in this.mergeObjects(texts)) {
-      if (texts.hasOwnProperty(prop)) {
-        target[prop] = texts[prop][lng] || '';
-      }
+      this.getDefaultObject(texts,(defobj: any) => {
+        for (const key in defobj) {
+          target[key] = defobj[key][lng] || '';
+        }
+        // target[prop] = obj[prop][lng] || '';
+      })
     }
     return target;
   }
@@ -61,9 +81,12 @@ export class TextsService {
       btarget[prop] = textdata[prop][lng] || '';
     }
     for (let prop in txts) {
-      if (txts.hasOwnProperty(prop)) {
-        target[prop] = txts[prop][lng] || '';
-      }
+      this.getDefaultObject(txts, (defobj: any) => {
+        for (const key in defobj) {
+          target[key] = defobj[key][lng] || '';
+        }
+        // target[prop] = obj[prop][lng] || '';
+      })
     }
     return target;
   }

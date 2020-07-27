@@ -1,11 +1,11 @@
 {
     "appname":{
-        "en":"Examinators",
-        "sk":"Preskúšania"
+        "en":"Examiners",
+        "sk":"Examinátori"
     },
     "exams":{
-        "en":"Examinations",
-        "sk":"Preskúšania"
+        "en":"Tasks",
+        "sk":"Úlohy"
     },
     "users":{
         "en":"Users",
@@ -16,23 +16,23 @@
         "sk": "Dokumenty"
     },
     "examinatorexa": {
-        "en": "Examinators",
-        "sk": "Examinátori"
+        "en": "LPE",
+        "sk": "LPE"
     },
     "verifications": {
-        "en": "Verifications",
-        "sk": "Preskúšania"
+        "en": "EXAM",
+        "sk": "PRESKÚŠANIE"
     },
     "evaluations": {
-        "en": "Evaluations",
-        "sk": "Hodnotenia"
+        "en": "RATING",
+        "sk": "HODNOTENIE"
     },
     "trainings": {
-        "en": "Trainings",
-        "sk": "Hodnotenia"
+        "en": "TRAINING",
+        "sk": "VÝUČBA"
     },
     "addresses": {
-        "en": "Addresses",
+        "en": "Address",
         "sk": "Adresy"
     },
     "clients": {
@@ -40,12 +40,16 @@
         "sk": "Klienti"
     },
     "flyoffices": {
-        "en": "Flyoffices",
-        "sk": "Let.úrady"
+        "en": "Authority",
+        "sk": "Úrad"
     },
     "exasets": {
         "en": "Settings",
-        "sk": "Nastavenie"
+        "sk": "Nastavenia"
+    },
+    "examed": {
+        "en": "Media for test",
+        "sk": "Médiá pre test"
     }
 
 }

@@ -1,0 +1,56 @@
+<pgtitle [title]="labels.title" [iclass]="'fa fa-fw fa-file-video-o'" [oid]="oid" [brwFieldName]="'fullsearch'">
+  <div class="btn-group col-sm-5 px-0">
+    <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></span>
+    <input type="text" #search class="form-control px-1 text-primary" placeholder="{{labels.search}}">
+    <button type="button" class="btn btn-outline-secondary" (click)="showDetail('')" [class.disabled]="!access.adm"><i
+        class="fa fa-plus"></i>&nbsp;{{labels.btnadd}}</button>
+  </div>
+</pgtitle>
+
+<pgpanel [lmargins]="20">
+  <pgview [width]="panelWidth.left" [lmargin]="0">
+    <brw [uuid]="uuid" [oid]="oid" [service]="service" (rowClick)="rowClick($event)" (rowDoubleClick)="rowDoubleClick($event)"
+      (rowChanged)="rowChanged($event)">
+      <brwtitle>
+        <div class="rounded border border-primary d-inline-flex mb-1">
+            <div class="btn-group" role="group mr-3">
+                <div class="d-inline-flex flex-row align-items-end text-primary pl-2">
+                    <div class="form-check form-check-inline mr-4 text-nowrap" *ngFor="let itm of labels.doctypes | keyvalue">
+                        <input type="radio" class="form-check-input" name="inlineRadioOptions" id="flt-{{itm.value.type}}" (click)="setExaFilter($event,itm.value.type)">
+                        <label class="form-check-label" for="flt-{{itm.value.type}}">{{itm.value.name}}</label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </brwtitle>
+
+      <brwcol [name]="'type'" [header]="labels.type" [width]="20">
+        <ng-template #dataTableCell let-item="row">
+          <div *ngFor="let itm of labels.doctypes | keyvalue">
+            <div *ngIf="itm.value.type==item.type">{{itm.value.name}}</div>
+            <!-- <pre>{{itm.value|json}}</pre> -->
+          </div>
+        </ng-template>
+      </brwcol>
+
+      <brwcol [name]="'name'" [header]="labels.name" [width]="25"></brwcol>
+      <brwcol [name]="'filename'" [header]="labels.filename" [width]="50"></brwcol>
+      <brwcol [name]="'act'" [header]="labels.act" [width]="5">
+        <ng-template #dataTableCell let-item="row">
+          <span [class]="'fa fa-check-square-o'" *ngIf="item.act=='1'"></span>
+          <span [class]="'fa fa-square-o'" *ngIf="item.act=='0'"></span>
+        </ng-template>
+      </brwcol>
+    
+      <brwcol [name]="'id'" [width]="'28px'" [cls]="'p-0 float-right'" [visible]="access.adm">
+        <ng-template #dataTableCell let-item="row">
+          <button type="button" class="btn btn-primary btn-sm" (click)="showDetail(item.id)">
+            <span [class]="'fa fa-pencil'"></span>
+          </button>
+        </ng-template>
+      </brwcol>
+
+    </brw>
+  </pgview>
+</pgpanel>

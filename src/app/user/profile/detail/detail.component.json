@@ -19,7 +19,7 @@
         "sk": "Meno"
     },
     "lastname": {
-        "en": "Surname",
+        "en": "Last name",
         "sk": "Priezvisko"
     },
     "phone": {
@@ -39,12 +39,12 @@
         "sk": "E-mail"
     },
     "profession": {
-        "en": "Profession",
+        "en": "Occupation",
         "sk": "Profesia"
     },
     "speaks": {
-        "en": "Speaks",
-        "sk": "Hovorí"
+        "en": "Languages",
+        "sk": "Jazyky"
     },
 
 
@@ -57,18 +57,18 @@
     },
     "company": {
         "en": "Company",
-        "sk": "Firma"
+        "sk": "Spoločnosť"
     },
     "street": {
-        "en": "street",
+        "en": "Street",
         "sk": "Ulica"
     },
     "zip": {
-        "en": "zip",
+        "en": "ZIP",
         "sk": "PSČ"
     },
     "city": {
-        "en": "city",
+        "en": "City",
         "sk": "Obec"
     },
 

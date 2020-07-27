@@ -1,4 +1,4 @@
-<pgtitle [title]="labels.title" [subtitle]="labels.name" [oid]="oid" [brwFieldName]="'fullsearch'">
+<pgtitle [title]="labels.title" [iclass]="'fa fa-fw fa-envelope'" [subtitle]="labels.name" [oid]="oid" [brwFieldName]="'fullsearch'">
   <div class="btn-group col-sm-3 px-0">
     <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></span>
     <input type="text" #search class="form-control px-1 text-primary" placeholder="{{labels.search}}">
@@ -46,7 +46,8 @@
   <pgview [width]="panelWidth.left" [lmargin]="0">
     <brw [uuid]="uuid" [oid]="oid" [service]="service" (rowClick)="rowClick($event)" (rowDoubleClick)="rowDoubleClick($event)"
       (rowChanged)="rowChanged($event)">
-      <brwcol [name]="'address'" [header]="labels.address" [width]="25"></brwcol>
+      <brwcol [name]="'house_number'" [header]="labels.house_number" [width]="5"></brwcol>
+      <brwcol [name]="'street'" [header]="labels.street" [width]="20"></brwcol>
       <brwcol [name]="'zip'" [header]="labels.zip" [width]="20"></brwcol>
       <brwcol [name]="'city'" [header]="labels.city" [width]="40"></brwcol>
       <brwcol [name]="'state'" [header]="labels.state" [width]="15"></brwcol>

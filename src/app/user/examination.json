@@ -1,19 +1,23 @@
 {
     "exasubtitle": {
-        "en": "Basic data",
+        "en": "General information",
         "sk": "Základné údaje"
     },
     "exacard": {
-        "en": "Basic",
-        "sk": "Údaje"
+        "en": "Gneral",
+        "sk": "Všeobecne"
     },
-    "exacode": {
-        "en": "Type",
-        "sk": "Typ"
+    "exatype": {
+        "en": "Exam type",
+        "sk": "Typ skúšky"
     },
     "exnum": {
-        "en": "Exam Nr.",
-        "sk": "Skúška č."
+        "en": "Exam ID",
+        "sk": "Exam ID."
+    },
+    "exanr": {
+        "en": "Nr.",
+        "sk": "č."
     },
     "lng": {
         "en": "Lng",
@@ -24,53 +28,113 @@
         "sk": "Test č."
     },
     "userecnr": {
-        "en": "Record Nr.",
-        "sk": "Nahrávka č."
+        "en": "Audio ID",
+        "sk": "Audio ID"
     },
     "usevidnr": {
-        "en": "Video Nr.",
-        "sk": "Video č."
+        "en": "Video ID.",
+        "sk": "Video ID"
+    },
+    "usedt": {
+        "en": "Dátum a čas priradenia",
+        "sk": "Date and time of assignment"
     },
     "planplace": {
-        "en": "Planned location",
+        "en": "Planned venue",
         "sk": "Plánované miesto"
     },
-    "plandate": {
-        "en": "Planned date",
-        "sk": "Plán.dátum"
-    },
-    "plantime": {
-        "en": "Planned time",
-        "sk": "Plán.čas"
-    },
     "realplace": {
-        "en": "Real location",
+        "en": "Real venue",
         "sk": "Skutočné miesto"
     },
-    "realdate": {
-        "en": "Real date",
-        "sk": "Skut.dátum"
+    "examplace": {
+        "en": "Venue",
+        "sk": "Miesto"
     },
-    "realtime": {
-        "en": "Real time",
-        "sk": "Skut.čas"
+    "planeddt": {
+        "en": "Planned date and time",
+        "sk": "Plánovaný dátum a čas"
+    },
+    "realdt": {
+        "en": "Real date and time",
+        "sk": "Skutočný dátum a čas"
+    },
+    "examdatetime": {
+        "en": "Date and time",
+        "sk": "Dátum a čas"
     },
     "chngreas": {
-        "en": "Change reason",
+        "en": "Reason of change",
         "sk": "Dôvod zmeny"
     },
-    "assigned": {
-        "en": "Assigned",
+    "testrecdoc": {
+        "en": "Store files",
+        "sk": "Uložiť súbory"
+    },
+    "drophere": {
+        "en": "Drop file here",
+        "sk": "Pustiť súbor tu"
+    },
+    "badextension": {
+        "en": "Incorrect File Extension",
+        "sk": "Nesprávne rozšírenie súboru"
+    },
+    "testdoc": {
+        "en": "Test document",
+        "sk": "Test dokument"
+    },
+    "testaudio": {
+        "en": "Audio record",
+        "sk": "Audio záznam"
+    },
+    "testvideo": {
+        "en": "Video record",
+        "sk": "Video záznam"
+    },
+    "assignedby": {
+        "en": "Assigned by",
         "sk": "Zadal"
     },
+    "assigndt": {
+        "en": "Date and time of assignment",
+        "sk": "Dátum a čas priradenia"
+    },
+    "testdt": {
+        "en": "Date and time of the entry",
+        "sk": "Dátum a čas zapisu mmédií"
+    },
     "applicant": {
-        "en": "Applicant",
+        "en": "Exam candidate",
         "sk": "Žiadateľ"
     },
-
+    "flyingrules": {
+        "en": "Flying rules",
+        "sk": "Pravidlá lietania"
+    },
+    "accordingrules": {
+        "en": [
+            {
+                "flyingrules": "VFR",
+                "name": "Visual"
+            },
+            {
+                "flyingrules": "IFR",
+                "name": "Instrument"
+            }
+        ],
+        "sk": [
+            {
+                "flyingrules": "VFR",
+                "name": "Vizuálne"
+            },
+            {
+                "flyingrules": "IFR",
+                "name": "Podľa prístrojov"
+            }
+        ]
+    },
     "state": {
-        "en": "State of review",
-        "sk": "Stav preskúšania"
+        "en": "State",
+        "sk": "Stav"
     }
-
 }

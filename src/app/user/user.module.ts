@@ -16,7 +16,6 @@ import { DocumentsComponent } from './profile/documents/documents.component';
 import { ExaminationsComponent } from './profile/examinations/examinations.component';
 import { EvaluationsComponent } from './profile/evaluations/evaluations.component';
 import { TrainingsComponent } from './profile/trainings/trainings.component';
-import { PhotoComponent } from './photo/photo.component';
 import { PhotoDlgComponent } from './photo/photo-dlg.component';
 import { UsrDocumentsComponent } from './usrlist/usr-documents.component';
 import { UsrDocumentComponent } from './usrlist/usr-document.component';
@@ -43,7 +42,6 @@ import { UsrLanguageComponent } from './usrlist/usr-language.component';
     EvaluationsComponent,
     TrainingsComponent,
     TestuiComponent,
-    PhotoComponent,
     PhotoDlgComponent,
     UsrDocumentsComponent,
     UsrDocumentComponent,

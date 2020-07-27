@@ -1,0 +1,28 @@
+<div class="modal-header pb-1">
+  <h4 class="modal-title" id="modal-basic-title">{{ctrlTitle}}
+    <!-- <small>{{labels.cardtitle}}</small> -->
+  </h4>
+  <button type="button" class="close" aria-label="Close" (click)="dismissDlg()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body py-0">
+  <div class="btn-group btn-group-toggle float-right btn-light position-static" ngbRadioGroup [(ngModel)]="viewcard" [ngStyle]="{'z-index': 100}">
+    <label ngbButtonLabel *ngFor="let item of exacards; index as i;" class="btn btn-outline-primary" (click)="selectCard(item.code)">
+      <input ngbButton type="radio" [value]="item.code"> {{i+1}}
+    </label>
+  </div>
+  <div class="border border-primary rounded p-2">
+    <ng-template exacards></ng-template>
+  </div>
+  <small class="text-muted float-left"><small>{{viewcard}}</small></small>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" data-dismiss="modal" *ngIf="visibleButtons.close" [disabled]="disabledButtons.close"
+    (click)="dismissDlg()">{{labels.close}}</button>
+  <button type="button" class="btn btn-secondary" (click)="cancelData($event)" *ngIf="visibleButtons.btnCancel" [disabled]="disabledButtons.btnCancel">{{labels.btnCancel}}</button>
+  <button type="button" class="btn btn-secondary" (click)="backData($event)" *ngIf="visibleButtons.btnBack" [disabled]="disabledButtons.btnBack">{{labels.btnBack}}</button>
+  <!-- <button type="button" class="btn btn-primary" (click)="saveData()" *ngIf="visibleButtons.btnsave" [disabled]="disabledButtons.btnsave">{{labels.btnsave}}</button>
+  <button type="button" class="btn btn-primary" (click)="saveExit()" *ngIf="visibleButtons.btnsaveexit" [disabled]="disabledButtons.btnsaveexit">{{labels.btnsaveexit}}</button> -->
+  <button type="button" class="btn btn-primary" (click)="saveNext()" *ngIf="visibleButtons.btnsavenext" [disabled]="viewstate!==viewcard || disabledButtons.btnsavenext">{{labels.btnsavenext}}</button>
+</div>

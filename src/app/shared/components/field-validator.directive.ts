@@ -1,9 +1,8 @@
 import { Directive, ElementRef, forwardRef, Input, AfterViewInit, Self, HostListener, Injectable } from '@angular/core';
 import { AsyncValidatorFn, AsyncValidator, Validator, NG_ASYNC_VALIDATORS, AbstractControl, ValidationErrors } from '@angular/forms';
-import { Observable, of } from 'rxjs';
+import { Observable, of ,  of as observableOf } from 'rxjs';
 import { first, debounceTime, map, distinctUntilChanged, switchMap, timeout } from 'rxjs/operators';
 import { FieldValidatorService } from '../services/field-validator.service';
-import { of as observableOf } from 'rxjs';
 
 
 @Directive({

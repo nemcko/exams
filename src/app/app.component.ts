@@ -48,6 +48,7 @@ export class AppComponent implements OnInit, OnDestroy {
         });
     })
     
+    
     toastr.options.positionClass = 'toast-bottom-right';
     toastr.options.preventDuplicates = true;
     this.user.onToast$.subscribe(toast => {
@@ -60,6 +61,10 @@ export class AppComponent implements OnInit, OnDestroy {
           break;
       }
     });
+  }
+
+  public get access() {
+    return this.user.getAccess();
   }
 
   ngOnInit() {

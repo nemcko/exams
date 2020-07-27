@@ -1,0 +1,87 @@
+<div class="form-row" [ngSwitch]="(cardcode||'000').substring(0,3)">
+  <div class="col-md-2">
+    <label for="lng">{{labels.lng}}</label>
+    <div class="mt-1 mb-2">{{selLanguage}}</div>
+  </div>
+
+  <div class="form-group col-4" userbtn [id]="'applicant'" [labels]="labels" [usrobj]="data.applicant" [readonly]="true"></div>
+  <div *ngIf="cardcode=='e02a'" class="form-group col-4" userbtn [id]="'lpeplaned'" [labels]="labels" [usrobj]="data.lpeplaned"
+    [readonly]="true"></div>
+  <div *ngIf="(cardcode||'000').substring(1,3)=='02' && (cardcode||'000').substring(1,4)!=='02a'" class="form-group col-4"
+    userbtn [id]="'lpereal'" [labels]="labels" [usrobj]="data.lpereal" [readonly]="true"></div>
+  <div *ngIf="(cardcode||'000').substring(1,4)=='03a'" class="form-group col-4" userbtn [id]="'lprplaned'" [labels]="labels"
+    [usrobj]="data.lprplaned" [readonly]="true"></div>
+  <div *ngIf="(cardcode||'000').substring(1,3)=='03' && (cardcode||'000').substring(1,4)!=='03a'" class="form-group col-4"
+    userbtn [id]="'lprreal'" [labels]="labels" [usrobj]="data.lprreal" [readonly]="true"></div>
+  <div *ngIf="cardcode=='e04a'" class="form-group col-4" userbtn [id]="'appplaned'" [labels]="labels" [usrobj]="data.appplaned"
+    [readonly]="true"></div>
+  <div *ngIf="(cardcode||'000').substring(1,3)=='04' && (cardcode||'000').substring(1,4)!=='04a'" class="form-group col-4"
+    userbtn [id]="'appreal'" [labels]="labels" [usrobj]="data.appreal" [readonly]="true"></div>
+
+  <div class="col-md-2" *ngIf="(cardcode||'000').substring(0,1)=='t' ">
+    <label for="lng">{{labels.flyingrules}}</label>
+    <div class="mt-1 mb-2">{{selRules}}</div>
+  </div>
+
+
+</div>
+
+<div class="form-row mb-1" *ngIf="(cardcode||'000').substring(1,3)=='02' || (cardcode||'000').substring(1,4)=='02c' || (cardcode||'000').substring(1,4)=='02d' || (cardcode||'000').substring(1,3)=='03' || (cardcode||'000').substring(1,3)=='04'">
+  <div class="col-md-3">
+    <label for="realplace">{{labels.examplace}}</label>
+    <div class="mt-1 mb-2 text-truncate">{{data.realplace.name}}</div>
+  </div>
+
+  <div class="col-md-3">
+    <label for="realplace">{{labels.examdatetime}}</label>
+    <div class="mt-1 mb-2 text-truncate">{{data.realdt|date: labels['dateformat'] + ' H:m'}}</div>
+  </div>
+
+  <div class="col-md-2">
+    <label for="usetstnr">{{labels.usetstnr}}</label>
+    <div class="input-group mt-1 mb-2" id="usetstnr">
+      <div class="flex-grow-1">{{data.usetstnr}}</div>
+      <appdoc [examid]="data.examed_usetstnr.id" [type]="'mediadoc'" [name]="data.examed_usetstnr.filename" [lbl]="labels">
+        <span [class]="'fa fa-list-ol'"></span>
+      </appdoc>
+    </div>
+  </div>
+  <div class="col-md-2">
+    <label for="userecnr">{{labels.userecnr}}</label>
+    <div class="input-group mt-1 mb-2" id="usetstnr">
+      <div class="flex-grow-1">{{data.userecnr}}</div>
+      <appdoc [examid]="data.examed_userecnr.id" [type]="'mediaaudio'" [name]="data.examed_userecnr.filename" [lbl]="labels">
+        <span [class]="'fa fa-volume-off'"></span>
+      </appdoc>
+    </div>
+  </div>
+  <div class="col-md-2">
+    <label for="usevidnr">{{labels.usevidnr}}</label>
+    <div class="input-group mt-1 mb-2" id="usetstnr">
+      <div class="flex-grow-1">{{data.usevidnr}}</div>
+      <appdoc [examid]="data.examed_usevidnr.id" [type]="'mediavideo'" [name]="data.examed_usevidnr.filename" [lbl]="labels">
+        <span [class]="'fa fa-video-camera'"></span>
+      </appdoc>
+    </div>
+  </div>
+</div>
+
+<div class="border-top border-primary my-3"></div>
+<ng-content></ng-content>
+
+<div class="form-row mt-4" [ngSwitch]="(cardcode||'000').substring(1,3)">
+  <div *ngSwitchCase="'02'" class="form-group col-4 offset-4" userbtn [id]="'assignedby'" [labels]="labels" [usrobj]="data.assignedby"
+    [readonly]="true"></div>
+  <div *ngSwitchCase="'02'" class="form-group col-4" userbtn [id]="'lperespon'" [labels]="labels" [usrobj]="data.lperespon"
+    [readonly]="true"></div>
+
+  <div *ngSwitchCase="'03'" class="form-group col-4 offset-4" userbtn [id]="'assignedby'" [labels]="labels" [usrobj]="data.assignedby"
+    [readonly]="true"></div>
+  <div *ngSwitchCase="'03'" class="form-group col-4" userbtn [id]="'lprrespon'" [labels]="labels" [usrobj]="data.lprrespon"
+    [readonly]="true"></div>
+
+  <div *ngSwitchCase="'04'" class="form-group col-4 offset-4" userbtn [id]="'assignedby'" [labels]="labels" [usrobj]="data.assignedby"
+    [readonly]="true"></div>
+  <div *ngSwitchCase="'04'" class="form-group col-4" userbtn [id]="'apprespon'" [labels]="labels" [usrobj]="data.apprespon"
+    [readonly]="true"></div>
+</div>

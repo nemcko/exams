@@ -1,10 +1,9 @@
 import { Component, Input, ViewChild } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { Subject } from 'rxjs';
+import { Observable ,  Subject } from 'rxjs';
 import { Http, Headers, Request, Response, RequestOptions } from '@angular/http';
 
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/map';
+
+
 
 import { NgbModalConfig, NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 

@@ -15,7 +15,7 @@ export class AuthService {
     return this._state.token;
   }
 
-  public redirectUrl: string = '/users';
+  public redirectUrl: string = '/exams';
 
   constructor(
     @Inject(APP_CONFIG) protected config: IConfig, 

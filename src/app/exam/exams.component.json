@@ -1,13 +1,14 @@
 {
     "title": {
-        "en":"Examinations",
-        "sk":"Preskúšania"
+        "en":"Tasks",
+        "sk":"Úlohy"
     },
     "subtitle": {
         "en":"Training and examinations",
         "sk":"Tréning a preskúšania"
     },
     
+
     "btndet": {
         "en": "User data",
         "sk": "Údaje používateľa"
@@ -44,6 +45,13 @@
     "close": {
         "en": "Close",
         "sk": "Zatvor"
+    },
+    "btntypeact": {
+        "en": "Active tasks",
+        "sk": "Aktívne úlohy"
+    },
+    "btntypeall": {
+        "en": "All tasks",
+        "sk": "Všetky úlohy"
     }
-
 }

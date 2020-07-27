@@ -1,6 +1,6 @@
 {
     "title": {
-        "en": "Examinators",
+        "en": "Examiners",
         "sk": "Examinátori"
     },
     "dtitle": {
@@ -9,8 +9,8 @@
     },
 
     "btnMembers":{
-        "en":"Members",
-        "sk":"Členovia"
+        "en":"STAFF MEMBERS",
+        "sk":"PRACOVNÍCI"
     },
     "btnUsers": {
         "en": "Users",
@@ -22,28 +22,28 @@
     },
 
     "addExaminerTitle": {
-        "en": "Add Examiner",
-        "sk": "Nový skúšajúci"
+        "en": "Add",
+        "sk": "Nový"
     },
     "delExaminerTitle": {
-        "en": "Delete examiner",
-        "sk": "Vymazanie skúšateľa"
+        "en": "Delete LPE",
+        "sk": "Vymazať LPE"
     },
     "delExaminerQuestion": {
-        "en": "Do you want to delete this examiner?",
-        "sk": "Chcete vymazať tohto preskúšavateľa?"
+        "en": "Do you want to delete this LPE?",
+        "sk": "Chcete vymazať tohto LPE?"
     },
 
     "addMemberTitle": {
-        "en": "Add member",
-        "sk": "Nový člen"
+        "en": "Add staff member",
+        "sk": "Pridať nového pracovníka"
     },
     "delMemberTitle": {
-        "en": "Delete member",
-        "sk": "Vymazanie člena"
+        "en": "Delete staff member",
+        "sk": "Vymazanie pracovníka"
     },
     "delMemberQuestion": {
-        "en": "Do you want to delete this member of group?",
+        "en": "Do you want to delete this group?",
         "sk": "Chcete vymazať tohto člena skupiny?"
     },
 
@@ -62,7 +62,7 @@
     },
 
     "addClientTitle": {
-        "en": "Add client",
+        "en": "Add new client",
         "sk": "Nový klient"
     },
     "delClientTitle": {

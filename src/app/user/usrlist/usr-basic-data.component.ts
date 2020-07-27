@@ -57,7 +57,7 @@ export class UsrBasicDataComponent implements OnInit {
       email: ['', [Validators.maxLength(45)]],
       web: ['', [Validators.maxLength(45)]],
       profession: ['', [Validators.maxLength(45)]],
-      speaks: ['', [Validators.required]],
+      speaks: ['',[Validators.required]],
       lpes: [false],
       lprs: [false],
       lpts: [false],

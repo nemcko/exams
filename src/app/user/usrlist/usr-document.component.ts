@@ -197,8 +197,10 @@ export class UsrDocumentComponent implements OnInit {
   }
 
   public fileOver(event) {
+    // console.log(event);
   }
 
   public fileLeave(event) {
+    // console.log(event);
   }
 }

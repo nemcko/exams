@@ -1,0 +1,79 @@
+[
+    {
+        "name": "Super User",
+        "username": "admin",
+        "email": "obchod@eurosoftware.sk",
+        "title": "",
+        "surname": "",
+        "company": "",
+        "street": "Jilemnickeho",
+        "zip": "01841",
+        "city": "Dubnica n/V"
+    },
+    {
+        "name": "Fero",
+        "username": "fero",
+        "email": "obchod2@eurosoftware.sk",
+        "title": "",
+        "surname": "Mrkvicka",
+        "company": "ABC",
+        "street": "321,",
+        "zip": "01841",
+        "city": "Dubnica"
+    },
+    {
+        "name": "dsfgklskn",
+        "username": "miso",
+        "email": "miso@dksfmkf.sk",
+        "title": "",
+        "surname": "",
+        "company": null,
+        "street": "515",
+        "zip": "5156",
+        "city": "661"
+    },
+    {
+        "name": "Patricia",
+        "username": "Svecova",
+        "email": "fipeko@gmail.com",
+        "title": "",
+        "surname": "Svecova",
+        "company": null,
+        "street": "nnnnnnnn",
+        "zip": "018 4",
+        "city": "gggggg"
+    },
+    {
+        "name": "Jana",
+        "username": "jana277",
+        "email": "jana277@centrum.sk",
+        "title": "Mgr.",
+        "surname": "Zigova",
+        "company": null,
+        "street": "SKN",
+        "zip": "1851",
+        "city": "Nová Dubnica"
+    },
+    {
+        "name": "Ferko",
+        "username": "f",
+        "email": "eurosw@eurosw.eu",
+        "title": "",
+        "surname": "Mrkva",
+        "company": "",
+        "street": " ",
+        "zip": "01854",
+        "city": "Slavnica"
+    },
+    {
+        "name": "Jana",
+        "username": "jezikova",
+        "email": "fipeko@stonline.sk",
+        "title": "Ing.",
+        "surname": "Jezikova",
+        "company": "",
+        "street": "Jilemnickeho 340/36",
+        "zip": "01841",
+        "city": "Dubnica nad Vahom"
+    }
+]

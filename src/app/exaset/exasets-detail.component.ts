@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'exaset-detail',
   template: `
+    <p>
+      exasets-detail works!
+    </p>
   `,
   styles: []
 })

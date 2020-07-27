@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+// import { ComposeMessageComponent }  from './compose-message.component';
 import { PageNotFoundComponent } from './not-found.component';
 import { LoginComponent } from './login/login.component';
 
@@ -9,9 +10,30 @@ import { SelectivePreloadingStrategy } from './shared/services/selective-preload
 
 
 const appRoutes: Routes = [
+  // {
+  //   path: 'compose',
+  //   component: ComposeMessageComponent,
+  //   outlet: 'popup'
+  // },
+  // {
+  //   path: 'admin',
+  //   loadChildren: 'app/admin/admin.module#AdminModule',
+  //   canLoad: [AuthGuard]
+  // },
+  // {
+  //   path: 'crisis-center',
+  //   loadChildren: '../app/crisis-center/crisis-center.module#CrisisCenterModule',
+  //   data: { preload: true }
+  // },
+
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'crisis-center',
+    loadChildren: '../app/crisis-center/crisis-center.module#CrisisCenterModule',
+    data: { preload: true }
   },
   {
     path: 'exams',
@@ -43,7 +65,12 @@ const appRoutes: Routes = [
     loadChildren: '../app/exaset/exaset.module#ExasetModule', canActivate: [AuthGuard],
     data: { preload: true }
   },
-  { path: '', redirectTo: '/users', pathMatch: 'full' },
+  {
+    path: 'examed',
+    loadChildren: '../app/examed/examed.module#ExamedModule', canActivate: [AuthGuard],
+    data: { preload: true }
+  },
+  { path: '', redirectTo: '/exams', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
 
@@ -66,3 +93,9 @@ const appRoutes: Routes = [
   ]
 })
 export class AppRoutingModule { }
+
+// @NgModule({
+//   imports: [RouterModule.forRoot(routes, { useHash: true })],
+//   exports: [RouterModule]
+// })
+// export class AppRoutingModule { }

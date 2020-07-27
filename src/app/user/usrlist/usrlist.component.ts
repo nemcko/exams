@@ -49,6 +49,9 @@ export class UsrlistComponent implements OnInit, OnDestroy {
   ) {
     let textlib = [users, clients, examinators, textdata, panelbuttons];
     this._modalConfig.backdrop = false; this._modalConfig.keyboard = false;
+    // if (_route.snapshot.url.length) {
+    //   this.examtype = _route.snapshot.url[0]['path'];
+    // }
     this.labels = texts.toObject(textlib, _user.lng);
     this.access = _user.getAccess();
     this.uuid = this._service.getUUID(this.oid);
@@ -75,6 +78,10 @@ export class UsrlistComponent implements OnInit, OnDestroy {
   }
 
   rowDoubleClick(rowEvent) {
+    // this._user.setData('seluser', rowEvent.row);
+    // this._router.navigate(['/users/profile']).then(nav => {
+    //   this._user.setData('seluser', rowEvent.row);
+    // });
     this.showBasicData(rowEvent.row.id);
   }
 
@@ -108,6 +115,7 @@ export class UsrlistComponent implements OnInit, OnDestroy {
       default:
         this.exafilter[ftype] = evnt.target.checked;
     }
+    // alert(JSON.stringify(this.exafilter))
     this.refresh();
   }
 
@@ -149,6 +157,12 @@ export class UsrlistComponent implements OnInit, OnDestroy {
       case 'btnExamLang':
         this.poid = 'examlng';
         break;
+      // case 'btnUsers':
+      //   this.poid = 'usradr';
+      //   break;
+      // case 'btnClients':
+      //   this.poid = 'cliadrs';
+      //   break;
       default:
         this.panelType = 'btnUser'
         this.poid = this.oid;

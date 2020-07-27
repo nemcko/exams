@@ -1,0 +1,69 @@
+{
+    "title": {
+        "en": "Media for test",
+        "sk": "Médiá pre test"
+    },
+    "dtitle": {
+        "en": "Test file",
+        "sk": "Test súbor"
+    },
+    "addExamedTitle": {
+        "en": "Media files",
+        "sk": "Mediálne súbory"
+    },
+    "name":{
+        "en":"Name",
+        "sk":"Názov"
+    },
+    "type":{
+        "en":"Type",
+        "sk":"Typ"
+    },
+    "filename":{
+        "en":"File name",
+        "sk":"Názov súboru"
+    },
+    "act":{
+        "en":"Active",
+        "sk":"Aktívny"
+    },
+    "delExamedTitle": {
+        "en": "Delete media file",
+        "sk": "Vymazanie med.súboru"
+    },
+    "delExamedQuestion": {
+        "en": "Do you want to remove this media file?",
+        "sk": "Chcete zrušiť tento mediálny súbor?"
+    },
+    "doctypes": {
+        "en": [
+            {
+                "type": "d",
+                "name": "Document"
+            },
+            {
+                "type": "a",
+                "name": "Audio file"
+            },
+            {
+                "type": "v",
+                "name": "Video file"
+            }
+        ],
+        "sk": [
+            {
+                "type": "d",
+                "name": "Dokument"
+            },
+            {
+                "type": "a",
+                "name": "Audio súbor"
+            },
+            {
+                "type": "v",
+                "name": "Video súbor"
+            }
+        ]
+    }
+
+}

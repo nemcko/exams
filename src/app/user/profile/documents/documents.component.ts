@@ -73,12 +73,24 @@ export class DocumentsComponent implements OnInit {
     if (this.profileForm.invalid) {
       return;
     }
+
+    // this.authenticationService.login(this.f.username.value, this.f.password.value)
+    //     .pipe(first())
+    //     .subscribe(
+    //         data => {
+    //             this._router.navigate([this.returnUrl]);
+    //         },
+    //         error => {
+    //             this.alertService.error(error);
+    //             this.loading = false;
+    //         });
   }
 
 
   public getDate(dateName: string) {
     let workingDateName = dateName + 'Date';
     let timestamp = this[workingDateName] != null ? new Date(this[workingDateName].year, this[workingDateName].month-1, this[workingDateName].day).getTime() : new Date().getTime();
+    // this.secondForm.controls[dateName + 'Date'].setValue(this.datePipe.transform(timestamp, 'fullDate'));
   }
   
   public showDatePick(selector):void {

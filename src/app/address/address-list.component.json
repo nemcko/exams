@@ -1,6 +1,6 @@
 {
     "title": {
-        "en": "Addresses",
+        "en": "Address",
         "sk": "Adresy"
     },
     "dtitle": {
@@ -9,31 +9,35 @@
     },
 
     "btnAddresses":{
-        "en":"Addresses",
+        "en":"Address",
         "sk":"Adresy"
     },
+    "btnOlAddress":{
+        "en":"Addresses...",
+        "sk":"Adresy..."
+    },
     "btnUsers": {
-        "en": "User addresses",
-        "sk": "Používateľské adresy"
+        "en": "Staff",
+        "sk": "Pracovníci"
     },
     "btnClients": {
-        "en": "Client addresses",
-        "sk": "Klientské adresy"
+        "en": "Clients",
+        "sk": "Klienti"
     },
     "delAddrTitle": {
-        "en": "Delete addresses",
-        "sk": "Vymazanie adresy"
+        "en": "Delete address",
+        "sk": "Vymazať adresu"
     },
     "delAddrQuestion": {
         "en": "Do you want to delete this address?",
-        "sk": "Chcete vymazať túto adresu?"
+        "sk": "Vymazať túto adresu?"
     },
     "delUsrTitle": {
-        "en": "Delete user",
-        "sk": "Vymazanie používateľa"
+        "en": "Delete staff member",
+        "sk": "Vymazať používateľa"
     },
     "delUsrQuestion": {
-        "en": "Do you want to delete this user?",
+        "en": "Do you want to delete this staff member?",
         "sk": "Chcete vymazať tohto používateľa?"
     },
     "addUserTitle": {
@@ -46,10 +50,10 @@
     },
     "delAdrcliTitle": {
         "en": "Delete client",
-        "sk": "Vymazanie adresy"
+        "sk": "Vymazať adresu"
     },
     "delAdrcliQuestion": {
-        "en": "Do you want to unassign this client?",
+        "en": "Do you want to delete this client?",
         "sk": "Chcete odobrať tohto klienta?"
     }
 

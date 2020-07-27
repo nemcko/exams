@@ -9,6 +9,7 @@ import { PgviewComponent } from '../pgview/pgview.component'
 export class PgpanelComponent implements OnInit, AfterViewInit {
   @Input() lmargins: string = '0px';
   @Input() rmargins: string = '0px';
+  // @ContentChildren(PgviewComponent) protected childcomps: QueryList<PgviewComponent>;
   @ContentChildren(PgviewComponent, { descendants: true }) protected childcomps: QueryList<PgviewComponent>
   constructor() { }
 
@@ -22,6 +23,8 @@ export class PgpanelComponent implements OnInit, AfterViewInit {
             item.lmargin = this.lmargins;
           if (this.rmargins && item.rmargin != '0')
             item.rmargin = this.rmargins;
+
+          // this.elementHeight = (this.nativeElement.offsetWidth * this.randomImage.dim.h) / this.randomImage.dim.w
         }
         )
       })
