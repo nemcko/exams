@@ -1,0 +1,212 @@
+{
+    "lpesubtitle": {
+        "en": "Rating by LPE",
+        "sk": "Hodnotenie od LPE"
+    },
+    "lpecard": {
+        "en": "LPE",
+        "sk": "LPE"
+    },
+    "lpeplaned": {
+        "en": "Planned LPE",
+        "sk": "Plánovaný LPE"
+    },
+   "lpereal": {
+        "en": "Real LPE",
+        "sk": "Skuočný LPE"
+    },
+    "lpechngre": {
+        "en": "Reason of LPE change",
+        "sk": "Dôvod zmeny LPE."
+    },
+    "lpechngredt": {
+        "en": "Date and time of change",
+        "sk": "Dátum a čas zmeny"
+    },
+    "chnglpe": {
+        "en": "Click to change LPE",
+        "sk": "Kliknutím zmeniť LPE"
+    },
+    "lperespon": {
+        "en": "Supervising LPE-S",
+        "sk": "Dozorujúci LPE-S"
+    },
+    "lperat1": {
+        "en": "LPE rating with a comment section 1",
+        "sk": "LPE hodnotenie s komentárom sekcia 1"
+    },
+    "lperat2": {
+        "en": "LPE rating with a comment section 2",
+        "sk": "LPE hodnotenie s komentárom sekcia 2"
+    },
+    "lperat3": {
+        "en": "LPE rating with a comment section 3",
+        "sk": "LPE hodnotenie s komentárom sekcia 3"
+    },
+    "lperat4": {
+        "en": "LPE rating with a comment section 4",
+        "sk": "LPE hodnotenie s komentárom sekcia 4"
+    },
+    "lperat5": {
+        "en": "LPE rating with a comment section 5",
+        "sk": "LPE hodnotenie s komentárom sekcia 5"
+    },
+    "lperate": {
+        "en": "Rating LPE",
+        "sk": "Hodnot.LPE"
+    },
+
+    "lprsubtitle": {
+        "en": "Rating by LPR",
+        "sk": "Hodnotenie od LPR"
+    },
+    "lprcard": {
+        "en": "LPR",
+        "sk": "LPR"
+    },
+    "lprplaned": {
+        "en": "Planned LPR",
+        "sk": "Plánovaný LPR"
+    },
+    "lprreal": {
+        "en": "Real LPR",
+        "sk": "Skutočný LPR"
+    },
+    "lprchngre": {
+        "en": "Reason of LPR change",
+        "sk": "Dôvod zmeny LPR."
+    },
+    "chnglpr": {
+        "en": "Click to change LPR",
+        "sk": "Kliknutím zmeniť LPR"
+    },
+    "lprrespon": {
+        "en": "Supervising LPR-S",
+        "sk": "Dozorujúci LPR-S"
+    },
+    "lprrat1": {
+        "en": "LPR rating with a comment section 1",
+        "sk": "LPR hodnotenie s komentárom sekcia 1"
+    },
+    "lprrat2": {
+        "en": "LPR rating with a comment section 2",
+        "sk": "LPR hodnotenie s komentárom sekcia 2"
+    },
+    "lprrat3": {
+        "en": "LPR rating with a comment section 3",
+        "sk": "LPR hodnotenie s komentárom sekcia 3"
+    },
+    "lprrat4": {
+        "en": "LPR rating with a comment section 4",
+        "sk": "LPR hodnotenie s komentárom sekcia 4"
+    },
+    "lprrat5": {
+        "en": "LPR rating with a comment section 5",
+        "sk": "LPR hodnotenie s komentárom sekcia 5"
+    },
+    "lprrate": {
+        "en": "LPR Rating",
+        "sk": "Hodnotenie od LPR"
+    },
+
+
+    "appsubtitle": {
+        "en": "Disupte",
+        "sk": "Odvolanie"
+    },
+    "appcard": {
+        "en": "Dispute",
+        "sk": "Odvolanie"
+    },
+    "appplaned": {
+        "en": "Planned appeal",
+        "sk": "Plán.odvolanie"
+    },
+    "appreal": {
+        "en": "Real appeal",
+        "sk": "Skut.odvolanie"
+    },
+    "appchngre": {
+        "en": "Appeal chng.re.",
+        "sk": "Odvolanie-dôvod zm."
+    },
+    "chngapp": {
+        "en": "Click to change LPR",
+        "sk": "Kliknutím zmeniť LPR"
+    },
+    "apprespon": {
+        "en": "Supervising LPR-S",
+        "sk": "Dozorujúci LPR-S"
+    },
+    "apprat1": {
+        "en": "Dispute - Interview and introduction",
+        "sk": "Odvolanie - rozhovor a predstavenie"
+    },
+    "apprat2": {
+        "en": "Dispute - Visual analysis",
+        "sk": "Odvolanie - Vizuálna analýza"
+    },
+    "apprat3": {
+        "en": "Dispute - Aviation phraseology and communications",
+        "sk": "Odvolanie - Letecká frazeológia a komunikácia"
+    },
+    "apprat4": {
+        "en": "Dispute - Listening and understanding",
+        "sk": "Odvolanie - Počúvanie s porozumením"
+    },
+    "apprat5": {
+        "en": "Dispute - Audio-visual analysis and problem solving",
+        "sk": "Odvolanie - audio-vizuálnej nahrávky"
+    },
+    "apprate": {
+        "en": "Rating of dispute",
+        "sk": "Hodnotenie odvolania"
+    },
+
+    "examrec": {
+        "en": "Exam record",
+        "sk": "Záznam z preskúšania"
+    },
+    "ratrep": {
+        "en": "Exam Rating report",
+        "sk": "Protokol o hodnotení"
+    },
+    "valexato": {
+        "en": "Validity till",
+        "sk": "Platnosť preskúšania"
+    },
+    "aviaauto": {
+        "en": "Aviation Authority",
+        "sk": "Letecký úrad"
+    },
+    "regpayment": {
+        "en": "Payment",
+        "sk": "Platba"
+    },
+    "invoice": {
+        "en": "Invoice",
+        "sk": "Faktúra"
+    },
+    "certificate": {
+        "en": "Certificate",
+        "sk": "Certifikát"
+    },
+
+    "finexam": {
+        "en": "FINAL LEVEL",
+        "sk": "KONEČNÁ ÚROVEŇ"
+    },
+    "respaviaauth": {
+        "en": "Issuing Authority",
+        "sk": "Vydávajúci Úradd"
+    },
+
+    "recording": {
+        "en": "Recording",
+        "sk": "Nahrávka"
+    },
+    "rectime": {
+        "en": "Recording time",
+        "sk": "Čas nahrávky"
+    }
+}

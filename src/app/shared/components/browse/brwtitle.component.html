@@ -1,0 +1,11 @@
+<div class="brwtitle row">
+  <div class="col-4" *ngIf="title">
+    <span class="h3 text-primary">{{title}}</span>
+    <span class="text-primary align-bottom pl-1">{{subtitle}}</span>
+  </div>
+  <div [ngClass]="title?'col-8':'col-12'">
+    <div [ngClass]="{'d-flex flex-row justify-content-end': title}">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

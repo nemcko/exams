@@ -1,0 +1,57 @@
+{
+    "title": {
+        "en":"Tasks",
+        "sk":"Úlohy"
+    },
+    "subtitle": {
+        "en":"Training and examinations",
+        "sk":"Tréning a preskúšania"
+    },
+    
+
+    "btndet": {
+        "en": "User data",
+        "sk": "Údaje používateľa"
+    },
+    "btndoc": {
+        "en": "Documents",
+        "sk": "Dokumenty"
+    },
+    "btneva": {
+        "en": "Evaluations",
+        "sk": "Preskúšania"
+    },
+    "btnexa": {
+        "en": "Examinations",
+        "sk": "Hodnotenia"
+    },
+    "btntra": {
+        "en": "Trainings",
+        "sk": "Tréningy"
+    },
+    "btnnotify": {
+        "en": "Notifications and settings",
+        "sk": "Notifikácie a nastavenia"
+    },
+
+    "detailtitle": {
+        "en": "Examination",
+        "sk": "Preskúšanie"
+    },
+    "saveall": {
+        "en": "Save",
+        "sk": "Uložiť"
+    },
+    "close": {
+        "en": "Close",
+        "sk": "Zatvor"
+    },
+    "btntypeact": {
+        "en": "Active tasks",
+        "sk": "Aktívne úlohy"
+    },
+    "btntypeall": {
+        "en": "All tasks",
+        "sk": "Všetky úlohy"
+    }
+}

@@ -1,0 +1,8 @@
+<div *ngIf="width"
+  [style.display]="'inline-block'"
+  [style.vertical-align]="'top'"
+  [style.width]="width | perc"
+  [style.padding-left]="lmargin | px"
+  [style.padding-right]="rmargin | px">
+  <ng-content></ng-content>
+</div>

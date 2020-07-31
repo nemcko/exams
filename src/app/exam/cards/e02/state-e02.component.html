@@ -1,0 +1,150 @@
+<form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
+  <examid [labels]="labels" [data]="data" [cardcode]="cardcode">
+    <div class="m-0 p-0" *ngIf="cardcode=='e02a'">
+
+      <div class="form-row w-100">
+
+        <div class="col-md-4" formGroupName="realplace">
+          <label for="realplace">{{labels.realplace}}</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" id="realplace" formControlName="name" readonly [attr.disabled]="cardcode!=='e02a'?'':null">
+            <div class="input-group-append">
+              <button type="button" class="btn btn-secundary btn-sm input-group-text" (click)="showExamPlaces('realplace')"
+                [disabled]="cardcode!=='e02a'">
+                <span [class]="'fa fa-map-marker'"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group col-md-4" frmdt [id]="'realdt'" [labels]="labels" [frm]="cardForm" [readonly]="cardcode!=='e02a'"></div>
+
+        <div class="form-group col-4" userbtn [id]="'lpereal'" [labels]="labels" [frm]="cardForm" [ctrl]="parentCtrl" [readonly]="cardcode!=='e02a'"></div>
+      </div>
+
+
+
+      <div class="form-row">
+        <div class="col-md-12" frminput [id]="'lpechngre'" [labels]="labels" [fld]="f.lpechngre">
+          <input type="text" formControlName="lpechngre" class="form-control" [readonly]="cardcode!=='e02a'" [ngClass]="{ 'is-invalid': errLpechngre }">
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <div class="form-row" *ngIf="cardcode=='e02b'">
+      <div class="col-md-3">
+        <label for="realplace">{{labels.examplace}}</label>
+        <div class="mt-1 mb-2 text-truncate">{{data.realplace.name}}</div>
+      </div>
+
+      <div class="col-md-3">
+        <label for="realplace">{{labels.examdatetime}}</label>
+        <div class="mt-1 mb-2 text-truncate">{{data.realdt|date: labels['dateformat'] + ' H:m'}}</div>
+      </div>
+
+      <div class="col-md-2" frminput [id]="'usetstnr'" [labels]="labels" [fld]="f.usetstnr">
+        <select formControlName="usetstnr" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.usetstnr.invalid }"
+          [attr.disabled]="cardcode!=='e02b'?'':null">
+          <option [value]="itm" *ngFor="let itm of data.examed_doc">{{itm}}</option>
+        </select>
+      </div>
+      <div class="col-md-2" frminput [id]="'userecnr'" [labels]="labels" [fld]="f.userecnr">
+        <select formControlName="userecnr" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.userecnr.invalid }"
+          [attr.disabled]="cardcode!=='e02b'?'':null">
+          <option [value]="itm" *ngFor="let itm of data.examed_aud">{{itm}}</option>
+        </select>
+      </div>
+      <div class="col-md-2" frminput [id]="'usevidnr'" [labels]="labels" [fld]="f.usevidnr">
+        <select formControlName="usevidnr" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.usevidnr.invalid }"
+          [attr.disabled]="cardcode!=='e02b'?'':null">
+          <option [value]="itm" *ngFor="let itm of data.examed_vid">{{itm}}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row" *ngIf="cardcode=='e02d'">
+      <div class="col-md-2 text-right">
+        <span class="d-flex justify-content-end mt-1">
+          {{labels.testrecdoc}}:
+        </span>
+      </div>
+      <div class="col-md-3">
+        <div class="text-center">{{labels.testdoc}}</div>
+        <appdoc [examid]="data.id" [type]="'testdoc'" [form]="cardForm" [lbl]="labels">
+          <div *ngIf="!f.testdoc.value; else elseBlock1">{{labels.drophere}}</div>
+          <ng-template #elseBlock1>{{f.testdoc.value}}</ng-template>
+        </appdoc>
+      </div>
+      <div class="col-md-3">
+        <div class="text-center">{{labels.testaudio}}</div>
+        <appdoc [examid]="data.id" [type]="'testaudio'" [form]="cardForm" [lbl]="labels">
+          <div *ngIf="!f.testaudio.value; else elseBlock2">{{labels.drophere}}</div>
+          <ng-template #elseBlock2>{{f.testaudio.value}}</ng-template>
+        </appdoc>
+      </div>
+      <div class="col-md-3">
+        <div class="text-center">{{labels.testvideo}}</div>
+        <appdoc [examid]="data.id" [type]="'testvideo'" [form]="cardForm" [lbl]="labels">
+          <div *ngIf="!f.testvideo.value; else elseBlock3">{{labels.drophere}}</div>
+          <ng-template #elseBlock3>{{f.testvideo.value}}</ng-template>
+        </appdoc>
+      </div>
+    </div>
+
+    <div class="m-0 p-0" *ngIf="cardcode=='e02' || cardcode=='e02c'">
+
+      <div *ngIf="cardcode=='e02'">
+        <h6 class="text-primary">{{labels.testrecdoc}}</h6>
+        <div class="form-row mb-2">
+          <div class="col-md-3">
+            <button type="button" class="btn btn-outline-secondary w-100 text-left">
+              <span [class]="'fa fa-list-ol'"></span>
+              {{labels.testdoc}}
+            </button>
+          </div>
+          <div class="col-md-3">
+            <button type="button" class="btn btn-outline-secondary w-100 text-left">
+              <span [class]="'fa fa-volume-off'"></span>
+              {{labels.testaudio}}
+            </button>
+          </div>
+          <div class="col-md-3">
+            <button type="button" class="btn btn-outline-secondary w-100 text-left">
+              <span [class]="'fa fa-video-camera'"></span>
+              {{labels.testvideo}}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <h6 class="text-primary">{{labels.lpesubtitle}}</h6>
+      <div class="form-row mb-2" *ngFor="let iseq of ['1','2','3','4','5']">
+        <div class="col-md-12">
+          <label>{{labels['lperat'+iseq]}}</label>
+          <div class="input-group">
+            <select [formControlName]="'lperat'+iseq" id="ratevalue{{iseq}}" class="custom-select col-md-1 input-group-prepend"
+              [attr.disabled]="cardcode!=='e02c'?'':null" [ngClass]="{ 'is-invalid': submitted && !f['lperat'+iseq].value }">
+              <option value=""></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+            <input type="text" [formControlName]="'lpecom'+iseq" class="form-control col-md-11" [attr.disabled]="cardcode!=='e02c'?'':null">
+          </div>
+        </div>
+      </div>
+      <div class="form-row mb-2">
+        <h5 class="m-2 text-primary">
+          {{labels.lperate}}: {{getRate()}}
+        </h5>
+      </div>
+    </div>
+
+  </examid>
+</form>

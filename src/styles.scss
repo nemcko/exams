@@ -1,0 +1,253 @@
+
+//@import "~bootstrap/scss/_variables"; 
+//@import "~bootstrap/scss/bootstrap"; 
+//@import "~bootstrap/dist/css/bootstrap.css";
+// @import "~font-awesome/css/font-awesome.css";
+$fa-font-path: "../node_modules/font-awesome/fonts";
+@import "../node_modules/font-awesome/scss/font-awesome";
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import "styles-variables";
+
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/root';
+@import '~bootstrap/scss/print';
+@import '../node_modules/toastr/build/toastr.css';
+@import '../node_modules/ol/ol.css';
+@import '../node_modules/ol-geocoder/dist/ol-geocoder.css';
+
+.icon-settings {
+  @extend .fa;
+  @extend .fa-cog;
+}
+
+.icon-data {
+  @extend .fa;
+  @extend .fa-database;
+}
+
+.icon-edit {
+  @extend .fa;
+  @extend .fa-edit;
+}
+
+.icon-filter {
+  @extend .fa;
+  @extend .fa-filter;
+}
+
+.icon-refresh {
+  @extend .fa;
+  @extend .fa-retweet;
+}
+
+.icon-spinner {
+  @extend .fa;
+  @extend .fa-spinner;
+}
+
+.icon-wrench {
+  @extend .fa;
+  @extend .fa-wrench;
+}
+
+.icon-delete {
+  @extend .fa;
+  @extend .fa-trash;
+}
+
+.icon-close {
+  @extend .fa;
+  @extend .fa-times-circle;
+}
+
+.icon-remove {
+  @extend .fa;
+  @extend .fa-times;
+}
+
+.icon-list {
+  @extend .fa;
+  @extend .fa-list;
+}
+
+.icon-first {
+  @extend .fa;
+  @extend .fa-step-backward;
+}
+
+.icon-prev {
+  @extend .fa;
+  @extend .fa-backward;
+}
+
+.icon-next {
+  @extend .fa;
+  @extend .fa-forward;
+}
+
+.icon-last {
+  @extend .fa;
+  @extend .fa-step-forward;
+}
+
+.icon-ok {
+  @extend .fa;
+  @extend .fa-check;
+}
+
+.icon-undo {
+  @extend .fa;
+  @extend .fa-undo;
+}
+
+.icon-off {
+  @extend .fa;
+  @extend .fa-power-off;
+}
+
+.icon-save {
+  @extend .fa;
+  @extend .fa-save;
+}
+
+.icon-search {
+  @extend .fa;
+  @extend .fa-search;
+}
+
+
+html, body {
+  font-size: 14px !important;
+  line-height: 1.42857143 !important;
+  // background-color: $appbgcolor !important;
+  height: 100% !important;
+}
+
+
+button.fbtn {
+  color: theme-color(secondary);
+}
+
+button.fbtn:hover {
+  color: theme-color-level(secondary, -9);
+}
+
+button.fbtn:disabled {
+  color: theme-color-level(secondary) !important;
+}
+
+.colored {
+  opacity: 0.68;
+  filter: alpha(opacity=68);
+}
+
+.colorless {
+  opacity: 0.54;
+  filter: alpha(opacity=14);
+}
+
+.colorweak {
+  opacity: 0.14;
+  filter: alpha(opacity=14);
+}
+
+.data-table {
+  // box-shadow: 0 0 15px $data-table-border;
+  table-layout: fixed;
+}
+
+.table-bordered th, 
+.table-bordered td {
+  border: 1px solid $data-table-border ;
+}
+
+.table-bordered thead th{
+  border-bottom: 2px solid $data-table-underline;
+}
+
+.data-table > tr:hover,
+.data-table .data-table-row:hover {
+    background-color:$data-table-selrow;
+}
+
+.pagination {
+  border-top: 1px solid theme-color(primary);
+  margin: 0;
+  padding-top: 8px;
+}
+
+.rowpanel {
+  margin-top: 10px;
+  padding: 10px;
+  border-top: 1px solid theme-color(primary);
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.loader {
+  border: 4px solid theme-color(primary);
+  border-top: 4px solid theme-color(light);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  animation: spin .6s linear infinite;
+  display: inline-block;
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  z-index: 2000;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+abe-header {
+    nav {
+      width: 100%;
+    }
+    
+    @media (min-width: map-get($grid-breakpoints, sm)) {
+      nav {
+        width: 80%;
+      }
+    }
+  }
+
+
+
+@media (max-width: 479px) {
+}
+@media (min-width: 480px) and (max-width: 839px) {
+}
+@media (min-width: 840px) {
+}
+
+
+@media (min-width: 1025px) {
+  .hide-largetablet {
+      display: none !important;
+  }
+}
+@media (max-width: 1024px) {
+  .hide-tabphone {
+      display: none !important;
+  }
+}
+
+// .gcd-txt-input {
+//   font-size: 1.3em !important;
+//   padding: 2px 30px 2px 40px !important;
+// }
+
+.wmmss {
+  width: 40px;
+  border: 1px solid $input-border-color;
+}
+

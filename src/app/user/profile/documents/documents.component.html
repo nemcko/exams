@@ -1,0 +1,161 @@
+<brw [uuid]="'usrlist'" [oid]="'user'" [hasBackbutton]="true" (rowDoubleClick)="openDlg(content)" [limit]="5">
+    <brwtitle [title]="'qqqqqq'" [subtitle]="'xxxtrtyhdt'" [brwFieldName]="'email'" [searchControl]="'search'">
+        <input type="text" id="search" class="col-sm-4 text-primary" placeholder="Search" aria-label="Example text with button addon"
+            aria-describedby="button-addon1">
+        <button type="button" class="btn btn-outline-primary btn-sm"><i class="fa fa-plus"></i> Add</button>
+        <button type="button" class="btn btn-outline-primary btn-sm"><i class="fa fa-edit"></i> Edit</button>
+        <button type="button" class="btn btn-outline-primary btn-sm"><i class="fa fa-remove"></i> Delete</button>
+    </brwtitle>
+
+    <brwcol [name]="'usr'" [header]="labels.usr" [width]="10"></brwcol>
+    <brwcol [name]="'firstname'" [header]="labels.firstname"></brwcol>
+    <brwcol [name]="'lastname'" [header]="labels.lastname" [width]="10"></brwcol>
+    <brwcol [name]="'email'" [header]="labels.to" [width]="10"></brwcol>
+    <brwcol [name]="'id'" [width]="'32px'" [cls]="'p-0 float-right'">
+        <ng-template #dataTableCell let-item="row">
+            <button type="button" class="btn btn-outline-secondary btn-sm" (click)="msg(item.name)">
+                <span [class]="'fa fa-times'"></span>
+            </button>
+        </ng-template>
+    </brwcol>
+</brw>
+
+<!-- <brw [oid]="'testdata1'" [hasBackbutton]="true" (rowDoubleClick)="openDlg(content)" [limit]="5">
+    <brwsearch [brwFieldName]="'email'" [searchControl]="'search'">
+        <ng-template #searchBarTemplate let-data>
+            <div class="col d-flex flex-row">
+                <div class="dropdown">
+                    <button class="btn btn-sm btn-outline-primary dropdown-toggle" appdropdown type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-filter"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="javascript:void(0)" (click)="brwFieldName='name'">{{labels.name}}</a>
+                        <a class="dropdown-item" href="javascript:void(0)" (click)="brwFieldName='email'">{{labels.type}}</a>
+                        <a class="dropdown-item" href="javascript:void(0)" (click)="selExaminatorType('snr')">{{labels.type_lic}}</a>
+                        <a class="dropdown-item" href="javascript:void(0)" (click)="selExaminatorType('exa')">{{labels.type_per}}</a>
+                    </div>
+                </div>
+                <input type="text" class="col-sm-4 text-primary" id="search" placeholder="{{labels[data]}}" aria-label="Example text with button addon"
+                    aria-describedby="button-addon1">
+
+                <button type="button" class="btn btn-outline-primary btn-sm"><i class="fa fa-plus"></i> Add</button>
+            </div>
+        </ng-template>
+    </brwsearch>
+
+    <brwcol [name]="'name'" [header]="labels.name" [width]="10"></brwcol>
+    <brwcol [name]="'email'" [header]="labels.type"></brwcol>
+    <brwcol [name]="'registerDate'" [header]="labels.from" [width]="10"></brwcol>
+    <brwcol [name]="'registerDate'" [header]="labels.to" [width]="10"></brwcol>
+    <brwcol [name]="'activation'" [width]="'32px'" [cls]="'p-0 float-right'">
+        <ng-template #dataTableCell let-item="row">
+            <button type="button" class="btn btn-outline-secondary btn-sm" (click)="msg(item.name)">
+                <span [class]="'fa fa-times'"></span>
+            </button>
+        </ng-template>
+    </brwcol>
+</brw>
+ -->
+
+<ng-template #content let-modal>
+    <div class="modal-header pb-1">
+        <h4 class="modal-title" id="modal-basic-title">{{labels.detailtitle}}</h4>
+        <button type="button" class="close" aria-label="Close" (click)="closeDlg()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body pt-0 pb-0">
+
+        <form>
+
+            <div class="border border-primary rounded px-2">
+                <h6 class="text-primary">{{labels.exasubtitle}}</h6>
+
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="type">{{labels.type}}</label>
+                        <select class="custom-select" id="type">
+                            <option value="lic">{{labels.typelic}}</option>
+                            <option value="cer">{{labels.typecer}}</option>
+                            <option value="doc">{{labels.typedoc}}</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="from">{{labels.from}}</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" ngbDatepicker #d1="ngbDatepicker" id="from" />
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" (click)="d1.toggle()"><i class="fa fa-calendar"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="to">{{labels.to}}</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" ngbDatepicker #d2="ngbDatepicker" id="to" />
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" (click)="d2.toggle()"><i class="fa fa-calendar"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label for="name">{{labels.name}}</label>
+                        <input type="file" class="custom-file-input" id="name">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label for="comment">{{labels.comment}}</label>
+                        <input type="text" class="form-control" id="comment">
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="closeDlg()">{{labels.close}}</button>
+        <button type="button" class="btn btn-primary" (click)="closeDlg()">{{labels.saveall}}</button>
+    </div>
+</ng-template>
+
+<!-- <brw [oid]="'testdata2'" [hasBackbutton]="true" (rowDoubleClick)="openDlg(content)" [limit]="3">
+    <brwsearch [brwFieldName]="'email'" [title]="'xxwqfew'" [searchControl]="'search2'">
+        <ng-template #searchBarTemplate let-data>
+            <div class="col d-flex flex-row justify-content-end">
+                <div class="dropdown">
+                    <button class="btn btn-sm btn-outline-primary dropdown-toggle" appdropdown type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-filter"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="javascript:void(0)" (click)="brwFieldName='name'">{{labels.name}}</a>
+                        <a class="dropdown-item" href="javascript:void(0)" (click)="brwFieldName='email'">{{labels.type}}</a>
+                        <a class="dropdown-item" href="javascript:void(0)" (click)="selExaminatorType('snr')">{{labels.type_lic}}</a>
+                        <a class="dropdown-item" href="javascript:void(0)" (click)="selExaminatorType('exa')">{{labels.type_per}}</a>
+                    </div>
+                </div>
+                <input type="text" class="col-sm-4 text-primary" id="search2" placeholder="{{labels[data]}}" aria-label="Example text with button addon"
+                    aria-describedby="button-addon1">
+
+                <button type="button" class="btn btn-outline-primary btn-sm"><i class="fa fa-plus"></i> Add</button>
+            </div>
+        </ng-template>
+    </brwsearch>
+
+    <brwcol [name]="'name'" [header]="labels.name" [width]="10"></brwcol>
+    <brwcol [name]="'email'" [header]="labels.type"></brwcol>
+    <brwcol [name]="'registerDate'" [header]="labels.from" [width]="10"></brwcol>
+    <brwcol [name]="'registerDate'" [header]="labels.to" [width]="10"></brwcol>
+    <brwcol [name]="'activation'" [width]="'32px'" [cls]="'p-0 float-right'">
+        <ng-template #dataTableCell let-item="row">
+            <button type="button" class="btn btn-outline-secondary btn-sm" (click)="msg(item.name)">
+                <span [class]="'fa fa-times'"></span>
+            </button>
+        </ng-template>
+    </brwcol>
+</brw> -->

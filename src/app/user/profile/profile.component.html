@@ -1,0 +1,31 @@
+<pgtitle [title]="labels.title" [subtitle]="labels.name">
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <a role="button" class="btn btn-outline-secondary" routerLink="/users/profile/detail" routerLinkActive="active"><i class="fa fa-id-card"></i>
+      {{labels.btndet}}</a>
+    <a role="button" class="btn btn-outline-secondary" routerLink="/users/profile/documents" routerLinkActive="active"><i
+        class="fa fa-folder"></i> {{labels.btndoc}}</a>
+    <a role="button" class="btn btn-outline-secondary" routerLink="/users/profile/examinations" routerLinkActive="active"><i
+        class="fa fa-clipboard"></i> {{labels.btnexa}}</a>
+    <a role="button" class="btn btn-outline-secondary" routerLink="/users/profile/evaluations" routerLinkActive="active"><i
+        class="fa fa-list-ol"></i> {{labels.btneva}}</a>
+    <a role="button" class="btn btn-outline-secondary" routerLink="/users/profile/trainings" routerLinkActive="active"><i
+        class="fa fa-comment"></i> {{labels.btntra}}</a>
+    <!-- <a role="button" class="btn btn-outline-secondary" routerLink="/users"><i class="fa fa-window-close"></i></a> -->
+  </div>
+</pgtitle>
+
+<pgpanel>
+  <pgview>
+    <div class="row">
+      <div class="col-3">
+        <img src="{{apiUri}}/steve" class="img-fluid">
+        <h6 class="mt-2">
+          <span *ngIf="activeurl!=='/users/profile' && activeurl!=='/users/profile/detail'">{{seluser?.name}}</span>
+        </h6>
+      </div>
+      <div class="col-9">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </pgview>
+</pgpanel>

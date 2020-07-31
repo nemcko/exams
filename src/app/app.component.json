@@ -1,0 +1,55 @@
+{
+    "appname":{
+        "en":"Examiners",
+        "sk":"Examinátori"
+    },
+    "exams":{
+        "en":"Tasks",
+        "sk":"Úlohy"
+    },
+    "users":{
+        "en":"Users",
+        "sk":"Používatelia"
+    },
+    "documents": {
+        "en": "Documents",
+        "sk": "Dokumenty"
+    },
+    "examinatorexa": {
+        "en": "LPE",
+        "sk": "LPE"
+    },
+    "verifications": {
+        "en": "EXAM",
+        "sk": "PRESKÚŠANIE"
+    },
+    "evaluations": {
+        "en": "RATING",
+        "sk": "HODNOTENIE"
+    },
+    "trainings": {
+        "en": "TRAINING",
+        "sk": "VÝUČBA"
+    },
+    "addresses": {
+        "en": "Address",
+        "sk": "Adresy"
+    },
+    "clients": {
+        "en": "Clients",
+        "sk": "Klienti"
+    },
+    "flyoffices": {
+        "en": "Authority",
+        "sk": "Úrad"
+    },
+    "exasets": {
+        "en": "Settings",
+        "sk": "Nastavenia"
+    },
+    "examed": {
+        "en": "Media for test",
+        "sk": "Médiá pre test"
+    }
+
+}

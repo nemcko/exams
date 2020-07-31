@@ -1,0 +1,71 @@
+<form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
+
+  <div class="m-0 p-0">
+
+    <h6 class="text-primary">{{labels.exasubtitle}}</h6>
+
+    <div class="form-row w-100">
+
+      <div class="col-md-2" frminput [id]="'exnum'" [labels]="labels" [fld]="f.exnum">
+        <input type="text" formControlName="exnum" class="form-control" [readonly]="cardcode!=='t01a'">
+      </div>
+
+      <div class="col-md-2" frminput [id]="'lng'" [labels]="labels" [fld]="f.lng">
+        <select formControlName="lng" class="form-control" id="lng" [attr.disabled]="cardcode!=='t01a'?'':null">
+          <option [value]="item.lng" *ngFor="let item of labels.lngs">{{item.name}}</option>
+        </select>
+      </div>
+
+      <div class="form-group col-4" userbtn [id]="'applicant'" [labels]="labels" [frm]="cardForm" [company]="company"
+        [ctrl]="parentCtrl" [readonly]="cardcode!=='t01a'"></div>
+
+      <div class="col-md-2" frminput [id]="'flyingrules'" [labels]="labels" [fld]="f.flyingrules">
+        <select formControlName="flyingrules" class="form-control" id="flyingrules" [attr.disabled]="cardcode!=='t01a'?'':null">
+          <option [value]="item.flyingrules" *ngFor="let item of labels.accordingrules">{{item.name}}</option>
+        </select>
+      </div>
+
+    </div>
+
+
+    <div class="form-row">
+
+
+      <div class="col-md-4" formGroupName="planplace">
+        <label for="planplace">{{labels.planplace}}</label>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" id="planplace" formControlName="name" readonly [attr.disabled]="cardcode!=='t01a'?'':null"
+            [ngClass]="{ 'is-invalid': f.planplace.invalid }">
+          <div class="input-group-append">
+            <button type="button" class="btn btn-secundary btn-sm input-group-text" (click)="showExamPlaces('planplace')"
+              [disabled]="cardcode!=='t01a'">
+              <span [class]="'fa fa-map-marker'"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group col-md-4" frmdt [id]="'planeddt'" [labels]="labels" [frm]="cardForm" [readonly]="cardcode!=='t01a'"></div>
+
+      <div class="form-group col-4" userbtn [id]="'lpeplaned'" [labels]="labels" [frm]="cardForm" [ctrl]="parentCtrl"
+        [readonly]="cardcode!=='t01a'"></div>
+
+    </div>
+  </div>
+  <div class="m-0 p-0" *ngIf="cardcode!=='t01a'">
+
+
+  </div>
+
+
+
+
+  <div class="form-row mt-4">
+    <div class="form-group col-4 offset-4" userbtn [id]="'assignedby'" [labels]="labels" [frm]="cardForm" [ctrl]="parentCtrl"
+      [readonly]="true"></div>
+    <div class="form-group col-4" userbtn [id]="'lperespon'" [labels]="labels" [frm]="cardForm" [ctrl]="parentCtrl"
+      [readonly]="true"></div>
+  </div>
+
+
+</form>

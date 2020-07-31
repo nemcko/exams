@@ -1,0 +1,38 @@
+{
+    "address": {
+        "en": "Address",
+        "sk": "Adresa"
+    },
+    "street": {
+        "en": "Street",
+        "sk": "Ulica"
+    },
+    "house_number": {
+        "en": "No.",
+        "sk": "Súp.č."
+    },
+    "zip":{
+        "en":"Zip",
+        "sk":"PSČ"
+    },
+    "city": {
+        "en": "City",
+        "sk": "Obec"
+    },
+    "state": {
+        "en": "State",
+        "sk": "Štát"
+    },
+    "longitude": {
+        "en": "Longitude",
+        "sk": "Zemepisná dĺžka"
+    },
+    "latitude": {
+        "en": "Latitude",
+        "sk": "Zemepisná šírka"
+    },
+    "creator": {
+        "en": "Created by:",
+        "sk": "Vytvoril:"
+    }   
+}

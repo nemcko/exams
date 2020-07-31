@@ -1,0 +1,64 @@
+<form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
+  <examid [labels]="labels" [data]="data" [cardcode]="cardcode">
+
+    <div class="m-0 p-0" *ngIf="cardcode=='e03a'">
+      <div class="form-row w-100">
+        <div class="form-group  col-md-3" userbtn [id]="'lprreal'" [labels]="labels" [frm]="cardForm" [ctrl]="parentCtrl" [readonly]="cardcode!=='e03a'"></div>
+        <div class="col-md-9" frminput [id]="'lprchngre'" [labels]="labels" [fld]="f.lprchngre">
+          <input type="text" formControlName="lprchngre" class="form-control" [readonly]="cardcode!=='e03a'" [ngClass]="{ 'is-invalid': lprchngreErr }">
+        </div>
+      </div>
+    </div>
+
+    <div class="m-0 p-0" *ngIf="cardcode=='e03' || cardcode=='e03b'">
+      <h6 class="text-primary">{{labels.testrecdoc}}</h6>
+      <div class="form-row mb-2">
+        <div class="col-md-3">
+          <appdoc [examid]="data.id" [type]="'showdoc'" [name]="data.testdoc" [lbl]="labels">
+            <span [class]="'fa fa-list-ol'"></span>
+            {{labels.testdoc}}
+          </appdoc>
+        </div>
+        <div class="col-md-3">
+          <appdoc [examid]="data.id" [type]="'showaudio'" [name]="data.testaudio" [lbl]="labels">
+            <span [class]="'fa fa-volume-off'"></span>
+            {{labels.testaudio}}
+          </appdoc>
+        </div>
+        <div class="col-md-3">
+          <appdoc [examid]="data.id" [type]="'showvideo'" [name]="data.testvideo" [lbl]="labels">
+            <span [class]="'fa fa-video-camera'"></span>
+            {{labels.testvideo}}
+          </appdoc>
+        </div>
+      </div>
+
+      <h6 class="text-primary">{{labels.lprsubtitle}}</h6>
+      <div class="form-row mb-2" *ngFor="let iseq of ['1','2','3','4','5']">
+        <div class="col-md-12">
+          <label>{{labels['lprrat'+iseq]}}</label>
+          <div class="input-group">
+            <select [formControlName]="'lprrat'+iseq" id="ratevalue{{iseq}}" class="custom-select col-md-1 input-group-prepend"
+              [attr.disabled]="cardcode!=='e03b'?'':null" [ngClass]="{ 'is-invalid': submitted && !f['lprrat'+iseq].value }">
+              <option value=""></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+            <input type="text" [formControlName]="'lprcom'+iseq" class="form-control col-md-11" [attr.disabled]="cardcode!=='e03b'?'':null">
+          </div>
+        </div>
+      </div>
+      <div class="form-row mb-2">
+        <h5 class="m-2 text-primary">
+          {{labels.lprrate}}: {{getRate()}}
+        </h5>
+      </div>
+
+    </div>
+
+  </examid>
+</form>

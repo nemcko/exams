@@ -1,0 +1,20 @@
+<pgtitle [title]="labels.title" [iclass]="'fa fa-fw fa-plane'" [oid]="oid" [brwFieldName]="'fullsearch'">
+  <div class="btn-group col-sm-5 px-0">
+    <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></span>
+    <input type="text" #search class="form-control px-1 text-primary" placeholder="{{labels.search}}">
+    <button type="button" class="btn btn-outline-secondary" (click)="showDetail('')" [class.disabled]="!access.adm"><i class="fa fa-plus"></i>&nbsp;{{labels.btnadd}}</button>
+  </div>
+</pgtitle>
+
+<pgpanel [lmargins]="20">
+  <pgview [width]="panelWidth.left" [lmargin]="0">
+    <brw [uuid]="uuid" [oid]="oid" [service]="service" (rowClick)="rowClick($event)" (rowDoubleClick)="rowDoubleClick($event)"
+      (rowChanged)="rowChanged($event)">
+      <brwcol [name]="'name'" [header]="labels.name" [width]="50"></brwcol>
+      <brwcol [name]="'address'" [header]="labels.address" [width]="25"></brwcol>
+      <brwcol [name]="'zip'" [header]="labels.zip" [width]="20"></brwcol>
+      <brwcol [name]="'city'" [header]="labels.city" [width]="40"></brwcol>
+      <brwcol [name]="'state'" [header]="labels.state" [width]="15"></brwcol>
+    </brw>
+  </pgview>
+</pgpanel>

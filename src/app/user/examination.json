@@ -1,0 +1,140 @@
+{
+    "exasubtitle": {
+        "en": "General information",
+        "sk": "Základné údaje"
+    },
+    "exacard": {
+        "en": "Gneral",
+        "sk": "Všeobecne"
+    },
+    "exatype": {
+        "en": "Exam type",
+        "sk": "Typ skúšky"
+    },
+    "exnum": {
+        "en": "Exam ID",
+        "sk": "Exam ID."
+    },
+    "exanr": {
+        "en": "Nr.",
+        "sk": "č."
+    },
+    "lng": {
+        "en": "Lng",
+        "sk": "Jazyk"
+    },
+    "usetstnr": {
+        "en": "Test Nr.",
+        "sk": "Test č."
+    },
+    "userecnr": {
+        "en": "Audio ID",
+        "sk": "Audio ID"
+    },
+    "usevidnr": {
+        "en": "Video ID.",
+        "sk": "Video ID"
+    },
+    "usedt": {
+        "en": "Dátum a čas priradenia",
+        "sk": "Date and time of assignment"
+    },
+    "planplace": {
+        "en": "Planned venue",
+        "sk": "Plánované miesto"
+    },
+    "realplace": {
+        "en": "Real venue",
+        "sk": "Skutočné miesto"
+    },
+    "examplace": {
+        "en": "Venue",
+        "sk": "Miesto"
+    },
+    "planeddt": {
+        "en": "Planned date and time",
+        "sk": "Plánovaný dátum a čas"
+    },
+    "realdt": {
+        "en": "Real date and time",
+        "sk": "Skutočný dátum a čas"
+    },
+    "examdatetime": {
+        "en": "Date and time",
+        "sk": "Dátum a čas"
+    },
+    "chngreas": {
+        "en": "Reason of change",
+        "sk": "Dôvod zmeny"
+    },
+    "testrecdoc": {
+        "en": "Store files",
+        "sk": "Uložiť súbory"
+    },
+    "drophere": {
+        "en": "Drop file here",
+        "sk": "Pustiť súbor tu"
+    },
+    "badextension": {
+        "en": "Incorrect File Extension",
+        "sk": "Nesprávne rozšírenie súboru"
+    },
+    "testdoc": {
+        "en": "Test document",
+        "sk": "Test dokument"
+    },
+    "testaudio": {
+        "en": "Audio record",
+        "sk": "Audio záznam"
+    },
+    "testvideo": {
+        "en": "Video record",
+        "sk": "Video záznam"
+    },
+    "assignedby": {
+        "en": "Assigned by",
+        "sk": "Zadal"
+    },
+    "assigndt": {
+        "en": "Date and time of assignment",
+        "sk": "Dátum a čas priradenia"
+    },
+    "testdt": {
+        "en": "Date and time of the entry",
+        "sk": "Dátum a čas zapisu mmédií"
+    },
+    "applicant": {
+        "en": "Exam candidate",
+        "sk": "Žiadateľ"
+    },
+    "flyingrules": {
+        "en": "Flying rules",
+        "sk": "Pravidlá lietania"
+    },
+    "accordingrules": {
+        "en": [
+            {
+                "flyingrules": "VFR",
+                "name": "Visual"
+            },
+            {
+                "flyingrules": "IFR",
+                "name": "Instrument"
+            }
+        ],
+        "sk": [
+            {
+                "flyingrules": "VFR",
+                "name": "Vizuálne"
+            },
+            {
+                "flyingrules": "IFR",
+                "name": "Podľa prístrojov"
+            }
+        ]
+    },
+    "state": {
+        "en": "State",
+        "sk": "Stav"
+    }
+}

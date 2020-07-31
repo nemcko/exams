@@ -1,0 +1,46 @@
+{
+    "name": {
+        "en": "Name",
+        "sk": "Meno"
+    },
+    "usr":{
+        "en":"Username",
+        "sk":"Meno používateľa"
+    },
+    "usrreq":{
+        "en":"Username is required",
+        "sk":"Vyžaduje sa meno používateľa"
+    },
+    "firstname": {
+        "en": "Name",
+        "sk": "Meno"
+    },
+    "lastname": {
+        "en": "Last name",
+        "sk": "Priezvisko"
+    },
+    "phone": {
+        "en": "Phone",
+        "sk": "Telefón"
+    },
+    "mobile": {
+        "en": "Mobile",
+        "sk": "Mobil"
+    },
+    "web": {
+        "en": "www",
+        "sk": "www"
+    },
+    "email": {
+        "en": "E-mail",
+        "sk": "E-mail"
+    },
+    "profession": {
+        "en": "Occupation",
+        "sk": "Profesia"
+    },
+    "speaks": {
+        "en": "Languages",
+        "sk": "Jazyky"
+    }   
+}

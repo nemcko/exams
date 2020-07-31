@@ -1,0 +1,31 @@
+{
+    "titleexa": {
+        "en": "Examination",
+        "sk": "Preskúšanie"
+    },
+    "titletra": {
+        "en": "Training",
+        "sk": "Výcvik"
+    },
+    "invalidvaluefor": {
+        "en": "Invalid or incorrect value for ",
+        "sk": "Nezadaná alebo nesprávna hodnota pre "
+    },
+    "close": {
+        "en": "Close",
+        "sk": "Zatvor"
+    },
+    "tabe01": {
+        "en": "E01",
+        "sk": "E01"
+    },
+    "tabe02": {
+        "en": "E02",
+        "sk": "E02"
+    },
+    "tabe03": {
+        "en": "E03",
+        "sk": "E03"
+    }
+
+}

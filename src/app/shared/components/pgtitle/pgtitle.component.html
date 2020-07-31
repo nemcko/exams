@@ -1,0 +1,12 @@
+<div class="pgtitle row">
+  <div class="col-5 h1 px-0 mb-0">
+    <span class="colorless mr-1" *ngIf="iclass!==''"><i [class]="iclass" aria-hidden="true"></i></span>
+    <span class="">{{title}}</span>
+    <span class="lead text-secondary pl-1">{{subtitle}}</span>
+  </div>
+  <div class="col-7 px-0">
+    <div class="d-flex flex-row justify-content-end">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

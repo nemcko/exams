@@ -1,0 +1,57 @@
+{
+    "detailtitle": {
+        "en": "Document",
+        "sk": "Dokument"
+    },
+    "saveall": {
+        "en": "Save",
+        "sk": "Uložiť"
+    },
+    "close": {
+        "en": "Close",
+        "sk": "Zatvoriť"
+    },
+
+    "type": {
+        "en": "Type",
+        "sk": "Typ"
+    },
+    "typelic": {
+        "en": "License",
+        "sk": "Licencia"
+    },
+    "typecer": {
+        "en": "Certificate",
+        "sk": "Certifikát"
+    },
+    "typedoc": {
+        "en": "Other",
+        "sk": "Iné"
+    },
+    "name": {
+        "en": "Name",
+        "sk": "Meno"
+    },
+    "comment": {
+        "en": "Comment",
+        "sk": "Poznámka"
+    },
+    "from": {
+        "en": "From",
+        "sk": "Od"
+    },
+    "to": {
+        "en": "To",
+        "sk": "do"
+    },
+
+    "type_lic": {
+        "en": "Licenses",
+        "sk": "Licencie"
+    },
+    "type_per": {
+        "en": "Personal documents",
+        "sk": "Osobné dokumenty"
+    }
+
+}

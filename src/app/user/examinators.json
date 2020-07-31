@@ -1,0 +1,72 @@
+{
+    "examinatorsnr": {
+        "en": "LPE-S",
+        "sk": "LPE-S"
+    },
+    "examinatorexa": {
+        "en": "LPE",
+        "sk": "LPE"
+    },
+    "examinatoradm": {
+        "en": "ADM",
+        "sk": "ADM"
+    },
+    "examinatorlprs": {
+        "en": "LPR-S",
+        "sk": "LPR-S"
+    },
+    "examinatorlpes": {
+        "en": "LPE-S",
+        "sk": "LPE-S"
+    },
+    "examinatorlpts": {
+        "en": "LPT-S",
+        "sk": "LPT-S"
+    },
+    "examinatorlpr": {
+        "en": "LPR",
+        "sk": "LPR"
+    },
+    "examinatorlpe": {
+        "en": "LPE",
+        "sk": "LPE"
+    },
+    "examinatorlpt": {
+        "en": "LPT",
+        "sk": "LPT"
+    },
+    "examinatorreq": {
+        "en": "Exam candidates",
+        "sk": "Žiadatelia"
+    },
+    "examinatorall": {
+        "en": "All users",
+        "sk": "Všetci používatelia"
+    },
+
+    "lpes": {
+        "en": "LPE-S",
+        "sk": "LPE-S"
+    },
+    "lprs": {
+        "en": "LPR-S",
+        "sk": "LPR-S"
+    },
+    "lpts": {
+        "en": "LPT-S",
+        "sk": "LPT-S"
+    },
+    "lpe": {
+        "en": "LPE",
+        "sk": "LPE"
+    },
+    "lpr": {
+        "en": "LPR",
+        "sk": "LPR"
+    },
+    "lpt": {
+        "en": "LPT",
+        "sk": "LPT"
+    }
+  
+}

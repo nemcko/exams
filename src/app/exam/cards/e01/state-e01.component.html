@@ -1,0 +1,192 @@
+<form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
+
+  <div class="m-0 p-0">
+
+    <h6 class="text-primary">{{labels.exasubtitle}}</h6>
+
+    <div class="form-row w-100">
+
+      <div class="col-md-2" frminput [id]="'exnum'" [labels]="labels" [fld]="f.exnum">
+        <input type="text" formControlName="exnum" class="form-control" [readonly]="cardcode!=='e01a'">
+      </div>
+
+      <div class="col-md-2" frminput [id]="'lng'" [labels]="labels" [fld]="f.lng">
+        <select formControlName="lng" class="form-control" id="lng"
+          [attr.disabled]="cardcode!=='e01a'?'':null">
+          <option [value]="item.lng" *ngFor="let item of labels.lngs">{{item.name}}</option>
+        </select>
+      </div>
+
+      <div class="form-group col-4" userbtn [id]="'applicant'" [labels]="labels" [frm]="cardForm" [company]="company" [ctrl]="parentCtrl"
+        [readonly]="cardcode!=='e01a'" ></div>
+    </div>
+
+
+    <div class="form-row">
+
+
+      <div class="col-md-4" formGroupName="planplace">
+        <label for="planplace">{{labels.planplace}}</label>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" id="planplace" formControlName="name" readonly [attr.disabled]="cardcode!=='e01a'?'':null"
+            [ngClass]="{ 'is-invalid': f.planplace.invalid }">
+          <div class="input-group-append">
+            <button type="button" class="btn btn-secundary btn-sm input-group-text" (click)="showExamPlaces('planplace')"
+              [disabled]="cardcode!=='e01a'">
+              <span [class]="'fa fa-map-marker'"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group col-md-4" frmdt [id]="'planeddt'" [labels]="labels" [frm]="cardForm" [readonly]="cardcode!=='e01a'"></div>
+
+      <div class="form-group col-4" userbtn [id]="'lpeplaned'" [labels]="labels" [frm]="cardForm" [ctrl]="parentCtrl" [readonly]="cardcode!=='e01a'"></div>
+
+    </div>
+
+
+
+    <!-- <div class="form-row">
+      <div class="col-md-4">
+        <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+          <input type="checkbox" class="custom-control-input" id="notifbefexamsk">
+          <label class="custom-control-label" for="notifbefexamsk">{{labels.notifbefexamsk}}</label>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+          <input type="checkbox" class="custom-control-input" id="notifbefexam">
+          <label class="custom-control-label" for="notifbefexam">{{labels.notifbefexam}}</label>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+          <input type="checkbox" class="custom-control-input" id="notifbefexamapp">
+          <label class="custom-control-label" for="notifbefexamapp">{{labels.notifbefexamapp}}</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-4">
+        <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+          <input type="checkbox" class="custom-control-input" id="notifaftexamsk">
+          <label class="custom-control-label" for="notifaftexamsk">{{labels.notifaftexamsk}}</label>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+          <input type="checkbox" class="custom-control-input" id="notifaftexam">
+          <label class="custom-control-label" for="notifaftexam">{{labels.notifaftexam}}</label>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+          <input type="checkbox" class="custom-control-input" id="notifaftexamapp">
+          <label class="custom-control-label" for="notifaftexamapp">{{labels.notifaftexamapp}}</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-4">
+        <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+          <input type="checkbox" class="custom-control-input" id="notifbefevalsk">
+          <label class="custom-control-label" for="notifbefevalsk">{{labels.notifbefevalsk}}</label>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+          <input type="checkbox" class="custom-control-input" id="notifbefeval">
+          <label class="custom-control-label" for="notifbefeval">{{labels.notifbefeval}}</label>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+          <input type="checkbox" class="custom-control-input" id="notifbefevalapp">
+          <label class="custom-control-label" for="notifbefevalapp">{{labels.notifbefevalapp}}</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-4">
+        <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+          <input type="checkbox" class="custom-control-input" id="notifbefappsk">
+          <label class="custom-control-label" for="notifbefappsk">{{labels.notifbefappsk}}</label>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+          <input type="checkbox" class="custom-control-input" id="notifbefapp">
+          <label class="custom-control-label" for="notifbefapp">{{labels.notifbefapp}}</label>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+          <input type="checkbox" class="custom-control-input" id="notifbefappapp">
+          <label class="custom-control-label" for="notifbefappapp">{{labels.notifbefappapp}}</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-4">
+        <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+          <input type="checkbox" class="custom-control-input" id="notifaftappsk">
+          <label class="custom-control-label" for="notifaftappsk">{{labels.notifaftappsk}}</label>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+          <input type="checkbox" class="custom-control-input" id="notifaftapp">
+          <label class="custom-control-label" for="notifaftapp">{{labels.notifaftapp}}</label>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+          <input type="checkbox" class="custom-control-input" id="notifaftappapp">
+          <label class="custom-control-label" for="notifaftappapp">{{labels.notifaftappapp}}</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-4">
+        <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+          <input type="checkbox" class="custom-control-input" id="notiffinalsk">
+          <label class="custom-control-label" for="notiffinalsk">{{labels.notiffinalsk}}</label>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+          <input type="checkbox" class="custom-control-input" id="notiffinal">
+          <label class="custom-control-label" for="notiffinal">{{labels.notiffinal}}</label>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="custom-control custom-checkbox mb-3 mr-3 mt-2">
+          <input type="checkbox" class="custom-control-input" id="notiffinalapp">
+          <label class="custom-control-label" for="notiffinalapp">{{labels.notiffinalapp}}</label>
+        </div>
+      </div>
+    </div> -->
+
+
+  </div>
+  <div class="m-0 p-0" *ngIf="cardcode!=='e01a'">
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+  <div class="form-row mt-4">
+    <div class="form-group col-4 offset-4" userbtn [id]="'assignedby'" [labels]="labels" [frm]="cardForm" [ctrl]="parentCtrl" [readonly]="true"></div>
+    <div class="form-group col-4" userbtn [id]="'lperespon'" [labels]="labels" [frm]="cardForm" [ctrl]="parentCtrl" [readonly]="true"></div>
+  </div>
+
+
+</form>

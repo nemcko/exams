@@ -1,0 +1,62 @@
+{
+    "btnOk": {
+        "en": "Ok",
+        "sk": "Ok"
+    },
+    "btnYes": {
+        "en": "Yes",
+        "sk": "Áno"
+    },
+    "btnNo": {
+        "en": "No",
+        "sk": "Nie"
+    },
+    "btnCancel": {
+        "en": "Cancel",
+        "sk": "Zrušiť"
+    },
+    "btnclose": {
+        "en": "Close",
+        "sk": "Zatvoriť"
+    },
+    "btnnew": {
+        "en": "New",
+        "sk": "Nový"
+    },
+    "btnadd": {
+        "en": "Add",
+        "sk": "Doplniť"
+    },
+    "btnappend": {
+        "en": "Append",
+        "sk": "Pridať"
+    },
+    "btnupdate": {
+        "en": "Update",
+        "sk": "Zmeniť"
+    },
+    "btndelete": {
+        "en": "Delete",
+        "sk": "Vymazať"
+    },
+    "btnsave": {
+        "en": "Save",
+        "sk": "Uložiť"
+    },
+    "btnBack": {
+        "en": "Back",
+        "sk": "Späť"
+    },
+    "btnsaveexit": {
+        "en": "Save & Exit",
+        "sk": "Uložiť+Návrat"
+    },
+    "btnsavenext": {
+        "en": "Save & Next",
+        "sk": "Uložiť+Ďalej"
+    },
+    "search": {
+        "en": "Search...",
+        "sk": "Vyhľadať.."
+    }
+}

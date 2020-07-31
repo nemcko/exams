@@ -1,0 +1,32 @@
+{
+    "lng":{
+        "en":"Language",
+        "sk":"Jazyk"
+    },
+    "lngs": {
+        "en": [
+            {
+                "lng": "en",
+                "name": "English"
+            },
+            {
+                "lng": "sk",
+                "name": "Slovak language"
+            }
+        ],
+        "sk": [
+            {
+                "lng": "en",
+                "name": "Anglický jazyk"
+            },
+            {
+                "lng": "sk",
+                "name": "Slovenský jazyk"
+            }
+        ]
+    },
+    "dateformat":{
+        "en":"M/d/y",
+        "sk":"d. M. y"
+    }
+}

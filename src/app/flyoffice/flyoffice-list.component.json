@@ -1,0 +1,26 @@
+{
+    "title": {
+        "en": "Authorities",
+        "sk": "Úrady"
+    },
+    "dtitle": {
+        "en": "Aviation authorities",
+        "sk": "Letecký úrad"
+    },
+    "addFlyadrTitle": {
+        "en": "Addresses",
+        "sk": "Adresy"
+    },
+    "name":{
+        "en":"Name",
+        "sk":"Názov"
+    },
+    "delFlyOfficeTitle": {
+        "en": "Delete office",
+        "sk": "Vymazanie úradu"
+    },
+    "delFlyOfficeQuestion": {
+        "en": "Do you want to remove this office?",
+        "sk": "Chcete zrušiť tento úrad?"
+    }
+}

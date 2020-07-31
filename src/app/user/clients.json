@@ -1,0 +1,38 @@
+{
+    "code": {
+        "en": "3LC",
+        "sk": "3LC"
+    },
+    "name":{
+        "en":"Company name",
+        "sk":"Názov spoločnosti"
+    },
+    "ico": {
+        "en": "Company ID",
+        "sk": "IČO"
+    },
+    "icdph": {
+        "en": "VAT-ID",
+        "sk": "IČ-DPH"
+    },
+    "dic": {
+        "en": "TAX ID",
+        "sk": "DIČ"
+    },
+    "comment":{
+        "en":"Note",
+        "sk":"Poznámka"
+    },
+    "phone": {
+        "en": "Phone",
+        "sk": "Telefón"
+    },
+    "email": {
+        "en": "E-mail",
+        "sk": "E-mail"
+    },
+    "agreement": {
+        "en": "Agreement no.",
+        "sk": "Zmluva č."
+    }   
+}
